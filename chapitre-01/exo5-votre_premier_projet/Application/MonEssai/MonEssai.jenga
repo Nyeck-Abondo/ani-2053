@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+from Jenga import *
+from Jenga.GlobalToolchains import RegisterJengaGlobalToolchains
+
+with workspace("First Test"):
+    RegisterJengaGlobalToolchains()
+    configurations(["Debug", "Release"])
+    targetoses([
+        TargetOS.WINDOWS,
+        TargetOS.LINUX
+    ])
+    targetarchs([
+        TargetArch.X86_64, 
+        TargetArch.ARM64
+    ])
+    startproject("MyTest")
+
+    with project("MysTest"):
+        consoleapp()
+        language("C++")
+        cppdialect("C++17")
+        cppcompiler("clang++")
+        ccompiler("clang")
+        files(["main.cpp"])
+
+        with filter("config:Debug"):
+            symbols(True)
+            optimize("OFF")
+            defines(["_DEBUG", "DEBUG"])
+        with filter("config:Release"):
+            symbols(False)
+            optimize("Speed")
+            defines("NDEBUG")
