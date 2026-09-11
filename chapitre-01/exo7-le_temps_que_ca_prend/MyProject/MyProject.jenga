@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+from Jenga import * 
+from Jenga.GlobalToolchains import RegisterJengaGlobalToolchains
+
+with workspace("exercice6") :
+    RegisterJengaGlobalToolchains()
+    configurations(["Debug", "Release"])
+    targetoses([
+        TargetOS.WINDOWS,
+            TargetOS.LINUX
+        ])
+    targetarchs([
+        TargetArch.X86_64,
+        TargetArch.ARM64
+    ])
+
+    cppcompiler("clang++")
+    ccompiler("clang")
+    
+    startproject("Simul")
+
+    with include("maths/maths.jenga"):
+        pass
+
+    with include("2DEntity/Entity.jenga"):
+        pass
+
+    with include("world/world.jenga"):
+        pass
+
+    with project("Simulation"):
+        consoleapp()
+        language("C++")
+        cppdialect("C++17")
+        files(["src/**.cpp"])
+
+        dependson(["maths", "Entity", "world"])
+
+        with filter("config:Debug"):
+            symbols(True)
+            optimize("OFF")
+            defines(["_DEBUG", "DEBUG"])
+
+        with filter("config:Release"):
+            symbols(False)
+            optimize("Speed")
+            defines("NDEBUG")
