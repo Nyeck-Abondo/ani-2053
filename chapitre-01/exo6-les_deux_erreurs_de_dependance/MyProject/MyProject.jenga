@@ -37,7 +37,7 @@ with workspace("exercice6") :
         cppdialect("C++17")
         files(["src/**.cpp"])
 
-        dependson(["maths", "Entity", "world"])
+        #dependson(["maths", "Entity", "world"])
 
         with filter("config:Debug"):
             symbols(True)

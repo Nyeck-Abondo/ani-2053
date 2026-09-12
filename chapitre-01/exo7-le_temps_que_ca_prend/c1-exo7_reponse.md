@@ -50,4 +50,6 @@ Status:         ✓ SUCCESS
 ```
 Le temps cette fois ci enregistré est de : **0.12s**
 
-- **Explications de la différence de temps**: LA différence de temps, sensiblement 46 fois plus petite entre les deux opérations peut s'explique par le fait que Jenga ne recompile que les fichiers ayant été modifiers, ce qui permet de gagner un temps significatif dans le second teste car aucune de ceux ci n'a été touché après le premier test de build.
+- **Explications de la différence de temps**: LA différence de temps, sensiblement 45.17 fois plus petite entre les deux opérations peut s'explique par le fait que Jenga ne recompile que les fichiers ayant été modifiers, ce qui permet de gagner un temps significatif dans le second teste car aucune de ceux ci n'a été touché après le premier test de build.
+
+Par alileurs, durant la deuxième opération de compilation jenga prends tout de même **0.12s**, car celui ci vérifie l'état de chaque fichiers de chaque projet.

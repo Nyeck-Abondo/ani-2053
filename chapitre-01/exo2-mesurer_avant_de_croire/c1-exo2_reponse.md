@@ -12,4 +12,4 @@ Dans un second temps en exécutant la commande :
 ```
 dans le répertoire racine de nkentseu on obtient: **3946** Fichiers, contre **2 641** fichiers tel que précisé dans le cours.
 
-Cette différence s'explique principalement pas la prise en compte des fichier en-tête dans chaque sous répertoire du dépôt, excepté le dossier `Build` mais aussi par la présence dans le dossier application du Framework de projets personnels développés avec NkCanvas. ce qui justifie cet écart avec les chiffres du cours.
+Cette différence s'explique principalement pas la prise en compte des fichier en-tête, des mise à jour régulières du dépôt via `git pull`m mais aussi par la présence dans le dossier application du Framework de projets personnels développés avec NkCanvas. ce qui justifie cet écart avec les chiffres du cours.
