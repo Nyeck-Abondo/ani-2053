@@ -114,3 +114,5 @@ nkentseudependson(
         │  NKPLATFORM    │                │    NKMEMORY    │                   │    NKCORE      │                       │  NKCONTAINERS  │
         └────────────────┘                └────────────────┘                   └────────────────┘                       └────────────────┘
 ```
+
+De ce graphe, nous observons donc qu'il faut exactement construire **14** projets avant de pouvoir arriver à la construction de NKCanvas

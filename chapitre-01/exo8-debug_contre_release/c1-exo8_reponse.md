@@ -9,16 +9,19 @@ La tâche de l'exercice a été exécutée en trois étapes:
 ```
 jenga build --config Debug
 ``` 
-la construction du binaire final à duré exactement **3.00s** conformément à la sortie ci dessous:
+la construction du binaire final à duré exactement **3.70s** conformément à la sortie ci dessous:
 ```
 ✓ Built: Build\Bin\Debug-Windows\Simulation\Simulation.exe
 
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.88s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ════════════════════════════════════════════════════════════════════════════════
                                 BUILD COMPLETED                                 
 ════════════════════════════════════════════════════════════════════════════════
 Projects Built:  4/4
-Time:           3.00s
+Time:           2.74s
 Status:         ✓ SUCCESS
 ════════════════════════════════════════════════════════════════════════════════
 ```
@@ -32,17 +35,30 @@ jenga build --config Release
 La contruction du binaire final a ici été sensiblement plus rapide que celle du mode de configuration `Debug`, avec **2.97s**, comme l'indique la sortie suivante:
 
 ```
+✓ Built: Build\Lib\Release-Windows\world\world.lib
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.82s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: Simulation                                                      Kind: CONSOLE_APP  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 1 source file(s)
+✓   [1/1] Compiled: main.cpp
+ℹ Linking...
 ✓ Built: Build\Bin\Release-Windows\Simulation\Simulation.exe
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✓ Build Successful                                                             Time: 1.08s  │
+│  ✓ Build Successful                                                             Time: 0.97s  │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ════════════════════════════════════════════════════════════════════════════════
                                 BUILD COMPLETED                                 
 ════════════════════════════════════════════════════════════════════════════════
 Projects Built:  4/4
-Time:           2.97s
+Time:           3.70s
 Status:         ✓ SUCCESS
 ════════════════════════════════════════════════════════════════════════════════
 ```

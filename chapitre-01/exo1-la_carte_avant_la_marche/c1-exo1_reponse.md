@@ -10,7 +10,7 @@ Le dépôt de Nkentseu présente 4 types de projets, **ConsoleApp**, **WindowedA
 - **StaticLib** : 55 projets
 - **TestSuite** : 64 projets
 
-pout un **total de**: 235 projets
+pout un **total de**: 235
 
 ## Nombre de chqines de compilation
 le dépot présete aussi une diversité de chaines de compilation (**ToolChains**). Ces chaines de compilations se compte au nombre de:  **7**.  Ce chiffre est exclusivement dépendant de la machine qui l'exécute car la commande `jenga info` renvoie les chaines de compilation disponibles sur la machine hôte.
