@@ -1,5 +1,7 @@
 # REPONSE DE L'EXERCICE 9
 
+> Les 2l2;ents de cette liste datent de la version 0.1.0 de NKRef et est rédigée le **12 / 09 / 2026**
+
 Après utilisation de NRef, voici les liste des fonctionnalités et des attentes trouvées:
 
 ## **Liste des fonctionnalités** : 
@@ -33,5 +35,7 @@ Même si l'application est déjà très bien, certaines fonctionnalitées suppl�
 - **L'ajout d'une gomme** : L'ajout de la gomme est certainement l'une des fonctionnalités les plus utiles. car permettant d'effacer n'importe quel trait ou encore portion de trait indésirable, ce que les options d'effacement actuelles ne permettent pas proprement de faire. car en effet bouloir effacer l'avant dernier trait signifie effacer le dernier trait. trait qui peut être indispensable au dessin.
 
 ci dessous une image du test effectué sur NKRef pendant environ 15 minutes.
+
+- **Ce qui m'a fait prendre plus de 10 minutes pour le teste** : La principale raison de cette durée dans l'application était le fait que je cherchais un moyen de me déplacer librement dans la grille de l'application. Et j'ai malheureusement fini le test à ce moment là sans le découvir. J'ai aussi pris le temps d'examiner les possibilités de sauvegardes promises dans le champs gestes de l'application en nommant les fichiers sauvegardés avec une extension de fichier image classique (PNG) en vain.
 
 <img src="reftest.png">
