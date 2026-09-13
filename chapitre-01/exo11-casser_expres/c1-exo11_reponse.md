@@ -1,74 +1,105 @@
 # REPONSE DE L'EXERCICE 11
 
-Comme indiqué dans l'ennoncé une erreur de syntaxe dans un fichier de NKMath: `namepce` au lieu de `namespace` dans le fichier **NKFunctions.cpp** à la ligne 46 .
+Comme indiqué dans l'ennoncé une erreur de syntaxe dans un fichier de NKCore: `namepce` au lieu de `namespace` dans le fichier **NKLimits.cpp** à la ligne 21 . Cet avec cette faute que nous allons tenter de construire NKMath.
 
 ```cpp
-namespace nkentseu {
+// -------------------------------------------------------------------------
+// SECTION 1 : ESPACE DE NOMS PRINCIPAL
+// -------------------------------------------------------------------------
 
-	// Indentation niveau 1 : namespace math
-	namepace math {
+namepace nkentseu {
 
-```
-
-Cette faute de syntaxe a entrainé une erreur de compilation une fois Jenga arrivée sur le projet NKMath lui même:
 
 ```
+
+Cette faute de syntaxe a entrainé une erreur de compilation une fois Jenga arrivée sur le projet NKCore avant d'arriver à NKMath:
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.8.0             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Loading workspace...
+
+Configuration: Debug
+Target:        Windows x86_64
+Toolchain:     clang-mingw
+
+Build Order (5 projects):
+  1. NKPlatform [STATIC_LIB] → 
+  2. NKCore [STATIC_LIB] (depends: NKPlatform) → 
+  3. NKMemory [STATIC_LIB] (depends: NKCore, NKPlatform) → 
+  4. NKContainers [STATIC_LIB] (depends: NKCore, NKMemory, NKPlatform) → 
+  5. NKMath [STATIC_LIB] (depends: NKContainers, NKCore, NKMemory, NKPlatform)
+
+
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║                              Compilation Error: NkFunctions.cpp                              ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════╣
-║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKMath\src\NKMath\NkFunc ║
-║ tions.cpp:45:2: error: unknown type name 'namepace'                                          ║
-║    45 |         namepace math {                                                              ║
-║       |         ^                                                                            ║
-║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKMath\src\NKMath\NkFunc ║
-║ tions.cpp:61:3: error: unexpected type name 'float32': expected expression                   ║
-║    61 |                 float32 NkFloor(float32 x) noexcept {                                ║
-║       |                 ^                                                                    ║
-║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKMath\src\NKMath\NkFunc ║
-║ tions.cpp:61:11: error: expected '}'                                                         ║
-║    61 |                 float32 NkFloor(float32 x) noexcept {                                ║
-║       |                         ^                                                            ║
-║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKMath\src\NKMath\NkFunc ║
-║ tions.cpp:45:16: note: to match this '{'                                                     ║
-║    45 |         namepace math {                                                              ║
-║       |                       ^                                                              ║
-║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKMath\src\NKMath\NkFunc ║
-║ tions.cpp:1102:3: error: expected ';' after top level declarator                             ║
-║  1102 |         } // namespace math                                                          ║
-║       |          ^                                                                           ║
-║       |          ;                                                                           ║
-║ 4 errors generated.                                                                          ║
+║  Project: NKPlatform                                                       Kind: STATIC_LIB  ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
-✗ ✗ Compilation failed: C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKMath\src\NKMath\NkFunctions.cpp
-✓   [3/12] Compiled: NkEulerAngle.cpp
-✓   [4/12] Compiled: NkRandom.cpp
-✓   [5/12] Compiled: NkRectangle.cpp
-✓   [6/12] Compiled: NkMat.cpp
-✓   [7/12] Compiled: NkAngle.cpp
-✓   [8/12] Compiled: NkSegment.cpp
-✓   [9/12] Compiled: NkQuat.cpp
-✓   [10/12] Compiled: NkRange.cpp
-✓   [11/12] Compiled: NkColor.cpp
-✓   [12/12] Compiled: NkVec.cpp
+ℹ Found 7 source file(s)
+✓ All files up to date
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✗ Build Failed                                                                Time: 13.49s  │
-│ Errors: 4  | Failed files: 1                                                                 │
+│  ✓ Build Successful                                                             Time: 0.14s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: NKCore                                                           Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 5 source file(s)
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║                               Compilation Error: NkLimits.cpp                                ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════╣
+║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKCore\src\NKCore\NkLimi ║
+║ ts.cpp:21:1: error: unknown type name 'namepace'                                             ║
+║    21 | namepace nkentseu {                                                                  ║
+║       | ^                                                                                    ║
+║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKCore\src\NKCore\NkLimi ║
+║ ts.cpp:30:2: error: expected expression                                                      ║
+║    30 |         union NkFloat32Bits {                                                        ║
+║       |         ^                                                                            ║
+║ C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKCore\src\NKCore\NkLimi ║
+║ ts.cpp:79:2: error: expected ';' after top level declarator                                  ║
+║    79 | } // namespace nkentseu                                                              ║
+║       |  ^                                                                                   ║
+║       |  ;                                                                                   ║
+║ 3 errors generated.                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+✗ ✗ Compilation failed: C:\Users\Administrator\Documents\Git_pro\Nkentseu\Kernel\Foundation\NKCore\src\NKCore\NkLimits.cpp
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✗ Build Failed                                                                 Time: 0.18s  │
+│ Errors: 3  | Failed files: 1                                                                 │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ════════════════════════════════════════════════════════════════════════════════
                                   BUILD FAILED                                  
 ════════════════════════════════════════════════════════════════════════════════
-Projects Built:  4/5
+Projects Built:  1/5
 Failed:         1
-Errors:         4
-Time:           37.14s
+Not reached:    3  (arret au premier echec — voir --keep-going)
+Errors:         3
+Time:           0.32s
 Status:         ✗ FAILURE
 ════════════════════════════════════════════════════════════════════════════════
 
 Echecs (1) — a corriger :
-  ✗ NKMath
+  ✗ NKCore
 ```
 
-On remarque ainsi que malgré la faute syntaxe dans **NKFunctions.cpp**, les projets **NKPlatform**, **NKMemory**, **NKCore** et **NKContainers** ont été construit sans encombre. Ce qui nous apprend que l'ordre de construction de Jenga se fait de façon succéssive, du projet possédant le moins de dépendances vers celui qui en a le plus.
+On remarque ainsi que malgré la faute syntaxe dans **NKLi,tis.cpp**, le projet **NKPlatform**, a été construit sans encombre. Ce qui nous apprend que l'ordre de construction de Jenga se fait de façon succéssive, du projet possédant le moins de dépendances vers celui qui en a le plus.
+
+Par ailleurs, la construction s'est arrêtée en **0.32s**. Un temps non négligeable qui nous indique qu'une faute de syntaxe est une erreur impardonnable dans la construction d'un projet de plusieurs millier de lignes
