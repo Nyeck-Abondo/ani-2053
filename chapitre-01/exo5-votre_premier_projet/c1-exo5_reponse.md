@@ -2,6 +2,33 @@
 
 Après création du dossier `MonEssai` dans le dossier `Applications`  de NKentseu, les différents tests de l'exercices ont été effectués:
 
+- **contenu du .jenga** :
+```py
+import os
+from Jenga import *
+from Jenga.GlobalToolchains import RegisterJengaGlobalToolchains
+
+with project("MonEssai"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    files(["./**.cpp"])
+    includedirs(["."])
+
+    with filter("system:Window") :
+        usetoolchain("clang−mingw")
+```
+
+- **contenu du `main.cpp`** : le programme n'affiche rien comme demandé dans l'énoncé
+
+```cpp
+#include <iostream>
+
+int main() {
+    return 0;
+}
+```
+
 - **Vérification de la présence dans la liste des projets** : suite au lancement de la commande `jenga info` depuis le dossier racine, ont observe que le nom du projet (`MonEssai`) apparait effectivement vers la 30 ième position, tel que plassé dans le fichier `Nkentseu.jenga`, plus précisément entre les projet **frog** et **NKSLCheck**.
 
 ```
