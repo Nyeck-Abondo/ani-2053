@@ -1,6 +1,6 @@
 # REPONSE DE LA DEMO 4
 
-> L"exercice de la démonstration 4 a été exécuté avec deux étudiants en me comptant: moi NYECK ABONDO et NOUMSSI TIATSAP VANESSA PRISCA. faute de camarades disponibles pour terminer le sprint.
+> L"exercice de la démonstration 4 a été exécuté avec deux étudiants en me comptant: moi NYECK ABONDO, NOUMSSI TIATSAP VANESSA PRISCA, Stéphane Dikoumé et Seumen Chapoya. Leur contribution est bel et bien vérifiable dans le dépôt au niveau des tests unitaires de la calculatrice du projet.
 
 ## Projet mis en place
 
