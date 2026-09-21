@@ -41,24 +41,17 @@ Celle de la collaboratrice se trouvant juste en dessous de la branche main.
 - **Etude de la branche `feature-add`** :
     - **Ce que la branche fait** : D'après le nom de la branche et en se basant sur l'objectif du dépôt qui est de créer un calculatrice en console, cette branche a pour rôle l'implémentation de la fonctionnalité d'addition de la calculatrice.
 
-    - **Analyse des commits** : En observant les commits via la commande `git log`, on obtien l'historique des commits de la collaboratrice.
+    - **Analyse des commits** : En observant les commits via la commande `git log origin/feature-add`, on obtien l'historique des commits de la collaboratrice.
 
     ```
-    git log
+     git log origin/feature-add    
 
-    commit 883359578279cc34674d285b19ee8c07d0ccdde1 (HEAD -> main, origin/main, origin/HEAD)
-    Merge: 423d435 ca1909a
+    commit 663a359dc18dc71c253a2fc27b9b4f97ca70fbb8 (origin/feature-add)
     Author: noumssiprisca6-star <noumssiprisca6@gmail.com>
-    Date:   Mon Sep 21 11:44:31 2026 +0200
+    Date:   Mon Sep 21 11:18:45 2026 +0200
 
-        Merge pull request #6 from noumssiprisca6-star/feature-multiplication
-        
-        feat: Ajout de la multiplication par types simples.
-    :...skipping...
-    .
-    .
-    .
-    .
+        feat :la calculatrice .cpp
+        apres la declaration  des fonction , il faut desormais les implementer d'ou la presence de ce fichier pour inserer de nouv:...skipping...
     commit 663a359dc18dc71c253a2fc27b9b4f97ca70fbb8 (origin/feature-add)
     Author: noumssiprisca6-star <noumssiprisca6@gmail.com>
     Date:   Mon Sep 21 11:18:45 2026 +0200
@@ -66,14 +59,38 @@ Celle de la collaboratrice se trouvant juste en dessous de la branche main.
         feat :la calculatrice .cpp
         apres la declaration  des fonction , il faut desormais les implementer d'ou la presence de ce fichier pour inserer de nouvelle fonctionnalire de calcul
 
-    .
-    .
+    commit 54e8ac62e54d88e94677241f3c9e5fc1cccd1016
+    Author: noumssiprisca6-star <noumssiprisca6@gmail.com>
+    Date:   Sun Sep 20 00:27:42 2026 +0200
+
+        les fonction de calcul implementer dans le fichier .cpp afin de construire des fonctions actives
+
+    commit b4555be10163894907816b519c4b585c7692866a
+    Author: noumssiprisca6-star <noumssiprisca6@gmail.com>
+    Date:   Sun Sep 20 00:04:34 2026 +0200
+
+        amelioration.
+
+    commit badb5f6d68034c545ff788f3c058a8adf15fcc6b
+    Author: noumssiprisca6-star <noumssiprisca6@gmail.com>
+    Date:   Sat Sep 19 23:58:09 2026 +0200
+
+        Revert " enregistrement"
+        
+        This reverts commit e7e4ad45629caaa4dc749e430d41d2b7e7e3b830.
+
+    commit e7e4ad45629caaa4dc749e430d41d2b7e7e3b830
+    Author: noumssiprisca6-star <noumssiprisca6@gmail.com>
+    Date:   Sat Sep 19 23:46:49 2026 +0200
+
     ```
     Le seul commit qui sera étudier sera donc celui au hash **663a359dc18dc71c253a2fc27b9b4f97ca70fbb8**, qui correspond à l'unique commit de la branche.
 
     - **La lisibilité** : Le commit est totalement lisible. Il n'expose son sujet, qui ici est la modification du fichier calculatrice.cpp. toutefois, il explique parfaitement le pourquoi de cette modification en disant qu'elle constitue la prochaine étape d'insertion de la fonctionnalité de calcul.
 
     - **Ce qui manque** : un sujet lisible. Le sujet du commit ne s'identifie qu'après lecture totale de son corps.
+
+    - **Ce qui ne devrait pas y être** : Le commit à part son sujet manquant ne présente que certaines fautes d'orthograohes mineures ne devant pas être là, et qui peuvent ralentir la lecture de celui ci.
 
 
 ## Bilan des discussions
@@ -94,4 +111,3 @@ Celle de la collaboratrice se trouvant juste en dessous de la branche main.
     remotes/origin/feature-add
     remotes/origin/feature-add-sous
     ```
-
