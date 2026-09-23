@@ -7,10 +7,16 @@
 from Jenga import *
 
 with workspace("exo2-les_sept_droits"):
+    useconfig("../NkentseuKit/NkentseuKit.jenga")
     configurations(['Debug', 'Release'])
     targetoses([TargetOS.WINDOWS])
     targetarchs([TargetArch.X86_64])
-    
+
+    with project("exo 2"):
+        windowedapp()
+        language("C++")
+        files(["./**.cpp"])
+        usenkentseukit()
     # Default toolchain (auto-detected)
     # usetoolchain("host-gcc")
     
