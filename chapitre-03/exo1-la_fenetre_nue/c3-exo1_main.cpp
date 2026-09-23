@@ -1,5 +1,7 @@
 #include "NKWindow/NKWindow.h"
 #include "NKWindow/NKMain.h"
+#include "NKEvent/NkEvent.h"
+#include "NKEvent/NkWindowEvent.h"
 
 using namespace nkentseu;
 
@@ -16,6 +18,12 @@ int nkmain(const NkEntryState& state) {
         logger.Error("Erreur de création de la fenêtre.");
         return -1;
     }
-    while (window.IsOpen()) {}
+    while (window.IsOpen()) {
+        while (NkEvent* e = NkEvents().PollEvent()) {
+            if (e->Is<NkWindowCloseEvent>()) {
+                window.Close();
+            }
+        }
+    }
     return 0;
 }
