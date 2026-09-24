@@ -25,7 +25,6 @@ int nkmain(const NkEntryState& state) {
         logger.Error("Erreur de création de la fenêtre.");
         return -1;
     }
-    bool run = true;
     while (window.IsOpen()) {
         while (NkEvent* e = NkEvents().PollEvent()) {
             if (e->Is<NkWindowCloseEvent>()) {
@@ -45,11 +44,11 @@ Numéro de ligne dans l'exercice |Lignes dans l'exercice | numro de ligne dans l
 **2** | `#include "NKWindow/NKMain.h"` | **2** | `#include "NKWindow/NKMain.h"`| Cette ligne permet d'utiliser le point d'entré du framework Nkentseu
 **8** | `int nkmain(const NkEntryState& state) {` | **4** | `int nkmain(const NkEntryState& state) {` | cette ligne définit le point d'entré du programme
 **9** | `NkWindowConfig cfg;` | **5** |`NkWindowConfig cfg;` | crée la structure de configuration de la fenêtre
-**10**, **11**, **12** | `cfg.title  = "Ma fenetre";`, `cfg.width  = 1280;`, `cfg.height = 720;` | **6**, **7**, **8** |  `cfg.title  = "Ma fenetre";`, `cfg.width  = 1280;`, `cfg.height = 720;` | Ces lignes définissent les caractéristiques que sont le titre, la taille en longueur et en largeur de la fenêtre
-**16** | `NkWindow window(cfg);` | **9** | `NkWindow window(cfg);` | crée la fenêtre et l'initialise avec la configuration définie plus haut
-**17**, **18**, **19**, **20** | `if (!window.IsOpen()) {`, `logger.Error("[app] creation fenetre echouee");`, `return -1;`, `}` | **10**, **11**, **12**, **13** | `if (!window.IsOpen()) {`, `logger.Error("[app] creation fenetre echouee");`, `return -1;`, `}` | Ces lignes contribuent à vérifier si la création de la fenêtre à bien été russie elles stopent directement le programme sinon
-**21** | `while (window.IsOpen()) {` | **14** |`while (window.IsOpen()) {/* les evenements arrivent ici */ }` | Cette pqrtie constitue lq boucle de jeu qui maintient la fenêtre en vie
-**28** | `return 0;` | **15** | `return 0;` | constitue le code de sortie du programme en cas de réussite
+**10**, **11**, **12** | `cfg.title   =   "Fenetre";`, `cfg.width  = 1280;`, `cfg.height = 720;` | **6**, **7**, **8** |  `cfg.title  = "Ma fenetre";`, `cfg.width  = 1280;`, `cfg.height = 720;` | Ces lignes définissent les caractéristiques que sont le titre, la taille en longueur et en largeur de la fenêtre
+**14** | `NkWindow window(cfg);` | **9** | `NkWindow window(cfg);` | crée la fenêtre et l'initialise avec la configuration définie plus haut
+**15**, **16**, **17**, **18** | `if (!window.IsOpen()) {`, `logger.Error("Erreur de création de la fenêtre.");`, `return -1;`, `}` | **10**, **11**, **12**, **13** | `if (!window.IsOpen()) {`, `logger.Error("[app] creation fenetre echouee");`, `return -1;`, `}` | Ces lignes contribuent à vérifier si la création de la fenêtre à bien été russie elles stopent directement le programme sinon
+**19** | `while (window.IsOpen()) {` | **14** |`while (window.IsOpen()) {/* les evenements arrivent ici */ }` | Cette partie constitue la boucle de jeu qui maintient la fenêtre en vie
+**26** | `return 0;` | **15** | `return 0;` | constitue le code de sortie du programme en cas de réussite
 
 ## Erreurs rencontrées lors de l'exécution du programme minimal de l'exercice
 
@@ -84,6 +83,29 @@ int nkmain(const NkEntryState& state) {
 ```
 jenga build
 
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.8.0             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Loading workspace...
+
+Configuration: Debug
+Target:        Windows x86_64
+Toolchain:     clang-mingw
+
+Build Order (1 projects):
+  1. window [WINDOWED_APP]
+
+
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
 ║  Project: window                                                         Kind: WINDOWED_APP  ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -94,22 +116,18 @@ jenga build
 ✓ Built: Build\Bin\Debug-Windows\window\window.exe
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✓ Build Successful                                                             Time: 6.23s  │
+│  ✓ Build Successful                                                             Time: 5.92s  │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ════════════════════════════════════════════════════════════════════════════════
                                 BUILD COMPLETED                                 
 ════════════════════════════════════════════════════════════════════════════════
 Projects Built:  1/1
-Time:           6.23s
+Time:           5.92s
 Status:         ✓ SUCCESS
 ════════════════════════════════════════════════════════════════════════════════
-```
 
-Lancement du programme :
-
-```
-jenga run
+PS C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo1-la_fenetre_nue> jenga run       
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
@@ -132,7 +150,7 @@ jenga run
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  ◀  FIN D'EXECUTION  —  termine avec le code 3489660927  (26.51s)
+  ◀  FIN D'EXECUTION  —  termine normalement  (3.35s)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 

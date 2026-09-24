@@ -10,6 +10,8 @@ int nkmain(const NkEntryState& state) {
     cfg.title       =   "Fenetre de l'exercice 3";
     cfg.width       =   1400;
     cfg.height      =   800;
+    cfg.minHeight   =   600;
+    cfg.minWidth    =   800;
 
     NkWindow window;
     if (!window.Create(cfg)) {
