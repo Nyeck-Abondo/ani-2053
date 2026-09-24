@@ -1,6 +1,6 @@
 #include "NKWindow/NKMain.h"
 #include "NKWindow/NKWindow.h"
-#include "NKEvent/NkEvent.h"
+#include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
 
 using namespace nkentseu;

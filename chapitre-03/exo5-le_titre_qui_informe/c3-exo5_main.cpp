@@ -1,9 +1,16 @@
 #include "NKWindow/NKMain.h"
 #include "NKWindow/NKWindow.h"
-#include "NKEvent/NkEvent.h"
+#include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
 
 using namespace nkentseu;
+
+NKENTSEU_DEFINE_APP_DATA(([]() {
+    NkAppData d{};
+    d.appName    = "MonJeu";
+    d.appVersion = "0.1.0";
+    return d;
+})());
 
 int nkmain(const NkEntryState& state) {
     NkWindowConfig cfg;
@@ -33,10 +40,7 @@ int nkmain(const NkEntryState& state) {
                 modified = true;
             }
             if (e->Is<NkWindowDpiEvent>()) modified = true;
-            if (e->Is<NkWindowFocusGainedEvent>()) modified = true;
             if (e->Is<NkWindowPaintEvent>()) modified = true;
-            if (e->Is<NkWindowShownEvent>()) modified = true;
-            if (e->Is<NkWindowFocusLostEvent>()) modified = true;
             if (e->Is<NkWindowMoveEndEvent>()) modified = true;
 
             if (modified) {

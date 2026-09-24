@@ -14,8 +14,14 @@ with workspace("exo1-la_fenetre_nue"):
 
     with project("window"):
         windowedapp()
-        files(["./**.cpp"])
+        files(["./c3-exo1_main.cpp"])
         usenkentseukit()
+
+    with project("exo1-erreur") :
+        windowedapp()
+        files(["./c3-exo1-erreur.cpp"])
+        usenkentseukit()
+        
 
     
     # Default toolchain (auto-detected)

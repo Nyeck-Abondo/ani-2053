@@ -1,9 +1,16 @@
 #include "NKWindow/NKWindow.h"
 #include "NKWindow/NKMain.h"
-#include "NKEvent/NkEvent.h"
+#include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
 
 using namespace nkentseu;
+
+NKENTSEU_DEFINE_APP_DATA(([]() {
+    NkAppData d{};
+    d.appName    = "MonJeu";
+    d.appVersion = "0.1.0";
+    return d;
+})());
 
 int nkmain(const NkEntryState& state) {
     NkWindowConfig cfg;

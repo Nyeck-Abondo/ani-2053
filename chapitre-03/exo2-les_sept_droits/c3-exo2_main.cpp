@@ -1,6 +1,6 @@
 #include "NKWindow/NKWindow.h"
 #include "NKWindow/NKMain.h"
-#include "NKEvent/NkEvent.h"
+#include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
 #include "NKEvent/NkKeyboardEvent.h"
 
