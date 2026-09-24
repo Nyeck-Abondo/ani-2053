@@ -22,7 +22,7 @@ int nkmain(const NkEntryState& state) {
             if (e->Is<NkWindowCloseEvent>())
                 window.Close();
             if (e->Is<NkWindowResizeBeginEvent>())
-                logger.Info("[Window] : width = {0}     height = {1}", window.GetConfig().width, window.GetConfig().height);
+                logger.Info("[Window] : width = {0}     height = {1}", window.GetSize().width, window.GetSize().height);
         }
     }
 
