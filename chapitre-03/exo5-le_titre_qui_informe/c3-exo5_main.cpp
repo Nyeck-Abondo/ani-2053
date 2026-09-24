@@ -2,6 +2,7 @@
 #include "NKWindow/NKWindow.h"
 #include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
+#include "NKEvent/NkKeyboardEvent.h"
 
 using namespace nkentseu;
 
@@ -31,14 +32,11 @@ int nkmain(const NkEntryState& state) {
         while (NkEvent* e = NkEvents().PollEvent()) {
             if (e->Is<NkWindowCloseEvent>())
                 window.Close();
-            if (e->As<NkWindowMoveEvent>()) {
-                modified = true;
-                window.SetTitle("exo5-le_titre_qui_informe * " + window.GetSize().ToString());
-            }
             if (e->Is<NkWindowResizeEndEvent>()) {
                 size = window.GetSize();
                 modified = true;
             }
+            if (e->As<NkWindowMoveEvent>()) modified = true;
             if (e->Is<NkWindowDpiEvent>()) modified = true;
             if (e->Is<NkWindowPaintEvent>()) modified = true;
             if (e->Is<NkWindowMoveEndEvent>()) modified = true;
@@ -48,7 +46,12 @@ int nkmain(const NkEntryState& state) {
             } else {
                 window.SetTitle("exo5-le_titre_qui_informe " + size.ToString());
             }
-            modified = false;
+
+            //retire l'état modifié par un enregistrementavec CTRL + S
+            if (auto* key = e->As<NkKeyPressEvent>()) {
+                if (key->GetKey() == NkKey::NK_S && key->HasCtrl())
+                modified = false;
+            }
         }
     }
     return 0;
