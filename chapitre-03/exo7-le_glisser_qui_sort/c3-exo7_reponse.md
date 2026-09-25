@@ -49,6 +49,11 @@ int nkmain(const NkEntryState& state) {
                     isDraging = true;
                 }
             }
+            if (auto* press = e->As<NkMouseButtonReleaseEvent>()) {
+                if (press->IsRight()) {
+                    window.CaptureMouse(false);
+                }
+            }
             if (auto* move = e->As<NkMouseMoveEvent>()) {
                 if (logInterval > 2) {
                     logger.Info("position curseur: ({0} ; {1})", move->GetX(), move->GetY());
@@ -118,6 +123,15 @@ L'utilisation de la capture de la souris se fait à travers la méthode `MouseCa
             isDraging = true;
         }
     }
+    ```
+    - L'arrêt de la capture de la souris : L'arrêt de la capture de la souris est produit lorsque la fenêtre reçoit l'évènement de relachement de la souris. Cette mécanique est assurée par le bloc :
+
+    ```cpp
+    if (auto* press = e->As<NkMouseButtonReleaseEvent>()) {
+                if (press->IsRight()) {
+                    window.CaptureMouse(false);
+                }
+            }
     ```
 
     - La fermeture de la fenêtre : En procédant à ce test, je me suis rendu compte que la fenêtre ne se fermait pas en utilisant le bouton dédié sur la barre de titre. Afin de remédier à ce problème, j'ai assigné à la touche `F` la responsabilité de fermeture propre de la fenêtre.
@@ -213,7 +227,7 @@ PS C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo7-le_
 
 ## Retrait de la capture de la souris
 
-Dans ce cas précis La ligne 39 qui est chargée de la capture de la souhait est juste placée en commentaire. 
+Dans ce cas précis, un nouveau fichier nommé `exo7.cpp` a été ajouté dans le dossier de l'exercie. Il contient la seconde version du code à étudier dans le cas de l'ommission de la capture de la souris. 
 
 ```cpp
 #include "NKWindow/NKMain.h"
@@ -252,12 +266,6 @@ int nkmain(const NkEntryState& state) {
             float32 dt = clock.Tick().delta;
             if (e->Is<NkWindowCloseEvent>())
                 window.Close();
-            if (auto* press = e->As<NkMouseButtonPressEvent>()){
-                if (press->IsRight()) {
-                    //window.CaptureMouse(true);
-                    isDraging = true;
-                }
-            }
             if (auto* move = e->As<NkMouseMoveEvent>()) {
                 if (logInterval > 2) {
                     logger.Info("position curseur: ({0} ; {1})", move->GetX(), move->GetY());
@@ -275,7 +283,7 @@ int nkmain(const NkEntryState& state) {
     return 0;
 }
 ```
-Ici le cri crois de la souris ne fait plus rien.
+Ici le clic droit de la souris ne fait plus rien.
 
 - **Contruction et lancement du programme** :
 
@@ -434,10 +442,10 @@ PS C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo7-le_
 
 - **Observations faites** : Dans le cadre de ce texte les observations faites sont les suivantes :
     - Le placement du glisser et de la souris dans la zone cliente entraîne bel et bien un log de Sa position dans le terminal .
-    - La sortie du glisser de la zone clientèle de la fenêtre arrête les logs dans le terminal. Ceci ne regarde presque plus tard avec un intervalle de temps extrêmement décalé d'environ 10 à 20 secondes et seront le temps d'attente à l'extérieur de la fenêtre, Lorsque le Curseur entre de nouveau dans la zone cliente de la fenêtre.
+    - La sortie du glisser de la zone cliente de la fenêtre arrête les logs dans le terminal. Ils ne reprennent aue plus tard avec un intervalle de temps extrêmement décalé d'environ 10 à 20 secondes selon le temps d'attente à l'extérieur de la fenêtre, Lorsque le Curseur entre de nouveau dans la zone cliente de la fenêtre.
 
 Ce test nous permet de comprendre que la fenêtre ne reçoit des événements que lorsque le curseur est à l'intérieur de sa zone cliente et aussi lorsqu'elle a encore le focus .
 
-## Diffrence globale du point de vue de l'utilisateur
+## Diffrence globale du point de vue de l'utilisateur (LA réponse à la question)
 
-Du point de vue de l'utilisateur la différence qui se pose ici entre l'usage et la capture de la souris et son omission, "est que la capture de la ssouris permet à la fenêtre de continuer de traiter des évènements entrée même lorsque le curseur n'est plus dans la zone client. C'est un atout qui garanti une certain confort, notemment dans des applications utilisant une caméra, en garantissant la mobilité de celle ci même hors de la fenêtre. Comtrairement à l'omission de cet fonctionnalité, qui oblige le curseur à être dans la zone cliente de la fenêtre pour traiter les évènements relatifs à la souris.
+Du point de vue de l'utilisateur la différence qui se pose ici entre l'usage et la capture de la souris et son omission, est que la capture de la ssouris permet à la fenêtre de continuer de traiter des évènements de la souris même lorsque le curseur n'est plus dans la zone cliente. C'est un atout qui garanti une certain confort. Dans le cas où un utilisateur porterait un objet de la fenêtre et le ferait sortir de celle ci sanns le vouloir, il aura encore la possibilité d'annuler son action en revenant le déposer dans celle ci tant qu'il ne relêche pas la touche de la souris qui active la capture. Comtrairement à l'omission de cet fonctionnalité, qui oblige le curseur à être dans la zone cliente de la fenêtre pour traiter les évènements relatifs à la souris.

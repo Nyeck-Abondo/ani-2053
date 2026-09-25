@@ -18,6 +18,12 @@ with workspace("exo7-le_glisser_qui_sort"):
         language("C++")
         files(["./c3-exo7_main.cpp"])
         usenkentseukit()
+
+    with project("exo7"):
+        windowedapp()
+        language("C++")
+        files(["exo7.cpp"])
+        usenkentseukit()
     
     # Default toolchain (auto-detected)
     # usetoolchain("host-gcc")

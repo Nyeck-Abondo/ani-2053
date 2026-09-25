@@ -34,16 +34,6 @@ int nkmain(const NkEntryState& state) {
             float32 dt = clock.Tick().delta;
             if (e->Is<NkWindowCloseEvent>())
                 window.Close();
-            if (auto* press = e->As<NkMouseButtonPressEvent>()){
-                if (press->IsRight()) {
-                    window.CaptureMouse(true);
-                }
-            }
-            if (auto* press = e->As<NkMouseButtonReleaseEvent>()) {
-                if (press->IsRight()) {
-                    window.CaptureMouse(false);
-                }
-            }
             if (auto* move = e->As<NkMouseMoveEvent>()) {
                 if (logInterval > 2) {
                     logger.Info("position curseur: ({0} ; {1})", move->GetX(), move->GetY());
