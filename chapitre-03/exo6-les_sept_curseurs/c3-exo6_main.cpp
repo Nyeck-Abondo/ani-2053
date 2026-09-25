@@ -7,7 +7,7 @@ using namespace nkentseu;
 
 NKENTSEU_DEFINE_APP_DATA(([]() {
     NkAppData d{};
-    d.appName    = "MonJeu";
+    d.appName    = "EXERCICE 6";
     d.appVersion = "0.1.0";
     return d;
 })());
