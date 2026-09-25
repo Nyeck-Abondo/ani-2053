@@ -1,4 +1,4 @@
-# REPONSE DE L'EXERCICE 3
+# REPONSE DE L'EXERCICE 2
 
 > Dans cet Exercice, l'on ne créera qu'une seule variable NKWindow dont on se contentera de changer les configurations pour plus de lisibilité dans le code. On s'assurera toute fois de pouvoir fermer la fenêtre dans certains cas avec la touche `F` du clavier. L'exercice est fait depuis le dépôt ANI-2053 grâce au nkentseuKit créé au préalable depuis la copie locale du dépôt de Nkentseu.
 

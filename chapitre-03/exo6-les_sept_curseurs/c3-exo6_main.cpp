@@ -5,6 +5,13 @@
 
 using namespace nkentseu;
 
+NKENTSEU_DEFINE_APP_DATA(([]() {
+    NkAppData d{};
+    d.appName    = "MonJeu";
+    d.appVersion = "0.1.0";
+    return d;
+})());
+
 int nkmain(const NkEntryState& state) {
     NkWindowConfig cfg;
     cfg.width   =   1280;
@@ -29,16 +36,19 @@ int nkmain(const NkEntryState& state) {
                     window.SetCursor(NkWindow::NkCursorType::Hand);
                 }
                 if (mouse->GetX() >= window.GetSize().width * 2 / 7 && mouse->GetX() < window.GetSize().width * 3 / 7) {
-                    window.SetCursor(NkWindow::NkCursorType::Arrow);
+                    window.SetCursor(NkWindow::NkCursorType::ResizeNESW);
                 }
                 if (mouse->GetX() >= window.GetSize().width * 3 / 7 && mouse->GetX() < window.GetSize().width * 4 / 7) {
-                    window.SetCursor(NkWindow::NkCursorType::Arrow);
+                    window.SetCursor(NkWindow::NkCursorType::ResizeNS);
                 }
                 if (mouse->GetX() >= window.GetSize().width * 4 / 7 && mouse->GetX() < window.GetSize().width * 5 / 7) {
-                    window.SetCursor(NkWindow::NkCursorType::Arrow);
+                    window.SetCursor(NkWindow::NkCursorType::ResizeNWSE);
                 }
                 if (mouse->GetX() >= window.GetSize().width * 5 / 7 && mouse->GetX() < window.GetSize().width * 6 / 7) {
-                    window.SetCursor(NkWindow::NkCursorType::Arrow);
+                    window.SetCursor(NkWindow::NkCursorType::ResizeWE);
+                }
+                if (mouse->GetX() >= window.GetSize().width * 6 / 7) {
+                    window.SetCursor(NkWindow::NkCursorType::TextInput);
                 }
             }
         }

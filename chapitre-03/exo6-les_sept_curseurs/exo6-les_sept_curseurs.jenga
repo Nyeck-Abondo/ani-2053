@@ -15,6 +15,13 @@ with workspace("exo6-les_sept_curseurs"):
 
     with project("exercice 6") :
         windowedapp()
+        files(["./c3-exo6_main.cpp"])
+        language("C++")
+        usenkentseukit()
+
+    with project("exo6"):
+        windowedapp()
+        files(["./exo6.cpp"])
         language("C++")
         usenkentseukit()
     
