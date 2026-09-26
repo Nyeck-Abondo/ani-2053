@@ -222,4 +222,11 @@ Le résultat obtenu après lancement du raccourci  clavier `CTRL + I` n'est d'au
 
 <img src="Preuves/image.png">
 
-Le résultat du texte et de l'image peuvent être directement consultés sur la vidéo fournie en annexe dans le dossier `Preuves`.
+- sortie en console :
+
+```
+[2026-09-26 01:10:21.816] [INF] [default] [c3-exo8_main.cpp:44 in nkmain] -> [CLIPBORD IMAge] : Recuperation de l'image du presse papier
+[2026-09-26 01:10:21.903] [INF] [default] [c3-exo8_main.cpp:53 in nkmain] -> [CLIPBORD IMAge] : Reussite de changement de l'image
+```
+
+Le résultat du texte et de l'image peuvent être directement consultés sur la vidéo fournie et les images en annexe dans le dossier `Preuves`.

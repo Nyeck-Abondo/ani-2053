@@ -1,3 +1,2 @@
-[2026-09-26 01:10:03.661] [INF] [default] [c3-exo8_main.cpp:40 in nkmain] -> [CLIPBOARD TEXT] : convertion en majuscule tu texte "lancement du programme"
-[2026-09-26 01:10:21.816] [INF] [default] [c3-exo8_main.cpp:44 in nkmain] -> [CLIPBORD IMAge] : Recuperation de l'image du presse papier
-[2026-09-26 01:10:21.903] [INF] [default] [c3-exo8_main.cpp:53 in nkmain] -> [CLIPBORD IMAge] : Reussite de changement de l'image
+[2026-09-26 01:41:50.976] [INF] [default] [c3-exo8_main.cpp:40 in nkmain] -> [CLIPBOARD TEXT] : convertion en majuscule tu texte "#include "nkwindow/nkmain."
+[2026-09-26 01:42:31.013] [INF] [default] [c3-exo8_main.cpp:40 in nkmain] -> [CLIPBOARD TEXT] : convertion en majuscule tu texte "er pour pouvoir"
