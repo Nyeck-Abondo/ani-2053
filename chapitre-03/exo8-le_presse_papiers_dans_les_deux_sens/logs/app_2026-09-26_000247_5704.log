@@ -1,0 +1,8 @@
+[2026-09-26 00:02:47.991] [ERR] [default] [c3-exo8_main.cpp:45 in nkmain] -> [CLIPBORD IMAge] : Impossible de recuperer l'image du presse papier
+[2026-09-26 00:02:47.992] [ERR] [default] [c3-exo8_main.cpp:54 in nkmain] -> [CLIPBORD IMAge] : Echec , image invalide par l'OS
+[2026-09-26 00:04:11.447] [INF] [default] [c3-exo8_main.cpp:43 in nkmain] -> [CLIPBORD IMAge] : Recuperation de l'image du presse papier
+[2026-09-26 00:04:11.521] [INF] [default] [c3-exo8_main.cpp:52 in nkmain] -> [CLIPBORD IMAge] : Reussite de changement de l'image
+[2026-09-26 00:05:22.452] [INF] [default] [c3-exo8_main.cpp:43 in nkmain] -> [CLIPBORD IMAge] : Recuperation de l'image du presse papier
+[2026-09-26 00:05:22.527] [INF] [default] [c3-exo8_main.cpp:52 in nkmain] -> [CLIPBORD IMAge] : Reussite de changement de l'image
+[2026-09-26 00:07:03.151] [INF] [default] [c3-exo8_main.cpp:43 in nkmain] -> [CLIPBORD IMAge] : Recuperation de l'image du presse papier
+[2026-09-26 00:07:03.225] [INF] [default] [c3-exo8_main.cpp:52 in nkmain] -> [CLIPBORD IMAge] : Reussite de changement de l'image
