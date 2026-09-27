@@ -10,14 +10,33 @@ with workspace("exo10-la_fenetre_sans_bordure"):
     configurations(['Debug', 'Release'])
     targetoses([TargetOS.WINDOWS])
     targetarchs([TargetArch.X86_64])
-
+    startproject("exercice-10")
     useconfig("../NkentseuKit/NkentseuKit.jenga")
-        
-    with project("exrcice-10"):
+
+    with project("Button"):
+        staticlib()
         language("C++")
         cppdialect("C++17")
-        files(["./**.cpp"])
+        files(["Button/button.cpp"])
         includedirs(["."])
+        usenkentseukit()
+
+    with project("TitleBar"):
+        staticlib()
+        language("C++")
+        cppdialect("C++17")
+        files(["TitleBar/TitleBar.cpp"])
+        includedirs(["."])
+        dependson(["Button"])
+        usenkentseukit()
+
+    with project("exercice-10"):
+        windowedapp()
+        language("C++")
+        cppdialect("C++17")
+        files(["./c3-exo10_main.cpp"])
+        includedirs(["."])
+        dependson(["Button", "TitleBar"])
         usenkentseukit()
     
     # Default toolchain (auto-detected)

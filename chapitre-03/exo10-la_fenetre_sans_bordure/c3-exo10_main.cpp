@@ -1,6 +1,6 @@
 #include "NKWindow/NKMain.h"
 #include "NKTime/NkClock.h"
-#include "TitleBar.h"
+#include "TitleBar/TitleBar.h"
 
 using namespace nkentseu;
 using namespace nkentseu::math;

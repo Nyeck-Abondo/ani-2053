@@ -144,19 +144,12 @@ namespace nkentseu {
                     } if (minimize.IsInside({static_cast<float>(mouse->GetX()),static_cast<float>(mouse->GetY())})) {
                         followMouse = false;
                     } else {
-                        clickTimeEllapsed += dt;
-                        if (clickTimeEllapsed <= 1.5f && mouse->GetClickCount() == 2) {
+                        if (mouse->GetClickCount() == 2) {
                             if (window.IsMaximized())
                             window.Minimize();
                             else window.Maximize();
-
-                            clickTimeEllapsed = 0.f;
-                        }
-                        if (clickTimeEllapsed > 2){ 
-                            clickTimeEllapsed = 0.f;
-                            firstClick = false;
+                        } else
                             followMouse = true;
-                        }
                     }
                 }
             }

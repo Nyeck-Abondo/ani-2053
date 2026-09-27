@@ -1,6 +1,6 @@
 #include "NKWindow/NKWindow.h"
 #include "NKMath/NkMat.h"
-#include "button.h"
+#include "Button/button.h"
 
 namespace nkentseu {
     using namespace math;
@@ -38,9 +38,6 @@ namespace nkentseu {
         HFONT font;
 
         bool followMouse;
-        bool firstClick = false;
-        bool doubleClicked = false;
-        float clickTimeEllapsed =0.0f;
 
         NkWindow& window;
 
