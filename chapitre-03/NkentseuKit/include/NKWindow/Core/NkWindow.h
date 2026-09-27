@@ -1,3 +1,4 @@
+// AUTEUR : TEUGUIA TADJUIDJE Rodolf Séderis — Rihen
 #pragma once
 
 // =============================================================================
@@ -107,7 +108,13 @@ namespace nkentseu {
 			// --- Propriétés ---
 			NkString GetTitle() const;
 			void SetTitle(const NkString &title);
+			/// Taille de la zone CLIENT, en pixels — la surface dessinable, sans
+			/// barre de titre ni bordure. Interroge le SYSTEME, pas `mConfig`.
+			/// ⚠️ `SetSize(GetSize())` est une IDENTITE : c'est le contrat, et il est
+			///    mesure (NkWindowSonde, essai G). Cf. le bloc LE CONTRAT en tete de
+			///    NkWindowConfig.h.
 			math::NkVec2u GetSize() const;
+			/// Coin haut-gauche de la FENETRE (cadre compris), en pixels ecran.
 			math::NkVec2u GetPosition() const;
 			float32 GetDpiScale() const;
 			math::NkVec2u GetDisplaySize() const;
@@ -128,18 +135,25 @@ namespace nkentseu {
 			uint32 GetMonitorCount() const;
 
 			// --- Manipulation ---
+			/// Pose la taille de la zone CLIENT. Le cadre est ajoute par le dorsal,
+			/// a UN seul endroit et jamais par l'appelant.
 			void SetSize(uint32 width, uint32 height);
 
 			void SetSize(const math::NkVec2u &size) {
 				SetSize(size.x, size.y);
 			}
 
+			/// Pose le coin haut-gauche de la FENETRE (cadre compris).
 			void SetPosition(int32 x, int32 y);
 
 			void SetPosition(const math::NkVec2u &pos) {
 				SetPosition(pos.x, pos.y);
 			}
 
+			// ⚠️ AUCUN `IsVisible()` N'EXISTE, NI ICI NI DANS NKEvent. Verifie le
+			//    2026-09-26, site par site. Ce n'est pas un renvoi omis : il n'y a
+			//    rien ou renvoyer. Pour savoir si la fenetre est affichee, il faut
+			//    suivre soi-meme ce qu'on a demande -- ou ajouter le getter.
 			void SetVisible(bool visible);
 			void Minimize();
 			void Maximize();
@@ -155,9 +169,19 @@ namespace nkentseu {
 			// plateformes = fallback interne a l'application (copier/coller intra-app).
 			void SetClipboardText(const NkString &text);
 			NkString GetClipboardText() const;
+			/// (Q9, 21/09) L'IMAGE du presse-papiers -- un bitmap copie (capture,
+			/// navigateur). RGBA 8 bits, du haut vers le bas. Win32 lit CF_DIBV5 puis
+			/// CF_DIB (24 et 32 bits) ; les autres plateformes rendent faux AVEC leur
+			/// motif (pas de silence).
+			bool GetClipboardImage(NkVector<uint8> &rgba, int32 &w, int32 &h, NkString &motif) const;
 			/// Bord de redimensionnement pour BeginResize (fenetre sans bordure).
 			enum class NkResizeEdge { Left, Right, Top, Bottom, TopLeft, TopRight, BottomLeft, BottomRight };
 			void BeginResize(NkResizeEdge edge); ///< hand-off natif du redimensionnement par un bord
+			// ⚠️ AUCUN `IsFullscreen()` N'EXISTE, nulle part (verifie le 2026-09-26).
+			//    `IsMaximized()` et `IsMinimized()` existent, eux -- mais ils ne
+			//    repondent PAS a la meme question : une fenetre plein ecran n'est ni
+			//    maximisee ni minimisee. *Un renvoi vers une fonction au contrat
+			//    different enverrait droit dans le piege suivant.*
 			void SetFullscreen(bool fullscreen);
 
 			// ── Decoration de la fenetre (bordure + barre de titre de l'OS) ──
@@ -203,6 +227,34 @@ namespace nkentseu {
 			/// rend le FOND composité : les deux se combinent).
 			void SetOpacity(float32 opacity);
 			float32 GetOpacity() const;
+
+			// ── LA COULEUR DE FOND, APRES LA CREATION (26/09) ─────────────────
+			//
+			// `NkWindowConfig::bgColor` ne se reglait qu'a la creation. Rodolf a
+			// demande a pouvoir en changer en cours de route — pour un theme
+			// clair/sombre qui bascule, par exemple.
+			//
+			// ⚠️ ET CE SETTER LEVE UNE LIMITE QUE LA CONFIGURATION PORTE ENCORE.
+			//    A la creation, la couleur alimente la brosse de la CLASSE de
+			//    fenetre, nommee par `config.name` : deux fenetres de meme `name`
+			//    et de `bgColor` differents partagent donc la brosse de la
+			//    premiere, et la seconde recoit un refus nomme. Ce setter-ci pose
+			//    une brosse PAR FENETRE, qui l'emporte sur celle de la classe :
+			//    deux fenetres de meme `name` peuvent donc avoir deux fonds
+			//    differents, a condition de passer par lui.
+			//
+			// ⚠️ CE FOND N'EST PEINT QUE SI PERSONNE NE PEINT PAR-DESSUS. Une
+			//    application qui rend sa propre image a chaque tour couvre cette
+			//    couleur : elle ne se voit alors qu'au redimensionnement et avant
+			//    la premiere image. C'est le contrat d'un fond, pas un defaut.
+			//
+			// @param rgba Couleur au format 0xRRGGBBAA. L'alpha est ignore : une
+			//             brosse GDI n'en a pas. Pour de la transparence, voyez
+			//             `SetOpacity` et `NkWindowConfig::transparent`.
+			void SetBackgroundColor(uint32 rgba);
+
+			/// @brief La couleur de fond courante, 0xRRGGBBAA.
+			uint32 GetBackgroundColor() const;
 
 			/// La fenêtre reste au-dessus de toutes les fenêtres normales,
 			/// même sans focus. L'utilisateur doit pouvoir le désactiver
@@ -255,19 +307,96 @@ namespace nkentseu {
 			bool GetLockOrientation() const;
 
 			// --- Souris ---
+			// ⚠️ POUR *LIRE* LA POSITION DE LA SOURIS : `NkInput.MouseX()` /
+			//    `MouseY()` dans **NKEvent** (NkEventDispatcher.h) -- il n'y a pas de
+			//    getter ici. Ajoute le 2026-09-26 parce qu'un utilisateur a cherche
+			//    la lecture la ou est l'ecriture, ce qui est le reflexe normal.
+			//    *Une moitie de geste sans renvoi vers l'autre est un silence, pas
+			//    une absence.*
 			void SetMousePosition(uint32 x, uint32 y);
+
+			// ── LA POSITION EN COORDONNEES **CLIENT** ────────────────────────────
+			// POURQUOI ELLE EXISTE A COTE DE `SetMousePosition`, ET NE LA REMPLACE
+			// PAS : `SetMousePosition` N'A PAS LE MEME CONTRAT SELON LA PLATEFORME.
+			// Win32 appelle `SetCursorPos`, donc des coordonnees ECRAN ; XCB et XLib
+			// font un warp RELATIF A LA FENETRE, donc des coordonnees fenetre. Le
+			// meme appel avec les memes nombres ne designe pas le meme pixel. Aucun
+			// appelant n'existait dans le depot, donc rien ne l'avait revele.
+			// On N'Y TOUCHE PAS -- un appelant peut naitre ailleurs et compter sur
+			// le contrat actuel. On AJOUTE celui qui a le meme sens partout.
+			//
+			// (x, y) est en pixels de la ZONE CLIENT, origine en haut a gauche.
+			// Rend VRAI si le curseur a ete replace. Rend FAUX -- et le DIT dans le
+			// journal -- si la plateforme ne sait pas le faire ou si l'appel systeme
+			// echoue : jamais un repli muet, l'appelant doit pouvoir constater que
+			// rien n'a bouge plutot que de croire que tout va bien.
+			// ⚠️ POUR *LIRE* : `NkInput.MouseX()` / `MouseY()` (NKEvent) -- et elles
+			//    sont en coordonnees CLIENT, donc elles s'accordent avec CELLE-CI,
+			//    pas avec `SetMousePosition` dont le contrat varie par plateforme.
+			//    C'est la paire coherente : ecrire ici, lire la.
+			bool SetMousePositionClient(int32 x, int32 y);
+
+			// ── LA MEME CHOSE, MAIS LA FENETRE EST NOMMEE (2026-09-26) ────────
+			// Demandee par Rodolf : « un setter qui prend soit un id de fenetre
+			// soit une fenetre elle-meme ». Elle rend EXPLICITE ce que
+			// `SetMousePosition` avait d'implicite -- *sur quelle fenetre ?*
+			//
+			// ⚠️ ELLE DELEGUE, ELLE NE REIMPLEMENTE RIEN : un seul corps de code
+			//    place le curseur, celui de `SetMousePositionClient`. *Plusieurs
+			//    portes vers une seule implementation : tres bien. Deux
+			//    implementations de la meme semantique : jamais.* Ce depot a paye
+			//    trois secondes portes en deux jours, et elles ont toutes diverge.
+			//
+			// ⚠️ COORDONNEES CLIENT, SANS VARIANTE AMBIGUE. Une troisieme entree
+			//    qui dirait juste « pose la souris » re-introduirait l'ambiguite
+			//    ecran/fenetre deja payee au-dessus.
+			//
+			// ⚠️ ET POURQUOI ELLE N'EST PAS DANS `NkInput`, COMME PROPOSE :
+			//    `NkInput` vit dans **NKEvent**, et **NKWindow depend de NKEvent**,
+			//    pas l'inverse (NKEvent.jenga l. 28). Un setter dans NkInput qui
+			//    appellerait NkWindow inverserait le graphe de dependances.
+			//    *Le graphe impose la coupe.* L'en-tete de `NkInput` RENVOIE donc
+			//    ici : les deux moities du geste restent nommees au meme endroit,
+			//    ce qui etait le vrai besoin.
+			friend bool NkPlaceMouseInWindow(NkWindow &window, int32 x, int32 y);
 
 			void SetMousePosition(const math::NkVec2u &pos) {
 				SetMousePosition(pos.x, pos.y);
 			}
 
+			// ⚠️ AUCUNE LECTURE DE LA VISIBILITE DU CURSEUR n'existe, nulle part.
+			//    Et attention au contrat sous-jacent : sur Win32 `ShowCursor` est un
+			//    COMPTEUR, pas un booleen -- deux appels a false demandent deux
+			//    appels a true pour revenir. Le banc `NkWindowSonde` (essai I) le
+			//    mesure en interrogeant le systeme, faute de getter.
 			void ShowMouse(bool show);
+			// 🔴 LE CHAMP DE LECTURE EXISTE ET PERSONNE NE L'ALIMENTE.
+			//    `NkMouseInputState::captured` (NKEvent, NkEventState.h:583) est
+			//    documente « Capture souris active (SetCapture / grab cursor) » --
+			//    mais il n'est ecrit QUE par `Clear()`, qui le remet a `false`.
+			//    **Personne ne le met jamais a `true`.** Mesure du 2026-09-26.
+			//
+			//    C'est pire qu'une absence de getter : un champ qui PROMET une
+			//    information et rend toujours `false`. L'exposer via `NkInput`
+			//    serait livrer un mensonge -- *un renvoi qui mente est pire que pas
+			//    de renvoi*.
+			//
+			//    ET CE N'EST PAS UNE LIGNE A POSER : `CaptureMouse` est implemente
+			//    PAR DORSAL (13 fichiers Platform/). Alimenter `captured` demanderait
+			//    13 sites, ou une facade qui n'existe pas -- donc une decision, pas
+			//    un branchement. En attendant : pour savoir si la capture est active,
+			//    interroger le systeme (`GetCapture()` sur Win32), comme le fait
+			//    `NkWindowSonde` essai I.
 			void CaptureMouse(bool capture);
 
 			// --- Curseur ---
 			// Forme du curseur dans la zone client (consomm� par les UI : poign�e de
 			// redimensionnement, lien cliquable, champ texte...). Mapp� sur les
-			// curseurs natifs (Win32 IDC_*, etc.). No-op sur mobile/web (sans curseur).
+			// curseurs natifs (Win32 IDC_*, etc.). IMPLEMENTEE SUR WIN32 SEULEMENT (26/09) : X11,
+			// Wayland et macOS ecrivent un REFUS NOMME au journal ; mobile, web et
+			// console sont sans objet. La phrase d avant -- "no-op sur mobile/web" --
+			// est celle qu un utilisateur a lue avant de conclure que ses appels
+			// etaient bons. Table : wiki/Runtime/NKWindow/Curseur-par-dorsal.md
 			enum class NkCursorType {
 				Arrow = 0,	///< fl�che standard
 				TextInput,	///< I-beam (saisie texte)
@@ -279,6 +408,13 @@ namespace nkentseu {
 			};
 			// Persistant : � rappeler chaque frame avec le curseur voulu (sinon, sur
 			// certaines plateformes, le syst�me le r�initialise � la fl�che).
+			// ⚠️ AUCUN `GetCursor()` N'EXISTE, et ce n'est pas le manque le plus
+			//    couteux ici : sur Win32 la forme est **reimposee a chaque mouvement**
+			//    (WM_SETCURSOR), donc un getter renverrait ce qu'on a demande, pas ce
+			//    que l'utilisateur voit. C'est ce qui a trompe un utilisateur reel le
+			//    25/09. La table complete dorsal par dorsal :
+			//    `wiki/Runtime/NKWindow/Curseur-par-dorsal.md`, et la demo
+			//    `NkDemoCurseur` reproduit le piege a volonte.
 			void SetCursor(NkCursorType cursor);
 
 			// Empeche le curseur de sortir de la zone client de la fenetre
@@ -287,6 +423,12 @@ namespace nkentseu {
 			// ecran. Cross-platform : implem native quand possible (Win32
 			// ClipCursor, XLib XGrabPointer, ...), no-op sur les plateformes
 			// sans curseur (mobile / web tactile).
+			// ⚠️ AUCUNE LECTURE DU CONFINEMENT n'existe, nulle part. Le systeme, lui,
+			//    sait repondre : `GetClipCursor()` sur Win32 -- c'est ainsi que
+			//    `NkWindowSonde` (essai I) le mesure, faute de getter.
+			//    ⚠️ Et le confinement SURVIT au processus s'il n'est pas relache :
+			//    tout appelant doit appeler `ClipMouseToClient(false)` avant de
+			//    quitter. `NkDemoCurseur` et `NkDemoDeltaSouris` le font.
 			void ClipMouseToClient(bool clip);
 
 			// --- Clavier logiciel (mobile : iOS / Android) ---
@@ -339,6 +481,10 @@ namespace nkentseu {
 			NkWebInputOptions GetWebInputOptions() const;
 
 			// --- OS extras ---
+			// ⚠️ AUCUN `GetProgress()` N'EXISTE, ni ici ni dans NKEvent (verifie le
+			//    2026-09-26). La valeur n'est pas conservee : elle est poussee au
+			//    systeme (barre des taches, dock) et oubliee. Un appelant qui a besoin
+			//    de la relire doit la garder lui-meme.
 			void SetProgress(float progress);
 
 			// --- Safe Area (mobile) ---
@@ -362,5 +508,13 @@ namespace nkentseu {
 			NkWindowConfig mConfig;
 			NkError mLastError;
 	};
+
+	// ⚠️ LA PORTE NOMMEE : delegation pure vers NkWindow::SetMousePositionClient.
+	//    Voir le commentaire sur sa declaration `friend` dans la classe.
+	//    Elle est DEHORS de la classe : c'est une fonction libre, pas une
+	//    methode -- elle nomme la fenetre dans sa signature.
+	inline bool NkPlaceMouseInWindow(NkWindow &window, int32 x, int32 y) {
+		return window.SetMousePositionClient(x, y);
+	}
 
 } // namespace nkentseu

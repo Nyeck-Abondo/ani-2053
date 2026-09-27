@@ -28,6 +28,7 @@
 // Copyright: (c) 2024 Rihen. Tous droits réservés.
 // =============================================================================
 
+// AUTEUR : TEUGUIA TADJUIDJE Rodolf Séderis — Rihen
 #pragma once
 
 #ifndef __NKENTSEU_QUATERNION_H__
@@ -40,6 +41,15 @@
 #include "NKMath/NkVec.h"		   // Types vectoriels : NkVec3T, NkVec4T
 #include "NKMath/NkMat.h"		   // Type NkMat4T pour conversions matricielles
 #include "NKMath/NkEulerAngle.h"   // Type NkEulerAngle pour conversions Euler
+
+// 2026-09-25 : les operator<<(std::ostream&, ...) de ce fichier ont ete
+// RETIRES. Ils n'etaient qu'une enveloppe autour de ToString(), mais ils
+// faisaient dependre NKMath de libstdc++ : un kit compile contre libstdc++
+// ne se liait plus avec une chaine qui a libc++ (celle qu'embarque NKCode).
+// Remplacement : `couleur.ToString()` ou `NkFormat("{0}", couleur)`, qui
+// etaient deja le CORPS de ces operateurs -- et qui sont 1,92x plus rapides
+// que le passage par un std::ostringstream (banc du 25/09 : 461 ns contre
+// 883 ns par couleur, meme texte au caractere pres).
 
 // =====================================================================
 // Namespace principal du projet
@@ -399,13 +409,35 @@ namespace nkentseu {
 				}
 
 				// Retourne la direction Right locale transformée
+				// ⚠️ CORRIGÉ LE 2026-09-14 : rendait `+X`, et c'était FAUX — pas une
+				// autre convention, une CONTRADICTION avec les deux lignes au-dessus.
+				// `Forward() = +Z` et `Up() = +Y` IMPOSENT `Right() = −X` : dans un
+				// repère direct, un observateur qui regarde +Z avec +Y en haut a sa
+				// droite en −X. Une convention est UN choix ; il y en avait DEUX qui
+				// s'excluaient dans le même fichier.
+				//
+				// L'autorité est le rendu : `NkCamera3D::GetRight()` (NkCamera.cpp:203)
+				// calcule `cross(forward, up)`. C'est ce que l'utilisateur VOIT.
+				// Coût du défaut : les flèches gauche/droite de la voiture étaient
+				// inversées à l'écran, et aucun des neuf bancs ne pouvait le voir — ils
+				// partent tous d'une consigne de braquage DÉJÀ SIGNÉE. Mesure : produit
+				// scalaire entre cet axe et celui de la caméra = **−1,0000**.
+				//
+				// ⚠️ CONSÉQUENCE À CONNAÎTRE : le triplet ORDONNÉ (Right, Up, Forward)
+				// est INDIRECT (déterminant −1), comme dans la convention « droite /
+				// haut / avant » à la DirectX. Ce n'est pas une contradiction : la base
+				// du MONDE (X, Y, Z) reste directe. Qui attend `cross(Right, Up) =
+				// Forward` obtiendra `−Forward` ; les identités vraies sont cycliques
+				// dans l'ordre (Forward, Up, Right) et le banc NkSystemsRevivalTest les
+				// vérifie sur des orientations QUELCONQUES, pas seulement à l'identité.
 				NK_FORCE_INLINE NkVec3T<T> Right() const noexcept {
-					return (*this) * NkVec3T<T>(T(1), T(0), T(0));
+					return (*this) * NkVec3T<T>(T(-1), T(0), T(0));
 				}
 
 				// Retourne la direction Left locale transformée
+				// Corrigée avec Right() le 2026-09-14 : elle en reste la négation exacte.
 				NK_FORCE_INLINE NkVec3T<T> Left() const noexcept {
-					return (*this) * NkVec3T<T>(T(-1), T(0), T(0));
+					return (*this) * NkVec3T<T>(T(1), T(0), T(0));
 				}
 
 				// -----------------------------------------------------------------
@@ -451,11 +483,6 @@ namespace nkentseu {
 				// Surcharge globale de ToString pour appel fonctionnel libre
 				friend NkString ToString(const NkQuatT &quaternion) {
 					return quaternion.ToString();
-				}
-
-				// Opérateur de flux pour affichage dans std::ostream
-				friend std::ostream &operator<<(std::ostream &outputStream, const NkQuatT &quaternion) {
-					return outputStream << quaternion.ToString().CStr();
 				}
 
 				// -----------------------------------------------------------------
