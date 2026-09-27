@@ -1,9 +1,0 @@
-#pragma once
-
-#ifndef NKENTSEU_CONTAINERS_STRING_NKWSTRING_H_INCLUDED
-#define NKENTSEU_CONTAINERS_STRING_NKWSTRING_H_INCLUDED
-
-#include "NkBasicString.h"
-// NkWString is declared in NkBasicString.h.
-
-#endif // NKENTSEU_CONTAINERS_STRING_NKWSTRING_H_INCLUDED
