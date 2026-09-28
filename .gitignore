@@ -47,3 +47,9 @@
 NkentseuKit/
 **/NkentseuKit/
 **/include/NKentseuKit/
+
+Linuxkit/
+**/Linuxkit/
+**/include/Linuxkit/
+
+logs
