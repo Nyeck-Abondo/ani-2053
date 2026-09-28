@@ -10,7 +10,13 @@ with workspace("exo1-le_journal_des_evenements"):
     configurations(['Debug', 'Release'])
     targetoses([TargetOS.WINDOWS])
     targetarchs([TargetArch.X86_64])
-    
+
+    useconfig("../NkentseuKit/NkentseuKit.jenga")
+
+    with project("ex0-1-c4"):
+            windowedapp()
+            files(["./**.cpp"])
+            usenkentseukit()
     # Default toolchain (auto-detected)
     # usetoolchain("host-gcc")
     
