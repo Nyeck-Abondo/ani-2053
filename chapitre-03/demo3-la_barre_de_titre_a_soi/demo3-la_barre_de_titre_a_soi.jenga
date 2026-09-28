@@ -10,6 +10,33 @@ with workspace("demo3-la_barre_de_titre_a_soi"):
     configurations(['Debug', 'Release'])
     targetoses([TargetOS.WINDOWS])
     targetarchs([TargetArch.X86_64])
+    useconfig("../NkentseuKit/NkentseuKit.jenga")
+    
+    with project("Button"):
+            staticlib()
+            language("C++")
+            cppdialect("C++17")
+            files(["Button/button.cpp"])
+            includedirs(["."])
+            usenkentseukit()
+    
+    with project("TitleBar"):
+            staticlib()
+            language("C++")
+            cppdialect("C++17")
+            files(["TitleBar/TitleBar.cpp"])
+            includedirs(["."])
+            dependson(["Button"])
+            usenkentseukit()
+    
+    with project("demo-3"):
+            windowedapp()
+            language("C++")
+            cppdialect("C++17")
+            files(["./main.cpp"])
+            includedirs(["."])
+            dependson(["Button", "TitleBar"])
+            usenkentseukit()
     
     # Default toolchain (auto-detected)
     # usetoolchain("host-gcc")
