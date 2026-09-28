@@ -150,19 +150,18 @@ namespace nkentseu {
                 if (followMouse) {
                     NkVec2 mousePos {};
                     NkVec2 winPos = window.GetPosition();
-                    int32 x = mouse->GetScreenX();
-                    int32 y = mouse->GetScreenY();
-                    int32 dx = mouse->GetDeltaX();
-                    int32 dy = mouse->GetDeltaY();
+                    int32 sx = mouse->GetScreenX();
+                    int32 sy = mouse->GetScreenY();
+                    int32 x = mouse->GetX();
+                    int32 y = mouse->GetY();
 
-                    mousePos = {static_cast<float>(x), static_cast<float>(y)};
-                    mouseOldPos = {static_cast<float>(dx), static_cast<float>(dy)};
-                    NkVec2 msdelta = mousePos - mouseOldPos;
-                    msdelta.Normalize();
-                    window.SetPosition(winPos + msdelta * 1.5);
+                    mousePos = {static_cast<float>(sx), static_cast<float>(sy)};
+                    NkVec2 mouseWinPos = {static_cast<float>(x), static_cast<float>(y)};
+                    static NkVec2  msdelta = {mousePos.x - mouseWinPos.x, mousePos.y};
+                    NkVec2  offset = {mousePos.x - msdelta.x, mousePos.y - 20};
+                    window.SetPosition(offset);
 
-                    mouseOldPos = mousePos;
-                    logger.Info("{0}", msdelta);
+                    logger.Info("mouseOldPos : {0} \n mousePos : {1}; delta: {2}", mouseWinPos, mousePos, msdelta);
                 }
             }
             if (auto* mouse = e->As<NkMouseButtonReleaseEvent>()) {

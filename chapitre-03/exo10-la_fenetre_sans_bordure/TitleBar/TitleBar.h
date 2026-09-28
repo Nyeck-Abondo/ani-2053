@@ -38,6 +38,7 @@ namespace nkentseu {
         HFONT font;
 
         bool followMouse = false;
+        NkVec2 mouseDstFactor {};
 
         NkWindow& window;
         NkVec2f mouseOldPos {};

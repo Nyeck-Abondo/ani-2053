@@ -1,7 +1,0 @@
-[2026-09-28 01:51:06.073] [INF] [default] [c3-exo10_main.cpp:40 in nkmain] -> [window] : (312, 160)
-[2026-09-28 01:51:06.074] [INF] [default] [button.h:33 in Button] -> [button] size : NkRectT[pos(1130, 10); size(40, 30)]
-[2026-09-28 01:51:06.074] [INF] [default] [button.h:33 in Button] -> [button] size : NkRectT[pos(1060, 10); size(40, 30)]
-[2026-09-28 01:51:06.074] [INF] [default] [button.h:33 in Button] -> [button] size : NkRectT[pos(1020, 10); size(40, 30)]
-[2026-09-28 01:51:06.075] [INF] [default] [c3-exo10_main.cpp:43 in nkmain] -> [button] : RECT : (1130, 10) (1170, 40)
-[2026-09-28 01:51:08.253] [INF] [default] [TitleBar.cpp:145 in Update] -> [follow mouse ok] : (730, 730)
-[2026-09-28 01:51:08.476] [INF] [default] [TitleBar.cpp:164 in Update] -> 
