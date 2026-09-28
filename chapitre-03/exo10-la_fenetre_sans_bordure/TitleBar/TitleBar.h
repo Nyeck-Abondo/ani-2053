@@ -37,9 +37,10 @@ namespace nkentseu {
         HPEN pen, penHover;
         HFONT font;
 
-        bool followMouse;
+        bool followMouse = false;
 
         NkWindow& window;
+        NkVec2f mouseOldPos {};
 
         TitleBar(TitleBarTheme& Bartheme, NkWindow& win);
         ~TitleBar();

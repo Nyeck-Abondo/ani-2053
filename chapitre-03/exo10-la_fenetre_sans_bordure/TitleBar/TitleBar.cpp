@@ -70,15 +70,12 @@ namespace nkentseu {
         switch (cross.GetState()) {
             case ComponentState::HOVER:
                 cross.DrawButton(hdc, hoverBrush, penHover);
-                logger.Warn("[cross] : state : Hover");
                 break;
             case ComponentState::CLICKED:
-            logger.Warn("[cross] : state : clicked");
                 cross.DrawButton(hdc, clickedBrush, penHover);
                 window.Close();
                 break;
             case ComponentState::NONE :
-            logger.Warn("[cross] : state : none");
                 cross.DrawButton(hdc, brush, penHover);
                 break;
         }
@@ -87,16 +84,13 @@ namespace nkentseu {
         switch (maximize.GetState()) {
             case ComponentState::HOVER:
                 maximize.DrawButton(hdc, hoverMaxBrush, penHover);
-                logger.Warn("[maximize] : state : Hover");
                 break;
             case ComponentState::CLICKED:
-            logger.Warn("[maximize] : state : clicked");
                 maximize.DrawButton(hdc, clickedMaxBrush, penHover);
                 window.Maximize();
                 maximize.SetState(ComponentState::NONE);
                 break;
             case ComponentState::NONE :
-            logger.Warn("[maximize] : state : none");
                 maximize.DrawButton(hdc, brush, penHover);
                 break;
         }
@@ -105,17 +99,14 @@ namespace nkentseu {
         switch (minimize.GetState()) {
             case ComponentState::HOVER:
                 minimize.DrawButton(hdc, hoverMinBrush, penHover);
-                logger.Warn("[minimize] : state : Hover");
                 minimize.SetState(ComponentState::NONE);
                 break;
             case ComponentState::CLICKED:
-            logger.Warn("[minimize] : state : clicked");
                 minimize.DrawButton(hdc, clickedMinBrush, penHover);
                 window.Minimize();
                 minimize.SetState(ComponentState::NONE);
                 break;
             case ComponentState::NONE :
-            logger.Warn("[minimize] : state : none");
                 minimize.DrawButton(hdc, brush, penHover);
                 break;
         }
@@ -139,27 +130,39 @@ namespace nkentseu {
                 if (mouse->IsLeft() && IsInside({static_cast<float>(mouse->GetX()),static_cast<float>(mouse->GetY())}, window)) {
                     if (cross.IsInside({static_cast<float>(mouse->GetX()),static_cast<float>(mouse->GetY())})) {
                         followMouse = false;
-                    } if (maximize.IsInside({static_cast<float>(mouse->GetX()),static_cast<float>(mouse->GetY())})) {
+                    }  if (maximize.IsInside({static_cast<float>(mouse->GetX()),static_cast<float>(mouse->GetY())})) {
                         followMouse = false;
                     } if (minimize.IsInside({static_cast<float>(mouse->GetX()),static_cast<float>(mouse->GetY())})) {
                         followMouse = false;
                     } else {
                         if (mouse->GetClickCount() == 2) {
                             if (window.IsMaximized())
-                            window.Minimize();
+                            window.Restore();
                             else window.Maximize();
-                        } else
+                        } else{
                             followMouse = true;
+                            mouseOldPos = {static_cast<float>(mouse->GetX()), static_cast<float>(mouse->GetX())};
+                            logger.Info("[follow mouse ok] : {0}", mouseOldPos);}
                     }
                 }
             }
             if (auto* mouse = e->As<NkMouseMoveEvent>()) {
                 if (followMouse) {
                     NkVec2 mousePos {};
-                    int32 x = mouse->GetScreenX() - window.GetSize().width / 2;
-                    int32 y = mouse->GetScreenY() - 20; 
+                    NkVec2 winPos = window.GetPosition();
+                    int32 x = mouse->GetScreenX();
+                    int32 y = mouse->GetScreenY();
+                    int32 dx = mouse->GetDeltaX();
+                    int32 dy = mouse->GetDeltaY();
+
                     mousePos = {static_cast<float>(x), static_cast<float>(y)};
-                    window.SetPosition(mousePos);
+                    mouseOldPos = {static_cast<float>(dx), static_cast<float>(dy)};
+                    NkVec2 msdelta = mousePos - mouseOldPos;
+                    msdelta.Normalize();
+                    window.SetPosition(winPos + msdelta * 1.5);
+
+                    mouseOldPos = mousePos;
+                    logger.Info("{0}", msdelta);
                 }
             }
             if (auto* mouse = e->As<NkMouseButtonReleaseEvent>()) {

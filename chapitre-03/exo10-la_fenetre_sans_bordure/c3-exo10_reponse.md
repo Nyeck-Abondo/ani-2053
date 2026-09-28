@@ -280,9 +280,6 @@ struct TitleBar {
         HFONT font;
 
         bool followMouse;
-        bool firstClick = false;
-        bool doubleClicked = false;
-        float clickTimeEllapsed =0.0f;
 
         NkWindow& window;
 
@@ -436,6 +433,204 @@ if (auto* mouse = e->As<NkMouseButtonPressEvent>()) {
 - **construction du programme** : Comme énoncé plus haut, l'exercice repose sur la construction de trois projets: celui de l'exercice, qui est le projet principal, celui de la barre de titre qui a un rdre d'importance intermédiaire, et enfin celui des boutons.
 
 ```
+PS C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo10-la_fenetre_sans_bordure> jenga build
 
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.8.0             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Loading workspace...
+
+Configuration: Debug
+Target:        Windows x86_64
+Toolchain:     clang-mingw
+
+Build Order (3 projects):
+  1. Button [STATIC_LIB] → 
+  2. TitleBar [STATIC_LIB] (depends: Button) → 
+  3. exercice-10 [WINDOWED_APP] (depends: Button, TitleBar)
+
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: Button                                                           Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 1 source file(s)
+✓ All files up to date
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.06s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: TitleBar                                                         Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 1 source file(s)
+✓   [1/1] Compiled: TitleBar.cpp
+ℹ Linking...
+✓ Built: Build\Lib\Debug-Windows\TitleBar\TitleBar.lib
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 2.25s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: exercice-10                                                    Kind: WINDOWED_APP  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 1 source file(s)
+✓   [1/1] Compiled: c3-exo10_main.cpp
+ℹ Linking...
+✓ Built: Build\Bin\Debug-Windows\exercice-10\exercice-10.exe
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 3.04s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+════════════════════════════════════════════════════════════════════════════════
+                                BUILD COMPLETED                                 
+════════════════════════════════════════════════════════════════════════════════
+Projects Built:  3/3
+Time:           5.35s
+Status:         ✓ SUCCESS
+════════════════════════════════════════════════════════════════════════════════
 ```
+Trois projets construism le resultat de succes est là.
+
+- **Lancement du programme** :
+```
+PS C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo10-la_fenetre_sans_bordure> jenga run
+
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.8.0             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ▶  EXECUTION  —  exercice-10.exe
+     C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo10-la_fenetre_sans_bordure\Build\Bin\Debug-Windows\exercice-10\exercice-10.exe
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NKLogger] niveau=info | console=debug | journal=C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-03\exo10-la_fenetre_sans_bordure\logs\app.log
+[NKLogger] trace/debug sont SOUS le niveau : NK_LOG_LEVEL=debug pour les voir ; NK_LOG_CONSOLE=1 pour tout mettre a l'ecran ; NK_LOG_QUIET=1 pour taire ces deux lignes.
+[2026-09-27 19:09:02.584] [INF] [default] [c3-exo10_main.cpp:40 in nkmain] -> [window] : (312, 160)
+[2026-09-27 19:09:02.585] [INF] [default] [button.h:33 in Button] -> [button] size : NkRectT[pos(1130, 10); size(40, 30)]
+[2026-09-27 19:09:02.585] [INF] [default] [button.h:33 in Button] -> [button] size : NkRectT[pos(1060, 10); size(40, 30)]
+[2026-09-27 19:09:02.585] [INF] [default] [button.h:33 in Button] -> [button] size : NkRectT[pos(1020, 10); size(40, 30)]
+[2026-09-27 19:09:02.585] [INF] [default] [c3-exo10_main.cpp:43 in nkmain] -> [button] : RECT : (1130, 10) (1170, 40)
+[2026-09-27 19:09:02.587] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:02.587] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:02.587] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:02.587] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:02.588] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:02.588] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+.
+...
+...
+...
+...
+...
+[2026-09-27 19:09:05.768] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.768] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.769] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.774] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.774] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.775] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.775] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.776] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.776] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.781] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.782] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.782] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.783] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.783] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.784] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.788] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.788] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.789] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.789] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.789] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.789] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.795] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.795] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.796] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.796] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.796] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.797] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.802] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.802] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.802] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.803] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.803] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.803] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.809] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.809] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.810] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.810] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.810] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.811] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.816] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.816] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.816] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.817] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.817] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.818] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.823] [WRN] [default] [TitleBar.cpp:81 in RenderBar] -> [cross] : state : none
+[2026-09-27 19:09:05.823] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.823] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.824] [WRN] [default] [TitleBar.cpp:73 in RenderBar] -> [cross] : state : Hover
+[2026-09-27 19:09:05.824] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.825] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.830] [WRN] [default] [TitleBar.cpp:73 in RenderBar] -> [cross] : state : Hover
+[2026-09-27 19:09:05.830] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.830] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.831] [WRN] [default] [TitleBar.cpp:73 in RenderBar] -> [cross] : state : Hover
+[2026-09-27 19:09:05.831] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:05.831] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:05.837] [WRN] [default] [TitleBar.cpp:73 in RenderBar] -> [cross] : state : Hover
+[2026-09-27 19:09:06.930] [WRN] [default] [TitleBar.cpp:76 in RenderBar] -> [cross] : state : clicked
+[2026-09-27 19:09:07.030] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:07.097] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+[2026-09-27 19:09:07.197] [WRN] [default] [TitleBar.cpp:76 in RenderBar] -> [cross] : state : clicked
+[2026-09-27 19:09:07.298] [WRN] [default] [TitleBar.cpp:99 in RenderBar] -> [maximize] : state : none
+[2026-09-27 19:09:07.364] [WRN] [default] [TitleBar.cpp:118 in RenderBar] -> [minimize] : state : none
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ◀  FIN D'EXECUTION  —  termine normalement  (4.93s)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+LEs messages de log de l'état des boutons étant êtremement longs l'exécution se devait d'être brève pour permettre la capture de la baniètre et du début de l'horodatage. Mais on peut remarquer parmis les messages de log le passage d'état des boutons survolés.
+
+## Le temps mis pour la réalisation de ce travail
+
+Le temps mis en seconde n'a pas été exactement chronométré, mais peut être exactement calculé en se basantsur la routine quotidienne adoptée depuis chaque exercices.
+
+- date d'engagement de l'exercice: l'exercice a été engagé il y a exactement deux jours, soit vendredi 25 septembre 2026 dans les alentours de 22h. Ce premier jour a été marqué par un ensemble des recherches quant à la compréhension de l'exercice. cette phase s'est poursuivie jusqu'à Samedi 26 septembre à 3h du matin. temps estimé ici à **3h**. Du temps perdu à cause d'assistance porté à divers camarades. 
+
+- plage de travail intermédiaire : le travail s'est ainsi poursuivi Samedi avec la conception de la barre de titre, puis l'implémentation. Les sites consultés étant ceux de Microsoft learn présents aux adresses suivantes : [https://learn.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-rectangle] , [https://learn.microsoft.com/fr-fr/windows/win32/api/windef/ns-windef-rect] , [https://learn.microsoft.com/fr-fr/windows/win32/gdi/drawing-a-custom-window-background] . Pour ne citer que ceux là. la période de travaille s'est étendue ainsi de 10h à 4h en comptant les pauses et les indisponibilitées momentanées. le temps de travail estimé redescend à environ **10h**. De nombreux bugs ont été résolus durant cette période, avec des hésitations notemment sur le choix d'utiliser les méthodes de l'API ou écrire directement les mienne en redu software. Les deux approches ont été explorées. Et l'utilisation de l'API a finalement été retenue.
+
+- Date d'achèvement : Dimanche 27/09/2026 à 19:09, comme indiqué sur les messages de Log. C'était la phase des derniers tests. et de rédaction de la réponse. Ici, le travail a commencé à 12h pour se terminer contraitement à 19h avec les périodes de repos incluse. Le tout, pour un temps de travail estimé à **5h**.
+
+Le temps total de travail estimé est donc de : **18h** . Et il est assumé pour une période de deux jours.
+
 > Les preuves se trouvent dqns le dossier Preuves joint avec l'exercice. Il comprend une vidéo de démonstration de quelques secondes et des images de test.

@@ -43,3 +43,7 @@
 # logging
 .log
 .jenga_sig
+
+NkentseuKit/
+**/NkentseuKit/
+**/include/NKentseuKit/
