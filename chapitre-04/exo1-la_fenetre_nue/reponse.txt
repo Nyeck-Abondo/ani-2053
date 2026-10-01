@@ -1,0 +1,10 @@
+Ce que la coquille fait a ma place : elle met en place le pont entre la fenêtre et le Renderer afin de permettre le dessin à l'intérieur.
+- Elle crée une configuration par défaut de la fenêtre
+- Elle initialise la fenêtre NkWindow
+- Elle initialise le contexte graphique
+- Elle choisi l'API par défaut
+- Elle crée un NKRenderWindow
+
+Ce qui se passe si je configure dans OnInit : Lorsque l'on configure dans la méthode OnInit, seul la couleur de fond de la fnêtre paramétrée est prise en compte. La taille et le titre fourni ne sont pas appliqués à la fenêtre
+
+Ce qui se passe sans NKMain.h :lors de l'ommission de NKMain.h, la compilation du programme se termine par une erreur affichant le message  "undefined reference to `WinMain' "
