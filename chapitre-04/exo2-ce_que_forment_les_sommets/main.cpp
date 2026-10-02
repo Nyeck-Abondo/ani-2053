@@ -35,47 +35,28 @@ struct Response {
 
     friend std::istream& operator>> (std::istream& is, Response& r) {
         is >> r.types >> r.sommets;
-        return is; 
+        return is;
     }
     friend std::ostream& operator<< (std::ostream& os, Response& r) {
         if (r.sType == ShapeTypes::NOTEXIST)
             os << r.types << " " << r.sommets << " " << r.UnitToString()<< std::endl;
         else
-            os << r.types << " " << r.sommets << " " << r.unit << " " << r.UnitToString() << " " << r.rest << std::endl;
+            os << r.types << " " << r.sommets << " " << r.unit << " " << r.UnitToString() 
+            << " " << r.rest << std::endl;
         return os;
     }
     void StringToShapeType() {
-        if (types == "TRIANGLES") sType = ShapeTypes::TRIANGLES;
-        else if (types == "LINE_STRIP") sType = ShapeTypes::LINE_STRIP;
-        else if (types == "TRIANGLE_FAN") sType = ShapeTypes::TRIANGLE_FAN;
-        else if (types == "TRIANGLE_STRIP") sType = ShapeTypes::TRIANGLE_STRIP;
-        else if (types == "LINES") sType = ShapeTypes::LINES;
+        if (types == "TRIANGLES")
+            sType = ShapeTypes::TRIANGLES;
+        else if (types == "LINE_STRIP")
+            sType = ShapeTypes::LINE_STRIP;
+        else if (types == "TRIANGLE_FAN")
+            sType = ShapeTypes::TRIANGLE_FAN;
+        else if (types == "TRIANGLE_STRIP")
+            sType = ShapeTypes::TRIANGLE_STRIP;
+        else if (types == "LINES")
+            sType = ShapeTypes::LINES;
         else sType = ShapeTypes::NOTEXIST;
-    }
-
-    std::string ShapeTypeToString() {
-        switch (sType) {
-            case ShapeTypes::LINE_STRIP :
-                return "LINE_STRIP";
-                break;
-            case ShapeTypes::LINES :
-                return "LINES";
-                break;
-            case ShapeTypes::TRIANGLE_FAN :
-                return "TRIANGLE_FAN";
-                break;
-            case ShapeTypes::TRIANGLE_STRIP :
-                return "TRIANGLE_STRIP";
-                break;
-            case ShapeTypes::TRIANGLES :
-                return "TRIANGLES";
-                break;
-            case ShapeTypes::NOTEXIST :
-                return types;
-            case ShapeTypes::COUNT :
-                break;
-        }
-        return " ";
     }
 
     std::string UnitToString() {
@@ -98,20 +79,23 @@ struct Response {
     void AssignUnit() {
         switch (sType) {
             case ShapeTypes::LINE_STRIP :
-                if (sommets >= 3) unit = sommets - 1;
+                if (sommets >= 3)
+                    unit = sommets - 2;
                 else {
                     unit = 0;
                     rest = sommets;
                 }
                 segments = unit;
                 break;
+
             case ShapeTypes::LINES :
                 unit = sommets / 2;
                 rest = sommets % 2;
                 segments = unit;
                 break;
             case ShapeTypes::TRIANGLE_FAN :
-                if (sommets >= 3) unit = sommets - 2;
+                if (sommets >= 3)
+                    unit = sommets - 2;
                 else {
                     unit = 0;
                     rest = sommets;
