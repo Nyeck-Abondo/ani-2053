@@ -80,7 +80,7 @@ struct Response {
         switch (sType) {
             case ShapeTypes::LINE_STRIP :
                 if (sommets >= 3)
-                    unit = sommets - 2;
+                    unit = sommets - 1;
                 else {
                     unit = 0;
                     rest = sommets;
