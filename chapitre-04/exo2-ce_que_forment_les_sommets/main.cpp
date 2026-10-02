@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 enum ShapeTypes {
     NOTEXIST,
@@ -20,7 +21,7 @@ enum UnitTypes {
 };
 
 struct Response {
-    std::string types = " ";
+    std::string types = "";
     ShapeTypes sType = ShapeTypes::NOTEXIST;
     UnitTypes uType = UnitTypes::NONE;
     int sommets = 0;
@@ -173,6 +174,7 @@ struct Response {
 
 int main() {
     std::vector<Response> allResponses;
+    std::string content;
     int lines;
     int totalPoint = 0;
     int totalTriangle = 0;
@@ -180,16 +182,27 @@ int main() {
     int totalRefused = 0;
 
     std::cin >> lines;
+    std::cin.ignore();
     allResponses.resize(lines);
     for (int i = 0; i < lines; i++) {
-        std::cin >> allResponses[i];
-        allResponses[i].StringToShapeType();
-        allResponses[i].DefineUnit();
-        allResponses[i].AssignUnit();
-        totalPoint += allResponses[i].points;
-        totalTriangle += allResponses[i].triangles;
-        totalSegments += allResponses[i].segments;
-        totalRefused += allResponses[i].refuse;
+        std::getline(std::cin, content);
+        if (content.empty()) {
+            allResponses[i].segments = 0;
+            allResponses[i].points = 0;
+            allResponses[i].triangles = 0;
+            continue;
+        }
+        else {
+            std::istringstream iss(content);
+            iss >> allResponses[i].types >> allResponses[i].sommets;
+            allResponses[i].StringToShapeType();
+            allResponses[i].DefineUnit();
+            allResponses[i].AssignUnit();
+            totalPoint += allResponses[i].points;
+            totalTriangle += allResponses[i].triangles;
+            totalSegments += allResponses[i].segments;
+            totalRefused += allResponses[i].refuse;
+        }
     }
     for (auto& r : allResponses) {
         std::cout << r;
