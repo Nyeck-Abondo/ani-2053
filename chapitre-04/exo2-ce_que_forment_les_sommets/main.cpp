@@ -41,7 +41,7 @@ struct Response {
         if (r.sType == ShapeTypes::NOTEXIST)
             os << r.types << " " << r.sommets << " " << r.UnitToString()<< std::endl;
         else
-            os << r.types << " " << r.sommets << " " << r.unit << " " << r.UnitToString() 
+            os << r.types << " " << r.sommets << " " << r.unit << " " << r.UnitToString()
             << " " << r.rest << std::endl;
         return os;
     }
@@ -57,6 +57,12 @@ struct Response {
         else if (types == "LINES")
             sType = ShapeTypes::LINES;
         else sType = ShapeTypes::NOTEXIST;
+    }
+
+    bool CanDraw() {
+        if (sommets <= 0)
+            return false;
+        return true;
     }
 
     std::string UnitToString() {
@@ -79,41 +85,57 @@ struct Response {
     void AssignUnit() {
         switch (sType) {
             case ShapeTypes::LINE_STRIP :
-                if (sommets >= 3)
-                    unit = sommets - 1;
-                else {
-                    unit = 0;
-                    rest = sommets;
+                if (CanDraw()) {
+                    if (sommets >= 3)
+                        unit = sommets - 1;
+                    else {
+                        unit = 0;
+                        rest = sommets;
+                    }
+                    segments = unit;
                 }
-                segments = unit;
+                
                 break;
 
             case ShapeTypes::LINES :
-                unit = sommets / 2;
-                rest = sommets % 2;
-                segments = unit;
+                if (CanDraw()) {
+                    unit = sommets / 2;
+                    rest = sommets % 2;
+                    segments = unit;    
+                }
+                
                 break;
             case ShapeTypes::TRIANGLE_FAN :
-                if (sommets >= 3)
-                    unit = sommets - 2;
-                else {
-                    unit = 0;
-                    rest = sommets;
+                if (CanDraw()) {
+                    if (sommets >= 3)
+                        unit = sommets - 2;
+                    else {
+                        unit = 0;
+                        rest = sommets;
+                    }
+                    triangles = unit;    
                 }
-                triangles = unit;
+                
                 break;
             case ShapeTypes::TRIANGLE_STRIP :
-                if (sommets >= 3) unit = sommets - 2;
-                else {
-                    unit = 0;
-                    rest = sommets;
+                if (CanDraw()) {
+                    if (sommets >= 3)
+                        unit = sommets - 2;
+                    else {
+                        unit = 0;
+                        rest = sommets;
+                    }
+                    triangles = unit;    
                 }
-                triangles = unit;
+                
                 break;
             case ShapeTypes::TRIANGLES :
-                unit = sommets / 3;
-                rest = sommets % 3;
-                triangles = unit;
+                if (CanDraw()) {
+                    unit = sommets / 3;
+                    rest = sommets % 3;
+                    triangles = unit;
+                }
+                
                 break;
             case ShapeTypes::NOTEXIST:
                 refuse = 1;
@@ -167,7 +189,7 @@ int main() {
         totalPoint += allResponses[i].points;
         totalTriangle += allResponses[i].triangles;
         totalSegments += allResponses[i].segments;
-        totalRefused += allResponses[i].refuse; 
+        totalRefused += allResponses[i].refuse;
     }
     for (auto& r : allResponses) {
         std::cout << r;
