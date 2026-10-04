@@ -13,7 +13,7 @@ enum RectState {
 };
 
 struct Vect2 {
-    int x, y;
+    int x = 0, y = 0;
     friend std::istream& operator>> (std::istream& is, Vect2& v) {
         return is >> v.x >> v.y;
     }
@@ -58,7 +58,7 @@ struct Rect {
         }
 
         return (r.state == RectState::ACCEPTED) ? os << r.nom << " COINS " << p00 << " " << p10 << " " << p11 << " " << p01 << std::endl
-                << r.nom << " BOITE " << " " << minx << " "  << miny << " " << maxx << " " << maxy << std::endl : os << r.nom << " ANGLE " << " REFUSE " << std::endl;
+                << r.nom << " BOITE " << minx << " "  << miny << " " << maxx << " " << maxy << std::endl : os << r.nom << " ANGLE " << " REFUSE " << std::endl;
     }
 
     friend std::istream& operator>>(std::istream& is, Rect& r) {
