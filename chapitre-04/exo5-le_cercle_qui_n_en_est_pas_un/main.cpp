@@ -64,7 +64,8 @@ struct Circle {
 };
 
 int main() {
-    int visible = 0, refuse = 0;
+    int visible = 0;
+    int refuse = 0;
     int n = 0;
     std::vector<Circle> allCircle;
     std::string content;
