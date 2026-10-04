@@ -53,8 +53,10 @@ struct Circle {
         else {
             double g = r * (1 - cos(pi / n));
             gap = std::floor(1000 * g);
-            if (g == 0)
+            if (g == 0) {
                 gs = GapState::NEVER;
+                zoom = 500;
+            }
             else
                 zoom = std::ceil(100 / g);
             if (zoom <= 100)
