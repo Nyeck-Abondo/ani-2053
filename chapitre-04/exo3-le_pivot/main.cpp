@@ -43,8 +43,8 @@ struct Rect {
         Vect2 p10 = r.FindEdge({r.size.x, 0});
         Vect2 p11 = r.FindEdge({r.size.x, r.size.y});
         Vect2 arry[4] = {p00, p01, p10, p11};
-        int minx = arry[0].x, maxx = 0;
-        int miny = arry[0].x, maxy = 0;
+        int minx = arry[0].x, maxx = arry[0].x;
+        int miny = arry[0].y, maxy = arry[0].y;
         
         for (int i = 0; i < 4; i++) {
             if (arry[i].x > maxx)
@@ -58,7 +58,7 @@ struct Rect {
         }
 
         return (r.state == RectState::ACCEPTED) ? os << r.nom << " COINS " << p00 << " " << p10 << " " << p11 << " " << p01 << std::endl
-                << r.nom << " BOITE " << minx << " "  << miny << " " << maxx << " " << maxy << std::endl : os << r.nom << " ANGLE " << " REFUSE " << std::endl;
+                << r.nom << " BOITE " << minx << " "  << miny << " " << maxx << " " << maxy << std::endl : os << r.nom << " ANGLE" << " REFUSE " << std::endl;
     }
 
     friend std::istream& operator>>(std::istream& is, Rect& r) {
