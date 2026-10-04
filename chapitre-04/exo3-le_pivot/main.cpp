@@ -122,6 +122,6 @@ int main() {
         if (allRects[i].state == RectState::REFUSED)
             refuse += 1;
     }
-    std::cout << "REFUSE " << refuse << std::endl;
+    std::cout << "REFUSES " << refuse << std::endl;
     return 0;
 }
