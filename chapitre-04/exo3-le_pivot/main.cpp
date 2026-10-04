@@ -76,10 +76,7 @@ struct Rect {
             state = RectState::REFUSED;
         } else {
             state = RectState::ACCEPTED;
-            if (angle.val > 0)
-                angle.val = angle.val % 360;
-            else
-                angle.val = angle.val % 360 * -1 + 180;
+            angle.val = ((angle.val % 360) + 360) % 360;
             if (angle.val == 0 || angle.val == 360) {
                     angle.c = 1;
                     angle.s = 0;
