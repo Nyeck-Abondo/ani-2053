@@ -50,16 +50,18 @@ struct Circle {
     void UpdateCircle() {
         if (n < 3)
             ps = PolygonState::REFUSES;
-        double g = r * (1 - cos(pi / n));
-        gap = std::floor(1000 * g);
-        if (g == 0)
-            gs = GapState::NEVER;
-        else
-            zoom = std::ceil(100 / g);
-        if (zoom <= 100)
-            vis = Visibility::VISIBLES;
-        else
-            vis = Visibility::INVISIBLE;
+        else {
+            double g = r * (1 - cos(pi / n));
+            gap = std::floor(1000 * g);
+            if (g == 0)
+                gs = GapState::NEVER;
+            else
+                zoom = std::ceil(100 / g);
+            if (zoom <= 100)
+                vis = Visibility::VISIBLES;
+            else
+                vis = Visibility::INVISIBLE;
+        }
     }
 };
 
