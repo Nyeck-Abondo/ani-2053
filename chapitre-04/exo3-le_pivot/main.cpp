@@ -45,7 +45,7 @@ struct Rect {
         Vect2 arry[4] = {p00, p01, p10, p11};
         int minx = arry[0].x, maxx = arry[0].x;
         int miny = arry[0].y, maxy = arry[0].y;
-        
+
         for (int i = 0; i < 4; i++) {
             if (arry[i].x > maxx)
                 maxx = arry[i].x;
@@ -57,8 +57,10 @@ struct Rect {
                 miny = arry[i].y;
         }
 
-        return (r.state == RectState::ACCEPTED) ? os << r.nom << " COINS " << p00 << " " << p10 << " " << p11 << " " << p01 << std::endl
-                << r.nom << " BOITE " << minx << " "  << miny << " " << maxx << " " << maxy << std::endl : os << r.nom << " ANGLE" << " REFUSE " << std::endl;
+        return (r.state == RectState::ACCEPTED) ? os << r.nom << " COINS " << p00 << " " << p10 << " "
+                << p11 << " " << p01 << std::endl << r.nom << " BOITE " << minx << " "  << miny << " "
+                << maxx << " " << maxy << std::endl : os << r.nom << " ANGLE" << " REFUSE "
+                << std::endl;
     }
 
     friend std::istream& operator>>(std::istream& is, Rect& r) {
@@ -95,7 +97,7 @@ struct Rect {
                 angle.s = -1;
             }
         }
-            
+
         Vect2 r = {a.x * angle.c - a.y * angle.s, a.x * angle.s + a.y * angle.c};
         result = {p.x + r.x, p.y + r.y};
         //position et le coin dans le monde
