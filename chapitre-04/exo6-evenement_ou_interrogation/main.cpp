@@ -106,8 +106,17 @@ struct Carre {
                     fevent[i].rightRelease = false;
                 if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0)
                     fevent[i].spaceRelease = false;
+
+                auto it = std::remove_if(fevent[i].ev.begin(), fevent[i].ev.end(),
+                    [](const Event& e) {
+                        return e.type == EventTypes::SPACE_RELEASE ||
+                            e.type == EventTypes::LEFT_RELEASE ||
+                            e.type == EventTypes::RIGTH_RELEASE;
+                    });
+                fevent[i].ev.erase(it, fevent[i].ev.end());
+
                 if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0 && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
-                    manque++;
+                    manque += fevent[i].CountEventType(EventTypes::SPACE_PRESSED);
             }
             else {
                 fevent[i].leftRelease = fevent[i - 1].leftRelease;
@@ -121,13 +130,7 @@ struct Carre {
                 if (fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
                     fevent[i].spaceRelease = true;
 
-                auto it = std::remove_if(fevent[i].ev.begin(), fevent[i].ev.end(),
-                    [](const Event& e) {
-                        return e.type == EventTypes::SPACE_RELEASE ||
-                            e.type == EventTypes::LEFT_RELEASE ||
-                            e.type == EventTypes::RIGTH_RELEASE;
-                    });
-                fevent[i].ev.erase(it, fevent[i].ev.end());
+                
                 if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0 && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
                     manque += fevent[i].CountEventType(EventTypes::SPACE_PRESSED);
             }
