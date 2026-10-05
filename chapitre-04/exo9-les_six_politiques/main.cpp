@@ -15,7 +15,7 @@ int main() {
     
     std::cout << "FOLLOW_WINDOW " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
 
-    if (RW != 0 || RH != 0) {
+    if (RW > 0 || RH > 0) {
         std::cout << "STRETCH " << vx << " " << vy << " " << W << " " << H << " " << RW << " " << RH << "\n";
         if (W * RH <= H * RW) {
             vw = W;
@@ -33,7 +33,7 @@ int main() {
         }
 
         if (W >= RW && H >= RH) {
-            int k = W / RW > H / RH ? Arrondi(H, RH) : Arrondi(W, RW);
+            int k = W / RW < H / RH ? W / RW : H / RH;
             vw = RW * k;
             vh = RH * k;
         } else {
@@ -44,9 +44,9 @@ int main() {
                 vh = H;
                 vw = Arrondi(RW * H, RH);
             }
-            vx = (W - vw) / 2;
-            vy = (H - vh) / 2;
         }
+        vx = (W - vw) / 2;
+        vy = (H - vh) / 2;
         std::cout << "INTEGER_SCALE " << vx << " " << vy << " " << vw << " " << vh << " " << RW << " " << RH << "\n";
         if (vw < W || vh < H) {
             bandes++;
@@ -67,8 +67,8 @@ int main() {
     else {
         std::cout << "STRETCH " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
         std::cout << "FIT_LETTERBOX " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
-        std::cout << "INTEGER_SCALE  " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
-        std::cout << "FIT_CROP  " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
+        std::cout << "INTEGER_SCALE " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
+        std::cout << "FIT_CROP " << vx << " " << vy << " " << W << " " << H << " " << W << " " << H << "\n";
     }
     
     std::cout << "MANUAL " << 0 << " " << 0 << " " << AW << " " << AH << " " << AW << " " << AH << "\n";
