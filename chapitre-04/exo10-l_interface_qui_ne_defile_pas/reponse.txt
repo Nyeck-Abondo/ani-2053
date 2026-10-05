@@ -1,0 +1,3 @@
+Ce que fait la barre sans ResetView : Sans resetView, la barre défile jusque hors de l'espace écran.
+Pourquoi : Elle le fait car sans ResetView, la barre subit la transformation matricielle de la caméra. Ce qui converti ses coordonnées monde en coordonnées écran dépendant du mouvement de la caméra.
+Ou placer l'appel : Il faut placer l'appel de ResetView juste avant le dessin de la barre et du texte dans la boucle de jeu.

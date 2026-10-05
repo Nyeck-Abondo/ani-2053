@@ -1,0 +1,6 @@
+reset : oui, centre_x : 1062.42, barre_x : 0
+reset : oui, centre_x : 1202.44, barre_x : 0
+reset : oui, centre_x : 1343.55, barre_x : 0
+reset : non, centre_x : 780.029, barre_x : 0
+reset : non, centre_x : 921.196, barre_x : 0
+reset : non, centre_x : 1062.36, barre_x : 0
