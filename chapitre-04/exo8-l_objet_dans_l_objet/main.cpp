@@ -44,8 +44,8 @@ struct object {
             int rx = tx * c - ty * s;
             int ry = tx * s + ty * c;
 
-            tx += elder->tx + rx;
-            ty += elder->ty + ry;
+            tx = elder->tx + rx;
+            ty = elder->ty + ry;
 
             angle = ((elder->angle + angle) % 360 + 360) % 360;
 
@@ -75,9 +75,9 @@ struct object {
 
 
 int main() {
-    int N = 0;                                          // AJOUTER
+    int N = 0;
     std::cin >> N;
-    std::vector<object> objs(N);                        // taille finale : pas de réallocation
+    std::vector<object> objs(N);
     int profondeur = 0;
 
     for (int i = 0; i < N; i++) {
