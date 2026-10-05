@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 enum EventTypes {
     NONE,
@@ -79,7 +80,7 @@ struct FrameEvent {
                 result++;
             }
         }
-        return result;
+        return result; 
     }
 };
 
@@ -90,6 +91,7 @@ struct Carre {
     int jump = 0;
     int jumpInter = 0;
     int v = 0;
+    int manque = 0;
 
     friend std::istream& operator>> (std::istream& is, Carre& c) {
         return is >> c.v;
@@ -104,6 +106,8 @@ struct Carre {
                     fevent[i].rightRelease = false;
                 if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0)
                     fevent[i].spaceRelease = false;
+                if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0 && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
+                    manque++;
             }
             else {
                 fevent[i].leftRelease = fevent[i - 1].leftRelease;
@@ -116,6 +120,8 @@ struct Carre {
                     fevent[i].rightRelease = true;
                 if (fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
                     fevent[i].spaceRelease = true;
+                if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0 && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
+                    manque++;
             }
         }
     }
@@ -195,5 +201,6 @@ int main() {
     }
     std::cout << "SAUTS EVENEMENTS " << scare.jump << std::endl;
     std::cout << "SAUTS INTERROGATION " << scare.jumpInter << std::endl;
+    std::cout << "MANQUES " << scare.manque << std::endl;
     return 0;
 }
