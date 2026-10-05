@@ -120,8 +120,16 @@ struct Carre {
                     fevent[i].rightRelease = true;
                 if (fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
                     fevent[i].spaceRelease = true;
+
+                auto it = std::remove_if(fevent[i].ev.begin(), fevent[i].ev.end(),
+                    [](const Event& e) {
+                        return e.type == EventTypes::SPACE_RELEASE ||
+                            e.type == EventTypes::LEFT_RELEASE ||
+                            e.type == EventTypes::RIGTH_RELEASE;
+                    });
+                fevent[i].ev.erase(it, fevent[i].ev.end());
                 if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0 && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
-                    manque++;
+                    manque += fevent[i].CountEventType(EventTypes::SPACE_PRESSED);
             }
         }
     }
