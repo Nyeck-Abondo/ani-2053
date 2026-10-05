@@ -123,13 +123,12 @@ struct Carre {
                 fevent[i].rightRelease = fevent[i - 1].rightRelease;
                 fevent[i].spaceRelease = fevent[i - 1].spaceRelease;
 
-                if (fevent[i].CountEventType(EventTypes::LEFT_RELEASE) > 0)
+                if (fevent[i - 1].leftRelease == false && fevent[i].CountEventType(EventTypes::LEFT_RELEASE) > 0)
                     fevent[i].leftRelease = true;
-                if (fevent[i].CountEventType(EventTypes::RIGTH_RELEASE) > 0)
+                if (fevent[i - 1].rightRelease == false && fevent[i].CountEventType(EventTypes::RIGTH_RELEASE) > 0)
                     fevent[i].rightRelease = true;
-                if (fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
+                if (fevent[i - 1].spaceRelease == false && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
                     fevent[i].spaceRelease = true;
-
                 
                 if (fevent[i].CountEventType(EventTypes::SPACE_PRESSED) > 0 && fevent[i].CountEventType(EventTypes::SPACE_RELEASE) > 0)
                     manque += fevent[i].CountEventType(EventTypes::SPACE_PRESSED);
