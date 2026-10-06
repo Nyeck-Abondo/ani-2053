@@ -24,12 +24,12 @@ class coquille : public nkentseu::renderer::NkCanvasApp {
         Config().clearColor =   {45, 45, 45};
     }
 
-    void OnRender(nkentseu::renderer::NkRenderWindow &target) {
+    void OnRender(nkentseu::renderer::NkRenderWindow &target) override {
         nkentseu::renderer::NkRenderer2D rd = target.GetRenderer2D();
         rd.DrawRect(carre, {165, 20, 20});
     }
 
-    void OnUpdate(nkentseu::float32 deltaTime) {
+    void OnUpdate(nkentseu::float32 deltaTime) override {
         carre.x += speed * deltaTime;
     }
 };

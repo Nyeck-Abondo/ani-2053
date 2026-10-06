@@ -51,7 +51,7 @@ int nkmain(const nkentseu::NkEntryState& state) {
         if (!run)
             break;
         carre.x += speed * dt;
-        target.Clear();
+        target.Clear({45, 45, 45});
         nkentseu::renderer::NkRenderer2D rd = target.GetRenderer2D();
         rd.DrawRect(carre, {165, 20, 20});
         target.Display();
