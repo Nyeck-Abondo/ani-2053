@@ -1,15 +1,7 @@
-
+#include "NKWindow/NKMain.h"
 #include "NKWindow/NKWindow.h"
 
 #include "NKCanvas/App/NkCanvasApp.h"
-#include "NKCanvas/Renderer/Targets/NkRenderWindow.h"
-#include "NKCanvas/Renderer/Core/NkRenderer2D.h"
-#include "NKCanvas/Core/NkContextDesc.h"
-#include "NKCanvas/Core/NkGraphicsApi.h"
-
-#include "NKMath/NkMat.h"
-#include "NKMAth/NkColor.h"
-#include "NKTime/NkTime.h"
 
 class fenetre : public nkentseu::renderer::NkCanvasApp {
     public:

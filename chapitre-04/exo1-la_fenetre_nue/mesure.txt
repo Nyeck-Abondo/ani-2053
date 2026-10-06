@@ -1,1 +1,1 @@
-lignes : 27, utiles : 22, fond : 65 171 204
+lignes : 20, utiles : 15, fond : 65 171 204
