@@ -1,0 +1,3 @@
+Ce que la taille du fichier ne dit pas : La taile du fichier ne dit pas quel espace il occupera sur la mémoire RAM une fois décodé.
+L'ecart entre calcul et mesure : Cet écart entre la mesure et le calcul peut s'expliquer par le fait que le gestionnaire de tâche dans le cas de windows (le système sur lequel a été fait cet exercice) arrondisse les valeurs de l'espace occupé par le processur sur la mémoire vive après préalable conversion en méga octets
+Avant d'ouvrir cinquante photos : il est préférable de calculer le poids que chacune d'elle occupera sur la mémoire vive afin de ne pas gaspiller de la mémoire.

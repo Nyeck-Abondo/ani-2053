@@ -1,0 +1,8 @@
+from Jenga import *
+
+with project("ex1"):
+    windowedapp()
+    language("C++")
+    files(["./**.cpp"])
+    usenkaudiokit()
+    usecanvas()

@@ -1,0 +1,5 @@
+image : fenetre.jpg, calcul : 7300000, mesure : 7344000, fichier : 327680
+image : aplat.png, calcul : 2600000, mesure : 2247008, fichier : 192512
+image : icons8-coffee-cup-100 (1).png, calcul : 0000, mesure : 40000, fichier : 4096
+image : errr.jpeg, calcul : 3700000, mesure : 4128000, fichier : 327680
+image : photo.jpeg, calcul : 2900000, mesure : 2624400, fichier : 86,016
