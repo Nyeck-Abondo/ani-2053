@@ -113,7 +113,7 @@ struct Image {
     friend std::ostream& operator<< (std::ostream& os, Image& i) {
         std::string result = "";
         if (i.loseOpacity)
-            result += " TRANSPARENCE";
+            result += "TRANSPARENCE";
         if (i.loseColor) {
             if (!result.empty())
                 result += "+";
