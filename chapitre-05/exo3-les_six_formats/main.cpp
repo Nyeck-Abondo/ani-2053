@@ -122,7 +122,7 @@ struct Image {
         if (i.loseFloats) {
             if (!result.empty())
                 result += "+";
-            result += "ETENDU";
+            result += "ETENDUE";
         }
         if (result.empty())
             result = "AUCUNE";
