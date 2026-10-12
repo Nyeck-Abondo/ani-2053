@@ -1,0 +1,15 @@
+from Jenga import *
+
+with workspace("Chapitre-04"):
+    configurations(['Debug', 'Release'])
+    targetoses([TargetOS.WINDOWS])
+    targetarchs([TargetArch.X86_64])
+
+    useconfig("../Kits/nkaudiokit/nkaudiokit.jenga")
+    useconfig("../Kits/Canvas/Canvas.jenga")
+
+    with include("exo1-le_calcul_puis_la_mesure/exo1.jenga"):
+        pass
+
+    with include("exo2-l_extension_qui_ment/exo2.jenga"):
+        pass

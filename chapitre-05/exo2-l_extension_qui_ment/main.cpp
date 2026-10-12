@@ -51,7 +51,7 @@ struct File {
                 r = " MENT";
                 break;
             case FileState::REFUSED :
-                r = " REFUSE";
+                return os << f.name << " REFUSE" << std::endl;
             default:
                 break;
         }
@@ -61,26 +61,20 @@ struct File {
     void InitialiseFile() {
         if (octets[0] == '-')
             return;
-        b[0] = octets.substr(0, 2);
-        b[1] = octets.substr(2, 2);
-        b[2] = octets.substr(4, 2);
-        b[3] = octets.substr(6, 2);
-        b[4] = octets.substr(8, 2);
-        b[5] = octets.substr(10, 2);
-        b[6] = octets.substr(12, 2);
+        for (int i = 0; i < 8; i++) {
+            if (octets.size() >= (size_t)(2 * i + 2))
+                b[i] = octets.substr(2 * i, 2);
+        }
     }
 
     void FindExtension() {
         if (name.empty())
             return;
         int counter = 0;
-        for (size_t i = 0; i < name.size(); i++) {
-            if (name[i] == '.') {
-                counter = i;
-            }
-        }
-        for (int i = counter + 1; i < name.size(); i++)
-            extention += name[i];
+        size_t pos = name.rfind('.');
+           if (pos == std::string::npos)
+               return;
+           extention = name.substr(pos + 1);
     }
 
     void ExtensionToFormat() {
@@ -248,6 +242,11 @@ struct File {
         }
         else if (b[0] == "3C" && b[1] == "3F" && b[2] == "78" && b[3] == "6D" && b[4] == "6C") {
             fr = Format::SVG;
+            state = FileState::ACCEPTED;
+        }
+        else if (taille >= 18 && (b[2] == "00" || b[2] == "01" || b[2] == "02" || b[2] == "03" ||
+                                      b[2] == "09" || b[2] == "0A" || b[2] == "0B")) {
+            fr = Format::TGA;
             state = FileState::ACCEPTED;
         }
         else {

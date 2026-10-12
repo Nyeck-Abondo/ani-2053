@@ -1,0 +1,8 @@
+# jcdb/1  Jenga Compilation DataBase
+compiler	C:/msys64/ucrt64/bin\clang++.EXE
+msvc	0
+project	ex1
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-05\exo1-le_calcul_puis_la_mesure
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\nkaudiokit\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Canvas\include
