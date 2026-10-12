@@ -70,7 +70,6 @@ struct File {
     void FindExtension() {
         if (name.empty())
             return;
-        int counter = 0;
         size_t pos = name.rfind('.');
            if (pos == std::string::npos)
                return;
