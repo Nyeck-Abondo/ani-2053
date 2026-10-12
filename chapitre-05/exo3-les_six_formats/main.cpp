@@ -98,7 +98,7 @@ struct Format {
 struct Image {
     std::string source = "";
     std::string target = "";
-    int w = 1, h = 1;
+    uint64_t w = 1, h = 1;
     Format fr;
     Format targetFr;
 
@@ -126,9 +126,11 @@ struct Image {
         }
         if (result.empty())
             result = "AUCUNE";
-
-        return (i.targetFr.ftype != FormatType::UNKNOW) ? os << i.source << " " << i.target << " " << i.SizeOfImageWithSource() << " " << i.SizeOfImageWithTarget() << " " << result << std::endl :
-                     os << i.source << " " << i.target << " REFUSE" << std::endl;
+        
+        if (i.fr.ftype != FormatType::UNKNOW && i.targetFr.ftype != FormatType::UNKNOW) {
+            return os << i.source << " " << i.target << " " << i.SizeOfImageWithSource() << " " << i.SizeOfImageWithTarget() << " " << result << std::endl;
+        }
+        return os << i.source << " " << i.target << " REFUSE" << std::endl;
     }
 
     FormatType StringToType(const std::string& s) {
@@ -179,8 +181,8 @@ struct Image {
 
 int main() {
     int n = 0;
-    int w = 1, h = 1;
-    int TOTAL = 0, SANSPERTE = 0, REFUSE = 0;
+    uint64_t w = 1, h = 1;
+    uint64_t TOTAL = 0, SANSPERTE = 0, REFUSE = 0;
     std::string content;
     std::vector<Image> allimg;
 
@@ -198,9 +200,10 @@ int main() {
         allimg[i].w = w;
         allimg[i].h = h;
 
-        if (allimg[i].targetFr.ftype == FormatType::UNKNOW)
+        if (allimg[i].fr.ftype == FormatType::UNKNOW || allimg[i].targetFr.ftype == FormatType::UNKNOW)
             REFUSE++;
-        if (!allimg[i].loseColor && !allimg[i].loseOpacity && !allimg[i].loseFloats)
+        if (allimg[i].fr.ftype != FormatType::UNKNOW && allimg[i].targetFr.ftype != FormatType::UNKNOW && 
+            !allimg[i].loseColor && !allimg[i].loseOpacity && !allimg[i].loseFloats)
             SANSPERTE++;
     }
 
@@ -211,6 +214,6 @@ int main() {
 
     std::cout << "TOTAL " << TOTAL << "\n";
     std::cout << "SANS_PERTE " << SANSPERTE << "\n";
-    std::cout << "REFUSE " << REFUSE << "\n";
+    std::cout << "REFUSES " << REFUSE << "\n";
     return 0;
 }
