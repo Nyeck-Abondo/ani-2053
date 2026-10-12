@@ -1,0 +1,3 @@
+Pourquoi une seule texture : Utiliser une seule texture contribue  rduire considrablement le nombre d'appel de dessin pour l'affichage des lettres , en regroupant de faon contigue les diffrents symboles d'une police.
+Ce que change la taille : La taille de la police augmente proportionnellement la taille des glyphes  introduire dans la texture, ce qui amne  la cration d'un atlas de grande taille.
+A quoi sert la marge entre glyphes : une marge est necessaire pour les glyphes afin d'eviter que le GPU ne recupere des pixels des glyphes voisin lorsquil en choisi un.

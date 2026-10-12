@@ -1,0 +1,9 @@
+# exo4.jenga
+from Jenga import *
+
+with project("ex4"):
+    windowedapp()
+    language("C++")
+    files(["./**.cpp"])
+    usenkaudiokit()
+    usecanvas()

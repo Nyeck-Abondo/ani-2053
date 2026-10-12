@@ -70,7 +70,6 @@ struct File {
     void FindExtension() {
         if (name.empty())
             return;
-        int counter = 0;
         size_t pos = name.rfind('.');
            if (pos == std::string::npos)
                return;
@@ -240,7 +239,7 @@ struct File {
                 state = FileState::REFUSED;
             }
         }
-        else if (b[0] == "3C" && b[1] == "3F" && b[2] == "78" && b[3] == "6D" && b[4] == "6C") {
+        else if (IsSvg()) {
             fr = Format::SVG;
             state = FileState::ACCEPTED;
         }
@@ -254,9 +253,26 @@ struct File {
             state = FileState::REFUSED;
         }
     }
+    
+    bool IsSvg() {
+        size_t i = 0;
+        if (octets.compare(0, 6, "EFBBBF") == 0)
+            i = 6;
+        while (i + 2 <= octets.size()) {
+            std::string o = octets.substr(i, 2);
+            if (o == "20" || o == "09" || o == "0A" || o == "0D")
+                i += 2;
+            else
+                break;
+        }
+        return octets.compare(i, 10, "3C3F786D6C") == 0
+            || octets.compare(i, 8, "3C737667") == 0;
+    }
 
     bool IsLiying() {
         if (octets[0] == '-')
+            return false;
+        if (state != FileState::ACCEPTED)
             return false;
         if (frExt != fr) {
             state = FileState::LIE;

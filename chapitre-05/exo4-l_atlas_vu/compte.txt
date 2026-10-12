@@ -1,0 +1,2 @@
+taille : 18, glyphes : 157, texture : 512 512, perdu : l'atlas ne prsentait rien
+taille : 18, glyphes : 157, texture : 1024 1024, perdu : l'atlas ne prsentait rien

@@ -13,3 +13,6 @@ with workspace("Chapitre-04"):
 
     with include("exo2-l_extension_qui_ment/exo2.jenga"):
         pass
+        
+    with include("exo4-l_atlas_vu/exo4.jenga"):
+        pass
