@@ -28,7 +28,7 @@ struct Text {
         for (int i = 0; i < content.size(); i++) {
             auto it = caracter.find(content[i]);
             if (it == caracter.end()) {
-                std::cout << content[i] << "ABSENT\n";
+                std::cout << content[i] << " ABSENT\n";
                 abscents++;
                 continue;
             }
