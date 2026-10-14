@@ -23,7 +23,7 @@ struct Audio {
       int pourcent = 0;
       uint64_t duree;
       uint64_t fichiers;
-      uint64_t brut;
+      uint64_t brut = 0;
       Mode amod = Mode::NONE;
       State aSt = State::REFUSED;
       
@@ -34,8 +34,8 @@ struct Audio {
           if (a.amod == Mode::FLUX && a.aSt == State::ACCEPTED)
               return os << a.name << " "  << a.brut << " " << a.pourcent << " FLUX" << std::endl;
           if (a.amod == Mode::MEMOIRE && a.aSt == State::ACCEPTED)
-              return os << a.name << " "  << a.brut << " " << a.pourcent << " FLUX" << std::endl;
-          return os << a.name << " REFUSES" << std::endl;
+              return os << a.name << " "  << a.brut << " " << a.pourcent << " MEMOIRE" << std::endl;
+          return os << a.name << " REFUSE" << std::endl;
       }
       
       void Evaluate() {
@@ -62,7 +62,8 @@ struct Audio {
           if (aSt == State::REFUSED)
               return;
           brut = (frequence * canaux * bits * duree) / (1000 * 8);
-          pourcent = fichiers * 100 / brut;
+          if (brut > 0)
+              pourcent = fichiers * 100 / brut;
           if (brut > s)
               amod = Mode::FLUX;
           else
@@ -94,7 +95,7 @@ int main() {
         if (allAudio[i].amod == Mode::FLUX) {
             F++;
         }
-        else
+        else if (allAudio[i].amod == Mode::MEMOIRE)
             MEMORY += allAudio[i].brut;
     }
     std::cout << "MEMOIRE " << MEMORY << std::endl;
