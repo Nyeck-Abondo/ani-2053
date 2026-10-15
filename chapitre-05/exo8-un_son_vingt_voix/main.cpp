@@ -42,7 +42,7 @@ int main() {
             allAudio[i].isFirstLoading = true;
             allAudio[i].calculateStats(d, c);
             allAudio[i].voiceCount = 1;
-            if (allAudio[i].endLoading + d > allAudio[i + 1].currentTime) {
+            if (allAudio[i].currentTime + d > allAudio[i + 1].currentTime) {
                     std::cout << allAudio[i].currentTime << " " << allAudio[i].voiceCount << " "  << allAudio[i].retard << " COUPE" << std::endl;
                     coupes++;
             }
@@ -53,19 +53,19 @@ int main() {
         else {
             allAudio[i].calculateStats(d, c, allAudio[i - 1].endLoading);
             for (int j = 0; j <= i; j++) {
-                if (d + allAudio[j].endLoading > allAudio[i].currentTime) {
+                if (allAudio[j].currentTime + d > allAudio[i].currentTime) {
                     allAudio[i].voiceCount++;
                 }
                 else {
-                    allAudio[i].voiceCount = 0;
+                    allAudio[i].voiceCount = allAudio[i].voiceCount;
                 }
             }
             if (i != n - 1) {
-                if (allAudio[i].endLoading +  d > allAudio[i + 1].currentTime) {
+                if (allAudio[i].currentTime +  d > allAudio[i + 1].currentTime) {
                     std::cout << allAudio[i].currentTime << " " << allAudio[i].voiceCount << " "  << allAudio[i].retard << " COUPE" << std::endl;
                     coupes++;
                 }
-                else {
+                else if (allAudio[i].currentTime +  d <= allAudio[i + 1].currentTime) {
                     std::cout << allAudio[i].currentTime << " " << allAudio[i].voiceCount << " "  << allAudio[i].retard << " ENTIER" << std::endl;
                 }
             }
