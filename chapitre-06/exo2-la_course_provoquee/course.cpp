@@ -1,0 +1,32 @@
+#include "NKWindow/NKMain.h"
+#include "NKWindow/NKWindow.h"
+#include "NKThreading/NkThreadPool.h"
+#include "NKThreading/NkThread.h"
+#include "NKContainers/Sequential/NkVector.h"
+#include "NKTime/NkChrono.h"
+#include "NKTime/NkElapsedTime.h"
+
+int nkmain(const nkentseu::NkEntryState& state) {
+    //creation du compteur
+    int c = 0;
+    //creation des 8 threads
+    nkentseu::NkVector<nkentseu::threading::NkThread> threads;
+    threads.Reserve(8);
+    for (int i = 0; i < 8; i++) {
+        threads.EmplaceBack([&] (auto&&...) {
+            for (int j = 0; j < 1000000; j++)
+            c++;
+        });
+    }
+    //join des threads
+    for (auto& t: threads)
+        t.Join();
+    std::cout << "Valeur du compteur attendue : 8000000 -- valeur obtenue : " << c << std::endl;
+    
+    //seconde version sur un seul threads
+    c = 0;
+    for (int i = 0; i < 1000000; i++)
+        c++;
+    std::cout << "Valeur du compteur attendue : 1000000 -- valeur obtenue : " << c << std::endl;
+    return 0;
+}

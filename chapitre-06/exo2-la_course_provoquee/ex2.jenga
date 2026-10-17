@@ -1,0 +1,7 @@
+with project("ex2"):
+    windowedapp()
+    cppdialect("C++17")
+    language("C++")
+    files(["./**.cpp"])
+    usenetwork()
+    usewin32()

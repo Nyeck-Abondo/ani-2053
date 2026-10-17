@@ -1,0 +1,16 @@
+Dix totaux : 
+1227067 
+1193784 
+1127245
+1283901
+1287844
+1476660
+1442812
+1322313
+3602527
+1261842
+
+seul fil : 1000000
+Release : 1122373, 1339178, 1093357
+Pourquoi : Ce resultat final de l'incrmentation du compteur en release s'explique par le fait que chaque thread ecrit sur le meme emplacement memoire de la variable comptreur. Chacun d'entre eux lit une valeur obsolette du compteur, l'incremente de 1 puis la stocke de nouveau dans la variable et le tout en desordre. Ce qui justifie que la valeur 8000000 attendue apres l'operation n'ai jamais ete atteinte dans aucun des tests.
+Par ailleur, en ce qui concerne la difference entre la compilation en Debug et en Release, le test ne revele pas une grande difference de comportement. Cela est du aux choix du compilateur au lancement du programme.
