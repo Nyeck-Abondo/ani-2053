@@ -1,0 +1,6 @@
+Tâche : incrementer une variable entiere 100 fois
+Réserve : 0.7542 ms , 0.5423 ms
+Fils : 11.8306 ms, 12.5328 ms
+Ouvriers : 12
+Tâche longue : incrmenter la valriable entire 1000000 de fois
+Pourquoi : D'apres les chiffres plus haut on observe que pour une tache courte, l'utilisation de la reserve de threads est la solution la plus rapide. Mais ds lors que la tche devient trop longue, cet cart se rduis nettement, sans toute fois rendre la cration manuelle de plusieurs threads meuilleure. Cette diffrence s'explique par le cout que la cration d'un thread apporte la dure d'excution d'un programme.

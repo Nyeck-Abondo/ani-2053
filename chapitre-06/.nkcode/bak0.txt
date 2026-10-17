@@ -1,0 +1,16 @@
+from Jenga import *
+
+with workspace("Chapitre-06"):
+    configurations(['Debug', 'Release'])
+    targetoses([TargetOS.WINDOWS])
+    targetarchs([TargetArch.X86_64])
+    
+    useconfig("../Kits/Network/Network.jenga")
+    useconfig("../Kits/win32/win32.jenga")
+    
+    with include("exo1-la_reserve/ex1.jenga"):
+        pass
+    with include("exo2-la_course_provoquee/ex2.jenga"):
+        pass
+    with include("exo3-la_course_corrigee/ex3.jenga"):
+        pass

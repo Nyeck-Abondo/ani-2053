@@ -1,0 +1,120 @@
+#include "NKWindow/NKMain.h"
+#include "NKWindow/NKWindow.h"
+#include "NKThreading/NkThreadPool.h"
+#include "NKThreading/NkThread.h"
+#include "NKContainers/Sequential/NkVector.h"
+#include "NKTime/NkChrono.h"
+#include "NKTime/NkElapsedTime.h"
+#include "NKThreading/NkScopedLock.h"
+#include "NKThreading/NkMutex.h"
+#include "NKCore/NkAtomic.h"
+
+int nkmain(const nkentseu::NkEntryState& state) {
+    //creation du compteur
+    int c = 0;
+    nkentseu::NkChrono chrono;
+    //creation du NkMutex
+    nkentseu::threading::NkMutex mutex;
+    //creation des 8 threads
+    nkentseu::NkVector<nkentseu::threading::NkThread> threads;
+    threads.Reserve(8);
+    //version NORMALE
+    for (int i = 0; i < 8; i++) {
+        threads.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+            c++;
+        });
+    }
+    for (auto& t: threads)
+        t.Join();
+        
+    std::cout << "Valeur du compteur Version Sans verrou attendue : 8000000 -- valeur obtenue : " << c << std::endl;
+    std::cout << "Temps Ecoule : " << chrono.Reset().milliseconds << std::endl;
+    
+    //VERSION MUTEX
+    nkentseu::NkVector<nkentseu::threading::NkThread> threads01;
+    int counter = 0;
+    for (int i = 0; i < 8; i++) {
+        threads01.EmplaceBack([&] (auto&&...) {
+            //placement du verrou 
+            nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(mutex);
+            for (int j = 0; j < 1000000; j++)
+                counter++;
+        });
+    }
+    for (auto& t: threads01)
+        t.Join();
+    
+    std::cout << "Valeur du compteur Version avec verrou attendue : 8000000 -- valeur obtenue : " << counter << std::endl;
+    std::cout << "Temps Ecoule : " << chrono.Reset().milliseconds << std::endl;
+    
+    //VERSION AU COMPTEUR ATOMIQUE
+    nkentseu::NkVector<nkentseu::threading::NkThread> threads02;
+    nkentseu::NkAtomic<int> compteur {0};
+    for (int i = 0; i < 8; i++) {
+        threads02.EmplaceBack([&] (auto&&...) {
+            for (int j = 0; j < 1000000; j++)
+                compteur.FetchAdd(1);
+        });
+    }
+    for (auto& t: threads02)
+        t.Join();
+    
+    std::cout << "Valeur du compteur Version atomique attendue : 8000000 -- valeur obtenue : " << compteur << std::endl;
+    std::cout << "Temps Ecoule : " << chrono.Reset().milliseconds << std::endl;
+    
+    //VERSION locale
+    int a = 0, b = 0, d = 0, e = 0, f = 0;
+    int g = 0, h = 0;
+    c = 0;
+
+    nkentseu::NkVector<nkentseu::threading::NkThread> threads03;
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+       a += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+       b += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+        c += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+           d += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+            e += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+           f += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+            g += 1; 
+    });
+    
+    threads03.EmplaceBack([&] (auto&&...) {
+        for (int j = 0; j < 1000000; j++)
+            h += 1; 
+    });
+
+    //join des threads
+    for (auto& t: threads03)
+        t.Join();
+    std::cout << "Valeur du compteur Version Sans verrou attendue : 8000000 -- valeur obtenue : " << a + b + c + d + e + f + g + h<< std::endl;
+    std::cout << "Temps Ecoule : " << chrono.Reset().milliseconds << std::endl;
+
+    return 0;
+}

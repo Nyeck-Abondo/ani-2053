@@ -1,5 +1,5 @@
 # ex1.jenga
-with project("ex6"):
+with project("ex1"):
     windowedapp()
     cppdialect("C++17")
     language("C++")

@@ -1,0 +1,18 @@
+# jcdb/1  Jenga Compilation DataBase
+compiler	C:/msys64/ucrt64/bin\clang++.EXE
+msvc	0
+project	ex1
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo1-la_reserve
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
+project	ex2
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo2-la_course_provoquee
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
+project	ex3
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo3-la_course_corrigee
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
