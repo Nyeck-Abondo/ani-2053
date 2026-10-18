@@ -6,13 +6,16 @@
 from typing import Any
 
 KIT_BUILT: Any
+KIT_COMPILER: Any
 KIT_DEPENDS: Any
 KIT_JENGA: Any
 KIT_MODULES: Any
 KIT_NAME: Any
 KIT_ROOT: Any
+KIT_STDLIB: Any
 KIT_SYSTEM_LIBS: Any
 KIT_TARGETS: Any
 KIT_WORKSPACE: Any
+def usecanvaskit(*args: Any, **kwargs: Any) -> Any: ...
 def usenetwork(*args: Any, **kwargs: Any) -> Any: ...
 def usewin32(*args: Any, **kwargs: Any) -> Any: ...

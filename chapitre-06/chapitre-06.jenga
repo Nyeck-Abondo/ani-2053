@@ -7,10 +7,25 @@ with workspace("Chapitre-06"):
     
     useconfig("../Kits/Network/Network.jenga")
     useconfig("../Kits/win32/win32.jenga")
+    useconfig("../Kits/canvaskit/canvaskit.jenga")
     
     with include("exo1-la_reserve/ex1.jenga"):
         pass
     with include("exo2-la_course_provoquee/ex2.jenga"):
         pass
     with include("exo3-la_course_corrigee/ex3.jenga"):
+        pass
+    with include("exo4-l_etreinte_fatale/ex4.jenga") :
+        pass
+    with include("exo5-le_futur_qui_ne_bloque_pas/ex5.jenga"):
+        pass
+    with include("exo6-deux_machines_se_parlent/ex6.jenga"):
+        pass
+    with include("exo7-la_decouverte/ex7.jenga"):
+        pass
+    with include("exo5-le_futur_qui_ne_bloque_pas/ex5.jenga"):
+        pass
+    with include("exo5-le_futur_qui_ne_bloque_pas/ex5.jenga"):
+        pass
+    with include("exo5-le_futur_qui_ne_bloque_pas/ex5.jenga"):
         pass

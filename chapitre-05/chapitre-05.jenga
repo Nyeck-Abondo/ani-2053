@@ -16,3 +16,6 @@ with workspace("Chapitre-04"):
         
     with include("exo4-l_atlas_vu/exo4.jenga"):
         pass
+    
+    with include("chapitre-05/exo10-l_erreur_claire/ex10.jenga"):
+            pass

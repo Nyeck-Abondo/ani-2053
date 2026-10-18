@@ -1,0 +1,5 @@
+Image : 9.66 MB , 0.089 ms
+Get : trame 60 avec 588.509 ms. chargement dure 0 trames
+IsReady : trame 60 avec 0.1906 ms. Le chargement dure 24 trames
+Ce qu'on voit : pendant la  version IsReady, le carre avance normalement sans que l'on ne voit de latence dans son deplacement. Par contre, dans la version
+Get, le carre se stop l'espace d'un instant avant de continuer son mouvement.

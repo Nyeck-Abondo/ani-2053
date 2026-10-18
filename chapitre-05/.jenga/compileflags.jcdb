@@ -6,3 +6,8 @@ dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-05\exo1-le
 std	c++17
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\nkaudiokit\include
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Canvas\include
+project	ex4
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-05\exo4-l_atlas_vu
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\nkaudiokit\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Canvas\include

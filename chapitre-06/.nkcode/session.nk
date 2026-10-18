@@ -1,13 +1,30 @@
 nksession/2
-active 9
+active 13
 ui 0 1
-F 10 4 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/chapitre-06.jenga
+F 9 50 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/chapitre-06.jenga
 F 1 17 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo1-la_reserve/ex1.jenga
 F 15 41 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo1-la_reserve/reserve.cpp
 F 5 375 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo1-la_reserve/reserve.txt
 F 31 1 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo2-la_course_provoquee/course.cpp
-F 15 215 0 0 19 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo2-la_course_provoquee/totaux.txt
+F 15 215 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo2-la_course_provoquee/totaux.txt
 F 0 17 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo2-la_course_provoquee/ex2.jenga
-F 6 13 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/ex3.jenga
-F 12 7 0 0 18 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/corrige.cpp
+F 6 14 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/ex3.jenga
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/corrige.cpp
 F 5 170 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/prix.txt
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/ex6.jenga
+F 17 20 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/etreinte.cpp
+F 0 9 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/etreinte.txt
+F 4 77 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo5-le_futur_qui_ne_bloque_pas/cadence.txt
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/decouverte.cpp
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/serveurs.txt
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/parle.cpp
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/echange.txt
+F 6 4 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/ex4.jenga
+F 8 18 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo5-le_futur_qui_ne_bloque_pas/ex5.jenga
+F 1 17 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/ex7.jenga
+F 47 61 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo5-le_futur_qui_ne_bloque_pas/futur.cpp
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/Canvas/Canvas.jenga
+F 88 42 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKTime/NkChrono.h
+F 49 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKTime/NkElapsedTime.h
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo5-le_futur_qui_ne_bloque_pas/map.png
+F 94 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKThreading/NkFuture.h

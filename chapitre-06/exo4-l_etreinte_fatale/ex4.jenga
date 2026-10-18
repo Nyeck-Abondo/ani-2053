@@ -1,0 +1,8 @@
+# ex4.jenga
+with project("ex4"):
+    windowedapp()
+    cppdialect("C++17")
+    language("C++")
+    files(["./**.cpp"])
+    usenetwork()
+    usewin32()

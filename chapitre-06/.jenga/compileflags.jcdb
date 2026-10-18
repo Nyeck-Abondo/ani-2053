@@ -1,5 +1,5 @@
 # jcdb/1  Jenga Compilation DataBase
-compiler	C:/msys64/ucrt64/bin\clang++.EXE
+compiler	C:/msys64/ucrt64/bin/clang++.exe
 msvc	0
 project	ex1
 dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo1-la_reserve
@@ -13,6 +13,27 @@ inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\includ
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
 project	ex3
 dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo3-la_course_corrigee
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
+project	ex4
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo4-l_etreinte_fatale
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
+project	ex5
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo5-le_futur_qui_ne_bloque_pas
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\canvaskit\include
+project	ex6
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo6-deux_machines_se_parlent
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include
+project	ex7
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo7-la_decouverte
 std	c++17
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include

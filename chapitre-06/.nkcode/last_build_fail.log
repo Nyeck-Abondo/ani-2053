@@ -1,4 +1,5 @@
-$ jenga build --target ex2 --config Debug --platform Windows-x86_64 --toolchain host-gcc --jenga-file "C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/chapitre-06.jenga"
+$ jenga build --target ex5 --config Debug --platform Windows-x86_64 --toolchain llvm-mingw --jenga-file "C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/chapitre-06.jenga"
+✗ Link failed: Build\Bin\Debug-Windows\ex5\ex5.exe
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
@@ -9,7 +10,7 @@ $ jenga build --target ex2 --config Debug --platform Windows-x86_64 --toolchain 
 ║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
 ║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
 ║                                                                  ║
-║             Multi-platform C/C++ Build System v2.8.14             ║
+║             Multi-platform C/C++ Build System v2.9.0             ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 
@@ -17,107 +18,29 @@ Loading workspace...
 
 Configuration: Debug
 Target:        Windows x86_64
-Toolchain:     host-gcc
+Toolchain:     llvm-mingw
 
 Build Order (1 projects):
-  1. ex2 [WINDOWED_APP]
+  1. ex5 [WINDOWED_APP]
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║  Project: ex2                                                            Kind: WINDOWED_APP  ║
+║  Project: ex5                                                            Kind: WINDOWED_APP  ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ℹ Found 1 source file(s)
-✓   [1/1] Compiled with warnings: course.cpp
-╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                     Warning: course.cpp                                      ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════╣
-║ In file included from                                                                        ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMemory/NkTra ║
-║ cker.h:28,                                                                                   ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMemory/NKMem ║
-║ ory.h:28,                                                                                    ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include/NKWindow/Core/Nk ║
-║ Entry.h:14,                                                                                  ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include/NKWindow/Core/Nk ║
-║ Main.h:33,                                                                                   ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include/NKWindow/NKMain. ║
-║ h:3,                                                                                         ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo2-la_course_provoque ║
-║ e\course.cpp:1:                                                                              ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKCore/NkAtomi ║
-║ c.h:53:32: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]           ║
-║    53 | #pragma GCC diagnostic ignored "-Watomic-alignment"                                  ║
-║       |                                ^~~~~~~~~~~~~~~~~~~~                                  ║
-║ In file included from                                                                        ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMath/NKMath. ║
-║ h:47,                                                                                        ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include/NKWindow/Core/Nk ║
-║ Types.h:16,                                                                                  ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include/NKWindow/Core/Nk ║
-║ WESystem.h:15,                                                                               ║
-║ from                                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\win32\include/NKWindow/Core/Nk ║
-║ Entry.h:15:                                                                                  ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMath/NkAngle ║
-✗ Link failed: Build\Bin\Debug-Windows\ex2\ex2.exe
-║ .h:480:93: warning: friend declaration 'nkentseu::NkString nkentseu::math::ToString(const    ║
-║ NkAngleT<Precision>&)' declares a non-template function [-Wnon-template-friend]              ║
-║ 480 |                                 friend NKENTSEU_MATH_API NkString ToString(const       ║
-║ NkAngleT &a);                                                                                ║
-║ |                                                                                            ║
-║ ^                                                                                            ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMath/NkAngle ║
-║ .h:480:93: note: (if this is not what you intended, make sure the function template has      ║
-║ already been declared and add '<>' after the function name here)                             ║
-║ In file included from                                                                        ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMath/NKMath. ║
-║ h:103:                                                                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\Network\include/NKMath/NkQuat. ║
-║ h:265:97: warning: friend declaration 'nkentseu::math::NkQuatT<T>                            ║
-║ nkentseu::math::operator^(const NkQuatT<T>&, T)' declares a non-template function            ║
-║ [-Wnon-template-friend]                                                                      ║
-║ 265 |                                 friend NkQuatT operator^(const NkQuatT &quaternion, T  ║
-║ exponent) noexcept;                                                                          ║
-║ |                                                                                            ║
-║ ^~~~~~~~                                                                                     ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+✓   [1/1] Compiled: futur.cpp
 ℹ Linking...
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                Compilation Error: Link Failed                                ║
 ╠══════════════════════════════════════════════════════════════════════════════════════════════╣
-║ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin ║
-║ /ld.exe:                                                                                     ║
-║ C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/win32/lib/Debug-Windows/NKWind ║
-║ ow.lib(src_NKWindow_Core_NkWESystem.obj):E:\Nkentseu\Kernel\Foundation\NKMath\src/NKMath/NkR ║
-║ andom.h:82: multiple definition of                                                           ║
-║ `nkentseu::math::NkRandom::Instance()::singletonInstance';                                   ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\Build\Obj\Debug-Windows ║
-║ \ex2\course.obj:C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/includ ║
-║ e/NKMath/NkRandom.h:82: first defined here                                                   ║
-║ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin ║
-║ /ld.exe:                                                                                     ║
-║ C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/win32/lib/Debug-Windows/NKWind ║
-║ ow.lib(src_NKWindow_Core_NkWESystem.obj):NkWESystem.cpp:(.bss$_ZGVZN8nkentseu4math8NkRandom8 ║
-║ InstanceEvE17singletonInstance[_ZGVZN8nkentseu4math8NkRandom8InstanceEvE17singletonInstance] ║
-║ +0x0): multiple definition of `guard variable for                                            ║
-║ nkentseu::math::NkRandom::Instance()::singletonInstance';                                    ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\Build\Obj\Debug-Windows ║
-║ \ex2\course.obj:C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/win32/include/ ║
-║ NKWindow/Core/NkEntry.h:292: first defined here                                              ║
-║ collect2.exe: error: ld returned 1 exit status                                               ║
+║ lld: error: unable to find library -lvulkan-1                                                ║
+║ clang-18: error: linker command failed with exit code 1 (use -v to see invocation)           ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✗ Build Failed                                                                 Time: 8.62s  │
-│ Errors: 1  | Warnings: 3  | Failed files: 1                                                  │
+│  ✗ Build Failed                                                                 Time: 2.79s  │
+│ Errors: 2  | Failed files: 1                                                                 │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ════════════════════════════════════════════════════════════════════════════════
@@ -125,12 +48,11 @@ Build Order (1 projects):
 ════════════════════════════════════════════════════════════════════════════════
 Projects Built:  0/1
 Failed:         1
-Errors:         1
-Warnings:       3
-Time:           8.62s
+Errors:         2
+Time:           2.79s
 Status:         ✗ FAILURE
 ════════════════════════════════════════════════════════════════════════════════
 
 Echecs (1) — a corriger :
-  ✗ ex2
+  ✗ ex5
 

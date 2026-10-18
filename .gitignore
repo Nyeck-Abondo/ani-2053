@@ -52,5 +52,8 @@ Linuxkit/
 **/Linuxkit/
 **/include/Linuxkit/
 
+.png
+.jpg
+.jpeg
 logs
 Kits

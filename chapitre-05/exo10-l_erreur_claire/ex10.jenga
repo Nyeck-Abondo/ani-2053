@@ -1,0 +1,9 @@
+# ex10.jenga
+from Jenga import *
+
+with project("ex10"):
+    windowedapp()
+    language("C++")
+    files(["./**.cpp"])
+    usenkaudiokit()
+    usecanvas()
