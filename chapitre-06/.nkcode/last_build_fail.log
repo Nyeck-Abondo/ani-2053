@@ -1,5 +1,4 @@
-$ jenga build --target ex5 --config Debug --platform Windows-x86_64 --toolchain llvm-mingw --jenga-file "C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/chapitre-06.jenga"
-✗ Link failed: Build\Bin\Debug-Windows\ex5\ex5.exe
+$ jenga build --target ex6 --config Debug --platform Windows-x86_64 --jenga-file "C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/chapitre-06.jenga"
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
@@ -18,28 +17,36 @@ Loading workspace...
 
 Configuration: Debug
 Target:        Windows x86_64
-Toolchain:     llvm-mingw
+Toolchain:     clang-mingw
 
 Build Order (1 projects):
-  1. ex5 [WINDOWED_APP]
+  1. ex6 [WINDOWED_APP]
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║  Project: ex5                                                            Kind: WINDOWED_APP  ║
+║  Project: ex6                                                            Kind: WINDOWED_APP  ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ℹ Found 1 source file(s)
-✓   [1/1] Compiled: futur.cpp
-ℹ Linking...
+
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                Compilation Error: Link Failed                                ║
+║                                 Compilation Error: parle.cpp                                 ║
 ╠══════════════════════════════════════════════════════════════════════════════════════════════╣
-║ lld: error: unable to find library -lvulkan-1                                                ║
-║ clang-18: error: linker command failed with exit code 1 (use -v to see invocation)           ║
+║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo6-deux_machines_se_p ║
+║ arlent\parle.cpp:72:62: error: expected ')'                                                  ║
+║    72 |             logger.Warn("[APP] : Client connecte avec succes";                       ║
+║       |                                                              ^                       ║
+║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo6-deux_machines_se_p ║
+║ arlent\parle.cpp:72:24: note: to match this '('                                              ║
+║    72 |             logger.Warn("[APP] : Client connecte avec succes";                       ║
+║       |                        ^                                                             ║
+║ 1 error generated.                                                                           ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
+✗ ✗ Compilation failed: C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-06\exo6-deux_machines_se_parlent\parle.cpp
+
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✗ Build Failed                                                                 Time: 2.79s  │
+│  ✗ Build Failed                                                                 Time: 2.14s  │
 │ Errors: 2  | Failed files: 1                                                                 │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
@@ -49,10 +56,10 @@ Build Order (1 projects):
 Projects Built:  0/1
 Failed:         1
 Errors:         2
-Time:           2.79s
+Time:           2.14s
 Status:         ✗ FAILURE
 ════════════════════════════════════════════════════════════════════════════════
 
 Echecs (1) — a corriger :
-  ✗ ex5
+  ✗ ex6
 
