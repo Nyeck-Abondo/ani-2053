@@ -1,11 +1,11 @@
 nksession/2
-active 11
+active 13
 ui 0 1
 F 30 5 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/parle.cpp
 F 68 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKContainers/String/NkString.h
 F 171 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKNetwork/Transport/NkSocket.h
 F 764 39 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKNetwork/Protocol/NkConnection.h
-F 54 31 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/decouverte.cpp
+F 46 0 0 0 19 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/decouverte.cpp
 F 80 47 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/echange.txt
 F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo8-le_message_qui_compte_ses_octets/tailles.txt
 F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/corrige.cpp
@@ -14,3 +14,4 @@ F 1116 44 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Ne
 F 222 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKTime/NkChrono.h
 F 3 144 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/etreinte.txt
 F 28 83 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/etreinte.cpp
+F 4 10 0 1 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/serveurs.txt
