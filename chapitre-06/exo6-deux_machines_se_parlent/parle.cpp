@@ -54,27 +54,26 @@ int nkmain(const nkentseu::NkEntryState& state) {
         if (result != nkentseu::net::NkNetResult::NK_NET_OK) {
             logger.Error("[APP] : Erreur de connexion du client au serveur");
         }
-        
+
         //temps d'atente de connexion
         nkentseu::uint64 ellapsed = 0;
         for (nkentseu::uint64 i = 0; i < 1000000000; ++i) {
             ellapsed++;
             if (ellapsed >= 300000000) {
                 logger.Info("[APP] : RECHERCHE DU SERVEUR");
+                nkentseu::NkString msg = "Bonjour depuis le client trs cher serveur.";
+                nkentseu::NkVector<nkentseu::uint8> convertMsg(msg.Size());
+                std::memcpy(convertMsg.Data(), msg.Data(), msg.Size());
+                nkentseu::net::NkNetResult r = manager.SendTo(nkentseu::net::NkPeerId::Server(), convertMsg.Data(), convertMsg.Size());
+                if (r != nkentseu::net::NkNetResult::NK_NET_OK) {
+                    logger.Warn("[APP] : Erreur d'envoie du message sur le fil");
+                }
+                logger.Warn("[APP] : Message envoye");
                 ellapsed = 0;   
             }
-            if (manager.ConnectedPeerCount() >= 1) {
-                break;
-            }
         }
-        
-        nkentseu::NkString msg = "Bonjour depuis le client trs cher serveur.";
-        nkentseu::NkVector<nkentseu::uint8> convertMsg(msg.Size());
-        std::memcpy(convertMsg.Data(), msg.Data(), msg.Size());
-        nkentseu::net::NkNetResult r = manager.SendTo(nkentseu::net::NkPeerId::Server(), convertMsg.Data(), convertMsg.Size());
-        if (r != nkentseu::net::NkNetResult::NK_NET_OK) {
-            logger.Warn("[APP] : Erreur d'envoie du message sur le fil");
-        }
+
+
     }        
 
     else if (role == NetRole::SERVER) {
@@ -95,12 +94,16 @@ int nkmain(const nkentseu::NkEntryState& state) {
             }
         }
         //collecte des messages
-        nkentseu::NkVector<nkentseu::net::NkReceiveMsg> msgs;
-        manager.DrainAll(msgs);
-        for (int i = 0; i < msgs.Size(); i++) {
-            const auto msg = msgs[i];
-            nkentseu::NkString clientMsg{reinterpret_cast<const char*>(msg.data), msg.size - 1};
-            std::cout << "[Client] : " << clientMsg.CStr() << " ID : " << msg.from.value << std::endl;
+        ellapsed = 0;
+        while (ellapsed < 1000000000) {
+            nkentseu::NkVector<nkentseu::net::NkReceiveMsg> msgs;
+            msgs.Clear();
+            manager.DrainAll(msgs);
+            for (int i = 0; i < msgs.Size(); i++) {
+                const auto& msg = msgs[i];
+                nkentseu::NkString clientMsg{reinterpret_cast<const char*>(msg.data), msg.size};
+                logger.Warn("[Client] : {0} --  ID : {1}",clientMsg.CStr(),msg.from.value);
+            }   
         }
     }
 

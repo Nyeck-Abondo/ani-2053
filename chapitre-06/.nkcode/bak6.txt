@@ -1,7 +1,89 @@
-with project("ex"):
-    windowedapp()
-    cppdialect("C++17")
-    language("C++")
-    files(["./**.cpp"])
-    usenetwork()
-    usewin32()
+Serveur :
+[2026-10-19 01:11:18.826] [INF] [default] [NkConnection.cpp:937 in StartServer] -> [NKNet] Serveur demarre sur port 7777 (max 7777 clients)
+[2026-10-19 01:11:18.826] [INF] [default] [NkConnection.cpp:1208 in NetThreadLoop] -> [NKNet] Thread reseau demarre
+[2026-10-19 01:11:18.826] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #0 bufSize=0 valid=0
+[2026-10-19 01:11:18.843] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #1 bufSize=1 valid=1
+[2026-10-19 01:11:18.860] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #2 bufSize=2 valid=2
+[2026-10-19 01:11:18.876] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #3 bufSize=3 valid=3
+[2026-10-19 01:11:18.893] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #4 bufSize=4 valid=4
+[2026-10-19 01:11:18.910] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #5 bufSize=5 valid=5
+[2026-10-19 01:11:18.927] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #6 bufSize=6 valid=6
+[2026-10-19 01:11:18.943] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #7 bufSize=7 valid=7
+[2026-10-19 01:11:24.403] [INF] [default] [parle.cpp:90 in nkmain] -> [APP] : RECHERCHE DU CLIENT
+[2026-10-19 01:11:27.743] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #0 <- 0 (0 bytes)
+[2026-10-19 01:11:27.745] [INF] [default] [NkConnection.cpp:1416 in FindOrCreateConnection] -> [NKNet] Connexion creee : 192.192.192.192:192 (slot 192.192.192.192:192/192.192.192.192:
+192 max)
+[2026-10-19 01:11:27.745] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #0 socket=0 valid=0
+[2026-10-19 01:11:27.760] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #1 socket=1 valid=1
+[2026-10-19 01:11:27.777] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #2 socket=2 valid=2
+[2026-10-19 01:11:27.794] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #1 <- 1 (1 bytes)
+[2026-10-19 01:11:27.794] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #3 socket=3 valid=3
+[2026-10-19 01:11:27.794] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #0 target=0 size=0 valid=0
+[2026-10-19 01:11:27.794] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #0 -> 0 (0 bytes OK)
+[2026-10-19 01:11:27.811] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #4 socket=4 valid=4
+[2026-10-19 01:11:27.861] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #2 <- 2 (2 bytes)
+[2026-10-19 01:11:27.861] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #1 target=1 size=1 valid=1
+[2026-10-19 01:11:27.861] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #1 -> 1 (1 bytes OK)
+[2026-10-19 01:11:27.894] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #2 target=2 size=2 valid=2
+[2026-10-19 01:11:27.894] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #2 -> 2 (2 bytes OK)
+[2026-10-19 01:11:27.928] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #3 <- 3 (3 bytes)
+[2026-10-19 01:11:27.928] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #3 target=3 size=3 valid=3
+[2026-10-19 01:11:27.928] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #3 -> 3 (3 bytes OK)
+[2026-10-19 01:11:27.979] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #4 <- 4 (4 bytes)
+[2026-10-19 01:11:27.995] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #4 target=4 size=4 valid=4
+[2026-10-19 01:11:27.995] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #4 -> 4 (4 bytes OK)
+[2026-10-19 01:11:28.061] [INF] [default] [NkConnection.cpp:797 in ProcessACK] -> [NKNet] ACK recu - connexion etablie avec client 7823295825147794755
+[2026-10-19 01:11:28.061] [WRN] [default] [parle.cpp:82 in operator()] -> [APP] : Client connecte avec succes
+[2026-10-19 01:11:28.061] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #5 target=5 size=5 valid=5
+[2026-10-19 01:11:28.077] [INF] [default] [NkConnection.cpp:1230 in NetThreadLoop] -> [NKNet] Thread reseau arrete
+[2026-10-19 01:11:28.077] [INF] [default] [NkConnection.cpp:313 in Disconnect] -> [NKNet] FIN envoye a 192.192.192.192:192 : 192.192.192.192:192
+[2026-10-19 01:11:28.078] [INF] [default] [NkConnection.cpp:1059 in Shutdown] -> [NKNet] Gestionnaire de connexions arrete
+
+Client :
+
+[2026-10-19 01:11:28.828] [WRN] [default] [parle.cpp:25 in nkmain] -> [APP] ARGUMENT : --client, ip : 192.168.202.209
+[2026-10-19 01:11:28.833] [INF] [default] [NkConnection.cpp:1026 in Connect] -> [NKNet] Connexion initiee vers 192.192.192.192:192
+[2026-10-19 01:11:28.834] [INF] [default] [NkConnection.cpp:1208 in NetThreadLoop] -> [NKNet] Thread reseau demarre
+[2026-10-19 01:11:28.834] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #0 bufSize=0 valid=0
+[2026-10-19 01:11:28.835] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #0 socket=0 valid=0
+[2026-10-19 01:11:28.836] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #0 target=0 size=0 valid=0
+[2026-10-19 01:11:28.837] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #0 -> 0 (0 bytes OK)
+[2026-10-19 01:11:28.851] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #1 bufSize=1 valid=1
+[2026-10-19 01:11:28.851] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #1 socket=1 valid=1
+[2026-10-19 01:11:28.868] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #2 bufSize=2 valid=2
+[2026-10-19 01:11:28.868] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #2 socket=2 valid=2
+[2026-10-19 01:11:28.885] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #3 bufSize=3 valid=3
+[2026-10-19 01:11:28.885] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #3 socket=3 valid=3
+[2026-10-19 01:11:28.886] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #1 target=1 size=1 valid=1
+[2026-10-19 01:11:28.887] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #1 -> 1 (1 bytes OK)
+[2026-10-19 01:11:28.901] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #4 bufSize=4 valid=4
+[2026-10-19 01:11:28.901] [INF] [default] [NkReliableUDP.cpp:448 in Update] -> [NKNet] [NET-DIAG] RUDP::Update enter #4 socket=4 valid=4
+[2026-10-19 01:11:28.918] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #5 bufSize=5 valid=5
+[2026-10-19 01:11:28.918] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #0 <- 0 (0 bytes)
+[2026-10-19 01:11:28.919] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #6 bufSize=6 valid=6
+[2026-10-19 01:11:28.934] [INF] [default] [NkSocket.cpp:771 in RecvFrom] -> [NKNet] [NET-DIAG] RecvFrom enter #7 bufSize=7 valid=7
+[2026-10-19 01:11:28.951] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #2 target=2 size=2 valid=2
+[2026-10-19 01:11:28.951] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #2 -> 2 (2 bytes OK)
+[2026-10-19 01:11:28.985] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #1 <- 1 (1 bytes)
+[2026-10-19 01:11:29.017] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #2 <- 2 (2 bytes)
+[2026-10-19 01:11:29.017] [INF] [default] [NkConnection.cpp:739 in ProcessSYNACK] -> [NKNet] Connexion etablie avec serveur 1
+[2026-10-19 01:11:29.018] [WRN] [default] [parle.cpp:46 in operator()] -> [APP] : Serveur connecte avec succes
+[2026-10-19 01:11:29.018] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #3 target=3 size=3 valid=3
+[2026-10-19 01:11:29.019] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #3 -> 3 (3 bytes OK)
+[2026-10-19 01:11:29.050] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #3 <- 3 (3 bytes)
+[2026-10-19 01:11:29.083] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #4 target=4 size=4 valid=4
+[2026-10-19 01:11:29.084] [INF] [default] [NkSocket.cpp:756 in SendTo] -> [NKNet] [NET-DIAG] sendto #4 -> 4 (4 bytes OK)
+[2026-10-19 01:11:29.116] [INF] [default] [NkSocket.cpp:837 in RecvFrom] -> [NKNet] [NET-DIAG] recvfrom #4 <- 4 (4 bytes)
+[2026-10-19 01:11:29.149] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #5 target=5 size=5 valid=5
+[2026-10-19 01:11:29.165] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #6 target=6 size=6 valid=6
+[2026-10-19 01:11:29.215] [INF] [default] [NkSocket.cpp:715 in SendTo] -> [NKNet] [NET-DIAG] SendTo enter #7 target=7 size=7 valid=7
+[2026-10-19 01:11:29.355] [WRN] [default] [parle.cpp:70 in nkmain] -> [APP] : Message envoye
+[2026-10-19 01:11:29.875] [WRN] [default] [parle.cpp:70 in nkmain] -> [APP] : Message envoye
+[2026-10-19 01:11:30.394] [WRN] [default] [parle.cpp:70 in nkmain] -> [APP] : Message envoye
+[2026-10-19 01:11:30.584] [INF] [default] [NkConnection.cpp:1230 in NetThreadLoop] -> [NKNet] Thread reseau arrete
+[2026-10-19 01:11:30.584] [INF] [default] [NkConnection.cpp:313 in Disconnect] -> [NKNet] FIN envoye a 192.192.192.192:192 : 192.192.192.192:192
+[2026-10-19 01:11:30.585] [INF] [default] [NkConnection.cpp:1059 in Shutdown] -> [NKNet] Gestionnaire de connexions arrete
+
+Pair : ID cote serveur : 7823295825147794755 . ID cote client : 1
+
+Machines : 2 machines. Adresse du serveur : 192.1068.202.209 Adresse cliente 192.168.202.
