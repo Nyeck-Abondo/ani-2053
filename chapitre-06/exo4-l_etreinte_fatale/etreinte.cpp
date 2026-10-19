@@ -11,22 +11,27 @@
 int nkmain(const nkentseu::NkEntryState& state) {
     nkentseu::threading::NkMutex m1;
     nkentseu::threading::NkMutex m2;
-    
+
     nkentseu::threading::NkThread a([&] (void *) {
-         nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> guard(m1);
-         nkentseu::NkChrono::SleepMicroseconds(100);
-         nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(m2);
+        nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> guard(m1);
+        nkentseu::NkChrono::SleepMicroseconds(100);
+        nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(m2);
     });
-    
+
     nkentseu::threading::NkThread b([&] (void*) {
         nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(m2);
         nkentseu::NkChrono::SleepMicroseconds(100);
         nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> guard(m1);
+        
+        // CORRECTION
+        // nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(m1);
+        // nkentseu::NkChrono::SleepMicroseconds(100);
+        // nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> guard(m2);
     });
-    
+
     a.SetName("Thread A");
     b.SetName("Thread B");
-    
+
     a.Join();
     b.Join();
     return 0;

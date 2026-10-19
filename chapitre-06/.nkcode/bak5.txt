@@ -1,16 +1,34 @@
-Dix totaux : 
-1227067 
-1193784 
-1127245
-1283901
-1287844
-1476660
-1442812
-1322313
-3602527
-1261842
+#include "NKWindow/NKMain.h"
+#include "NKWindow/NKWindow.h"
+#include "NKNetwork/NKNetwork.h"
 
-seul fil : 1000000
-Release : 1122373, 1339178, 1093357
-Pourquoi : Ce resultat final de l'incrmentation du compteur en release s'explique par le fait que chaque thread ecrit sur le meme emplacement memoire de la variable comptreur. Chacun d'entre eux lit une valeur obsolette du compteur, l'incremente de 1 puis la stocke de nouveau dans la variable et le tout en desordre. Ce qui justifie que la valeur 8000000 attendue apres l'operation n'ai jamais ete atteinte dans aucun des tests.
-Par ailleur, en ce qui concerne la difference entre la compilation en Debug et en Release, le test ne revele pas une grande difference de comportement. Cela est du aux choix du compilateur au lancement du program
+enum class NetRole{
+    NONE,
+    SERVER,
+    CLIENT  
+};
+
+int nkmain(const nkentseu::NkEntryState& state) {
+    NetRole role = NetRole::NONE;
+    nkentseu::NkString arg = state.args[1];
+    nkentseu::NkString ip = state.args[state.args.Size() > 2 ? 2 : 0];
+    nkentseu::uint16 port = 7777;
+
+    if (arg == "--server") {
+        role = NetRole::SERVER;
+    }
+    else if (arg == "--client") {
+        role = NetRole::CLIENT;
+        if (ip.Empty()) {
+            logger.Error("[APP] : Omission de l'IP du serveur !");
+            return -2;
+        }
+    }
+
+    if (nkentseu::net::NkSocket::PlatformInit() != nkentseu::net::NkNetResult::NK_NET_OK) {
+        logger.Error("[APP] : Echec d'initialisation de la plateforme");
+        return -3;
+    }
+    nkentseu::NkVector<nkentseu::net::NkDiscovery::ServerInfo> servers;
+    return 0;
+}

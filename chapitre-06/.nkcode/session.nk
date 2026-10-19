@@ -1,13 +1,16 @@
 nksession/2
-active 6
+active 11
 ui 0 1
-F 70 51 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/parle.cpp
+F 30 5 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/parle.cpp
 F 68 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKContainers/String/NkString.h
 F 171 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKNetwork/Transport/NkSocket.h
-F 118 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKNetwork/NKNetwork.h
 F 764 39 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKNetwork/Protocol/NkConnection.h
-F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/decouverte.cpp
-F 88 63 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/echange.txt
-F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/pyrightconfig.json
-F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo8-le_message_qui_compte_ses_octets/octets.cpp
+F 54 31 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo7-la_decouverte/decouverte.cpp
+F 80 47 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo6-deux_machines_se_parlent/echange.txt
 F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo8-le_message_qui_compte_ses_octets/tailles.txt
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo3-la_course_corrigee/corrige.cpp
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo8-le_message_qui_compte_ses_octets/octets.cpp
+F 1116 44 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKNetwork/Lobby/NkLobby.h
+F 222 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/Network/include/NKTime/NkChrono.h
+F 3 144 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/etreinte.txt
+F 28 83 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-06/exo4-l_etreinte_fatale/etreinte.cpp

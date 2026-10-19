@@ -1,33 +1,4 @@
-#include "NKWindow/NKMain.h"
-#include "NKWindow/NKWindow.h"
-#include "NKThreading/NkThreadPool.h"
-#include "NKThreading/NkThread.h"
-#include "NKContainers/Sequential/NkVector.h"
-#include "NKTime/NkChrono.h"
-#include "NKTime/NkElapsedTime.h"
-#include "NKThreading/NkScopedLock.h"
-#include "NKThreading/NkMutex.h"
-
-int nkmain(const nkentseu::NkEntryState& state) {
-    nkentseu::threading::NkMutex m1;
-    nkentseu::threading::NkMutex m2;
-    
-    nkentseu::threading::NkThread a([&] (void *) {
-                nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> guard(m1);
-         nkentseu::NkChrono::SleepMicroseconds(100);
-         nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(m2);
-    });
-    
-    nkentseu::threading::NkThread b([&] (void*) {
-        nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> lock(m2);
-        nkentseu::NkChrono::SleepMicroseconds(100);
-        nkentseu::threading::NkScopedLock<nkentseu::threading::NkMutex> guard(m1);
-    });
-    
-    a.SetName("Thread A");
-    b.SetName("Thread B");
-    
-    a.Join();
-    b.Join();
-    return 0;
-}
+Constat : le programme se fige sans envoyer un quelconque message d'erreur
+Pause : le premier fil attend  la ligne 18 et le second  attend a la ligne 24
+Correction : pour corriger, j'ai invers l'ordre de prise du verrou dans le second fil, pour qu'il soit identique a l'ordre de prise du verrou dans le premier fil
+Règle : Lorsque dans un programme plusieurs verrous sont necessaires, ils sont toujours pris dans le meme ordre par tous les fils du programme

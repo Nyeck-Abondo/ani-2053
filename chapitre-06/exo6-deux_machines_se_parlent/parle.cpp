@@ -7,22 +7,12 @@ enum class NetRole{
     SERVER,
     CLIENT  
 };
-//gestion du choix du role en ligne de commande style Gemcrush
-nkentseu::NkString ParseText(const nkentseu::NkVector<nkentseu::NkString>& args, const char* option) {
-    nkentseu::int32 optionLengh = nkentseu::NkString(option).Size();
-    for (int i = 0; i < args.Size(); ++i) {
-        if (args[i].StartsWith(option))
-        return args[i].SubStr(optionLengh);
-    }
-    return nkentseu::NkString();
-}
 
 int nkmain(const nkentseu::NkEntryState& state) {
     NetRole role = NetRole::NONE;
     nkentseu::NkString arg = state.args[1];
     nkentseu::NkString ip = state.args[state.args.Size() > 2 ? 2 : 0];
     nkentseu::uint16 port = 7777;
-    logger.Warn("[APP] ARGUMENT : {0}, ip : {1}", arg.CStr(), ip.CStr());
 
     if (arg == "--server") {
         role = NetRole::SERVER;
