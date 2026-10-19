@@ -1,3 +1,6 @@
 Liste :
-Apparitions :
-Pourquoi :
+- [2026-10-19 23:32:45.180] [WRN] [default] [decouverte.cpp:38 in nkmain] -> [APP] : Adresse serveur : 192.192.192.192:192 Nom : My LAN Server
+
+Apparitions : le serveur My LAN Server y figure une seule fois avec l'adresse 192.192.192.192:192
+Pourquoi : dans NkLobby.cpp, cette apparition unique du serveur dans la liste des serveurs detectes est due au fait que la methode NkDiscovery::Listen evite la diplication avant d'ajouter un serveur a la liste de serveurs detectes
+Machines : Le test a ete realise avec deux machines differentes: un desktop et un laptop; connectes tous les deux sur un telephone. Le laptop jouant le role de serveur, en diffusant ses informations sur le reseau, et le desktop celui de clien en ecoutant et en listant les serveurs quil detecte
