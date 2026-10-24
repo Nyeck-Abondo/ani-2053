@@ -1,0 +1,4 @@
+Ce qu'il possède : la position de la forme, sa rotation, son échelle, on origine. Il détien aussi en cahe sa transformation et l'inverse de sa transformation
+Qui l'appelle : Il est appelé depuis les fichiers NkShape.h en tant que classe parente de la classe NkShape.NkSprite.h toujours en tant que la première classe parente de la classe NKSprite et NkTransformable.h à la ligne 3 où elle est juste mentionnée dans un commentaire.
+Ce qu'il promet : Déplacer la forme par incréments de position, la faire roter, changer son échelle, recupérer son origine, sa position et sa rotation, définir l'origine de la forme, définir le scale et la rotation de la forme, ainsi que sa position.
+Ce que je n'ai pas lu : le code des corps des méthodes publiques; les commentaires de la classe car les noms des méthodes et des attribus privés étaient très ecplicites.
