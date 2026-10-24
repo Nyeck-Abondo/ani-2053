@@ -1,0 +1,7 @@
+# jcdb/1  Jenga Compilation DataBase
+compiler	C:/msys64/ucrt64/bin/clang++.exe
+msvc	0
+project	ex3
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo3-suivre_un_appel
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include

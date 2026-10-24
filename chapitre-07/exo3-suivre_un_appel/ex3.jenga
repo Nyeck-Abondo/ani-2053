@@ -1,0 +1,8 @@
+# ex3.jenga
+from Jenga import *
+
+with project("ex3") :
+    windowedapp()
+    cppdialect("C++17")
+    language("C++")
+    usenkcanvas()

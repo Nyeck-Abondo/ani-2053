@@ -6,4 +6,7 @@ with workspace("Chapitre-07"):
     targetoses([TargetOS.WINDOWS])
     targetarchs([TargetArch.X86_64])
     
-    useconfig("Kits\NKCanvas\NKCanvas.jenga")
+    useconfig("../Kits/NKCanvas/NKCanvas.jenga")
+    
+    with include("exo3-suivre_un_appel/ex3.jenga") :
+        pass

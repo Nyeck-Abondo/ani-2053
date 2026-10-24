@@ -1,0 +1,8 @@
+Les sauts :
+1- NkRenderWindow.h : void Clear(const NkColor2D &color = NkColor2D::Black) override;
+2- NkRenderTarget.h : virtual void Clear(const NkColor2D &color = NkColor2D::Black) = 0;
+
+Arrêt : virtual void Clear(const NkColor2D &color = NkColor2D::Black) = 0;
+Pourquoi là : je me suis arrêté ici ccar la méthode clear présentée dans le dernier saut est une fonction virtuelle pure
+Ce que je sais maintenant : je sais maintenant que la méthode clear dessine directement sur l'écran sans faire appel à un intermédiare en recupérant la couleur désirée placée en argument.
+Ce que je suppose c'est que la méthode clear s'appuis sur un mécanisme de double buffering pour remplir l'écran d'une couleur unie.
