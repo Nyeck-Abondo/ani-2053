@@ -1,0 +1,9 @@
+# chapitre7.jenga
+from Jenga import *
+
+with workspace("Chapitre-07"):
+    configurations(['Debug', 'Release'])
+    targetoses([TargetOS.WINDOWS])
+    targetarchs([TargetArch.X86_64])
+    
+    useconfig("Kits\NKCanvas\NKCanvas.jenga")

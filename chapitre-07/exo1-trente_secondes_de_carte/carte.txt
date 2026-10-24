@@ -1,0 +1,5 @@
+Module : NKStream
+D'après le projet : le module manipule des fichiers, stocke des données dans la mémoire, enregistre des traces d'exécution, s'exécute ur plusieurs plateformes et travaille sur plusieurs fils d'exécution.
+Il ne joue pas de son, de vidéo, et ne dessine pas à l'écran
+Après l'en-tête : Kits/NkCanvas/NKStream/NkStream.h
+Mes erreurs : Il ne permet pas l'enregistrement des traces d'exécution. Il utilise certainement le logger pour du debugage interne. Et ne manipule pas les fils d'exécutions.
