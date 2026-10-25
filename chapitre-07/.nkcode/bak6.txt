@@ -1,0 +1,9 @@
+Le commentaire : //   - Conteneur MOV/MP4 (ISOBMFF) : piste vidéo -> MJPEG (mjpa/jpeg). H264 = à venir.
+Le code : NkVector<nk_uint8> h264Sps, h264Pps; // H264 : SPS/PPS extraits de l'avc Dans NkVideoReader.cpp ligne 474
+La preuve : grep -rn "h264" Kernel/ donne comme resultat
+Kernel/Runtime/NKMedia/src/NKMedia/Video/NkVideoReader.cpp:1828:                                        info.codec = NkString("h264");
+Kernel/Runtime/NKMedia/src/NKMedia/Video/NkVideoReader.cpp:1996:                                        if (frames.Size() == 0 || h264Sps.Size() == 0 || h264Pps.Size() == 0)
+Kernel/Runtime/NKMedia/src/NKMedia/Video/NkVideoReader.cpp:2002:                                        info.codec = NkString("h264");
+
+Ce qu'il dit de son auteur : l'auteur a cru avoir totalement documenté le module en exposant avec honn^éteté ce qui n'était pas encore pris en charge dans les versions précédentes des fichiers.
+Ce qui nous permet de comprendre à cet endroit que les commentaires sous estiment les capacités du module NKMed

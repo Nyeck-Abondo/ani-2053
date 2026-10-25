@@ -1,8 +1,11 @@
 nksession/2
-active 3
+active 6
 ui 0 1
-F 8 56 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/exo3-suivre_un_appel/fenetre.h
+F 11 36 0 1 20 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/exo3-suivre_un_appel/fenetre.h
 F 10 30 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/exo3-suivre_un_appel/fenetre.cpp
 F 93 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/NKCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h
-F 7 134 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/exo3-suivre_un_appel/appel.txt
+F 7 108 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/exo3-suivre_un_appel/appel.txt
 F 63 53 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/NKCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h
+F 0 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/chapitre7.jenga
+F 8 116 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/exo4-le_mensonge_suivant/mensonge.txt
+F 97 0 0 0 0 C:/Users/Administrator/Documents/Github/Sprints/ani-2053/Kits/NKCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h
