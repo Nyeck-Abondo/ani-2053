@@ -1,0 +1,1426 @@
+Par le texte :
+
+Lq commande exécutée ici est grep -rn "Draw" ../Kits/NkCanvas/include/ exo5-qui_appelle_vraime
+nt/
+../Kits/NkCanvas/include/Core/NkFontSizeCache.h:202:     * NkFontScaleRenderer::DrawText2D(renderer, fontRef, "Hello", px, py, scale, .
+..);
+../Kits/NkCanvas/include/glad/gl.h:7337:typedef void (GLAD_API_PTR *PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNVPROC)(GLenum mode, const
+ void * indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+../Kits/NkCanvas/include/glad/gl.h:7347:typedef void (GLAD_API_PTR *PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNVPROC)(GLenum mode, GLe
+num type, const void * indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+../Kits/NkCanvas/include/glad/gl.h:9912:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_glDrawArrays;
+../Kits/NkCanvas/include/glad/gl.h:9913:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_debug_glDrawArrays;
+../Kits/NkCanvas/include/glad/gl.h:9914:#define glDrawArrays glad_debug_glDrawArrays
+../Kits/NkCanvas/include/glad/gl.h:9915:GLAD_API_CALL PFNGLDRAWARRAYSEXTPROC glad_glDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gl.h:9916:GLAD_API_CALL PFNGLDRAWARRAYSEXTPROC glad_debug_glDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gl.h:9917:#define glDrawArraysEXT glad_debug_glDrawArraysEXT
+../Kits/NkCanvas/include/glad/gl.h:9918:GLAD_API_CALL PFNGLDRAWARRAYSINDIRECTPROC glad_glDrawArraysIndirect;
+../Kits/NkCanvas/include/glad/gl.h:9919:GLAD_API_CALL PFNGLDRAWARRAYSINDIRECTPROC glad_debug_glDrawArraysIndirect;
+../Kits/NkCanvas/include/glad/gl.h:9920:#define glDrawArraysIndirect glad_debug_glDrawArraysIndirect
+../Kits/NkCanvas/include/glad/gl.h:9921:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDPROC glad_glDrawArraysInstanced;
+../Kits/NkCanvas/include/glad/gl.h:9922:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDPROC glad_debug_glDrawArraysInstanced;
+../Kits/NkCanvas/include/glad/gl.h:9923:#define glDrawArraysInstanced glad_debug_glDrawArraysInstanced
+../Kits/NkCanvas/include/glad/gl.h:9924:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDARBPROC glad_glDrawArraysInstancedARB;
+../Kits/NkCanvas/include/glad/gl.h:9925:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDARBPROC glad_debug_glDrawArraysInstancedARB;
+../Kits/NkCanvas/include/glad/gl.h:9926:#define glDrawArraysInstancedARB glad_debug_glDrawArraysInstancedARB
+../Kits/NkCanvas/include/glad/gl.h:9927:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glad_glDrawArraysInstancedBaseInstance;
+../Kits/NkCanvas/include/glad/gl.h:9928:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC glad_debug_glDrawArraysInstancedBaseInst
+ance;
+../Kits/NkCanvas/include/glad/gl.h:9929:#define glDrawArraysInstancedBaseInstance glad_debug_glDrawArraysInstancedBaseInstance
+../Kits/NkCanvas/include/glad/gl.h:9930:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDEXTPROC glad_glDrawArraysInstancedEXT;
+../Kits/NkCanvas/include/glad/gl.h:9931:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDEXTPROC glad_debug_glDrawArraysInstancedEXT;
+../Kits/NkCanvas/include/glad/gl.h:9932:#define glDrawArraysInstancedEXT glad_debug_glDrawArraysInstancedEXT
+../Kits/NkCanvas/include/glad/gl.h:9933:GLAD_API_CALL PFNGLDRAWBUFFERPROC glad_glDrawBuffer;
+../Kits/NkCanvas/include/glad/gl.h:9934:GLAD_API_CALL PFNGLDRAWBUFFERPROC glad_debug_glDrawBuffer;
+../Kits/NkCanvas/include/glad/gl.h:9935:#define glDrawBuffer glad_debug_glDrawBuffer
+../Kits/NkCanvas/include/glad/gl.h:9936:GLAD_API_CALL PFNGLDRAWBUFFERSPROC glad_glDrawBuffers;
+../Kits/NkCanvas/include/glad/gl.h:9937:GLAD_API_CALL PFNGLDRAWBUFFERSPROC glad_debug_glDrawBuffers;
+../Kits/NkCanvas/include/glad/gl.h:9938:#define glDrawBuffers glad_debug_glDrawBuffers
+../Kits/NkCanvas/include/glad/gl.h:9939:GLAD_API_CALL PFNGLDRAWBUFFERSARBPROC glad_glDrawBuffersARB;
+../Kits/NkCanvas/include/glad/gl.h:9940:GLAD_API_CALL PFNGLDRAWBUFFERSARBPROC glad_debug_glDrawBuffersARB;
+../Kits/NkCanvas/include/glad/gl.h:9941:#define glDrawBuffersARB glad_debug_glDrawBuffersARB
+../Kits/NkCanvas/include/glad/gl.h:9942:GLAD_API_CALL PFNGLDRAWBUFFERSATIPROC glad_glDrawBuffersATI;
+../Kits/NkCanvas/include/glad/gl.h:9943:GLAD_API_CALL PFNGLDRAWBUFFERSATIPROC glad_debug_glDrawBuffersATI;
+../Kits/NkCanvas/include/glad/gl.h:9944:#define glDrawBuffersATI glad_debug_glDrawBuffersATI
+../Kits/NkCanvas/include/glad/gl.h:9945:GLAD_API_CALL PFNGLDRAWCOMMANDSADDRESSNVPROC glad_glDrawCommandsAddressNV;
+../Kits/NkCanvas/include/glad/gl.h:9946:GLAD_API_CALL PFNGLDRAWCOMMANDSADDRESSNVPROC glad_debug_glDrawCommandsAddressNV;
+../Kits/NkCanvas/include/glad/gl.h:9947:#define glDrawCommandsAddressNV glad_debug_glDrawCommandsAddressNV
+../Kits/NkCanvas/include/glad/gl.h:9948:GLAD_API_CALL PFNGLDRAWCOMMANDSNVPROC glad_glDrawCommandsNV;
+../Kits/NkCanvas/include/glad/gl.h:9949:GLAD_API_CALL PFNGLDRAWCOMMANDSNVPROC glad_debug_glDrawCommandsNV;
+../Kits/NkCanvas/include/glad/gl.h:9950:#define glDrawCommandsNV glad_debug_glDrawCommandsNV
+../Kits/NkCanvas/include/glad/gl.h:9951:GLAD_API_CALL PFNGLDRAWCOMMANDSSTATESADDRESSNVPROC glad_glDrawCommandsStatesAddressNV;
+../Kits/NkCanvas/include/glad/gl.h:9952:GLAD_API_CALL PFNGLDRAWCOMMANDSSTATESADDRESSNVPROC glad_debug_glDrawCommandsStatesAddressNV;
+../Kits/NkCanvas/include/glad/gl.h:9953:#define glDrawCommandsStatesAddressNV glad_debug_glDrawCommandsStatesAddressNV
+../Kits/NkCanvas/include/glad/gl.h:9954:GLAD_API_CALL PFNGLDRAWCOMMANDSSTATESNVPROC glad_glDrawCommandsStatesNV;
+../Kits/NkCanvas/include/glad/gl.h:9955:GLAD_API_CALL PFNGLDRAWCOMMANDSSTATESNVPROC glad_debug_glDrawCommandsStatesNV;
+../Kits/NkCanvas/include/glad/gl.h:9956:#define glDrawCommandsStatesNV glad_debug_glDrawCommandsStatesNV
+../Kits/NkCanvas/include/glad/gl.h:9957:GLAD_API_CALL PFNGLDRAWELEMENTARRAYAPPLEPROC glad_glDrawElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:9958:GLAD_API_CALL PFNGLDRAWELEMENTARRAYAPPLEPROC glad_debug_glDrawElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:9959:#define glDrawElementArrayAPPLE glad_debug_glDrawElementArrayAPPLE
+../Kits/NkCanvas/include/glad/gl.h:9960:GLAD_API_CALL PFNGLDRAWELEMENTARRAYATIPROC glad_glDrawElementArrayATI;
+../Kits/NkCanvas/include/glad/gl.h:9961:GLAD_API_CALL PFNGLDRAWELEMENTARRAYATIPROC glad_debug_glDrawElementArrayATI;
+../Kits/NkCanvas/include/glad/gl.h:9962:#define glDrawElementArrayATI glad_debug_glDrawElementArrayATI
+../Kits/NkCanvas/include/glad/gl.h:9963:GLAD_API_CALL PFNGLDRAWELEMENTSPROC glad_glDrawElements;
+../Kits/NkCanvas/include/glad/gl.h:9964:GLAD_API_CALL PFNGLDRAWELEMENTSPROC glad_debug_glDrawElements;
+../Kits/NkCanvas/include/glad/gl.h:9965:#define glDrawElements glad_debug_glDrawElements
+../Kits/NkCanvas/include/glad/gl.h:9966:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXPROC glad_glDrawElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:9967:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXPROC glad_debug_glDrawElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:9968:#define glDrawElementsBaseVertex glad_debug_glDrawElementsBaseVertex
+../Kits/NkCanvas/include/glad/gl.h:9969:GLAD_API_CALL PFNGLDRAWELEMENTSINDIRECTPROC glad_glDrawElementsIndirect;
+../Kits/NkCanvas/include/glad/gl.h:9970:GLAD_API_CALL PFNGLDRAWELEMENTSINDIRECTPROC glad_debug_glDrawElementsIndirect;
+../Kits/NkCanvas/include/glad/gl.h:9971:#define glDrawElementsIndirect glad_debug_glDrawElementsIndirect
+../Kits/NkCanvas/include/glad/gl.h:9972:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDPROC glad_glDrawElementsInstanced;
+../Kits/NkCanvas/include/glad/gl.h:9973:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDPROC glad_debug_glDrawElementsInstanced;
+../Kits/NkCanvas/include/glad/gl.h:9974:#define glDrawElementsInstanced glad_debug_glDrawElementsInstanced
+../Kits/NkCanvas/include/glad/gl.h:9975:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDARBPROC glad_glDrawElementsInstancedARB;
+../Kits/NkCanvas/include/glad/gl.h:9976:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDARBPROC glad_debug_glDrawElementsInstancedARB;
+../Kits/NkCanvas/include/glad/gl.h:9977:#define glDrawElementsInstancedARB glad_debug_glDrawElementsInstancedARB
+../Kits/NkCanvas/include/glad/gl.h:9978:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC glad_glDrawElementsInstancedBaseInstan
+ce;
+../Kits/NkCanvas/include/glad/gl.h:9979:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC glad_debug_glDrawElementsInstancedBase
+Instance;
+../Kits/NkCanvas/include/glad/gl.h:9980:#define glDrawElementsInstancedBaseInstance glad_debug_glDrawElementsInstancedBaseInstance
+../Kits/NkCanvas/include/glad/gl.h:9981:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glad_glDrawElementsInstancedBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:9982:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glad_debug_glDrawElementsInstancedBaseVe
+rtex;
+../Kits/NkCanvas/include/glad/gl.h:9983:#define glDrawElementsInstancedBaseVertex glad_debug_glDrawElementsInstancedBaseVertex
+../Kits/NkCanvas/include/glad/gl.h:9984:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC glad_glDrawElementsInstanced
+BaseVertexBaseInstance;
+../Kits/NkCanvas/include/glad/gl.h:9985:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC glad_debug_glDrawElementsIns
+tancedBaseVertexBaseInstance;
+../Kits/NkCanvas/include/glad/gl.h:9986:#define glDrawElementsInstancedBaseVertexBaseInstance glad_debug_glDrawElementsInstancedBaseVer
+texBaseInstance
+../Kits/NkCanvas/include/glad/gl.h:9987:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDEXTPROC glad_glDrawElementsInstancedEXT;
+../Kits/NkCanvas/include/glad/gl.h:9988:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDEXTPROC glad_debug_glDrawElementsInstancedEXT;
+../Kits/NkCanvas/include/glad/gl.h:9989:#define glDrawElementsInstancedEXT glad_debug_glDrawElementsInstancedEXT
+../Kits/NkCanvas/include/glad/gl.h:9990:GLAD_API_CALL PFNGLDRAWMESHARRAYSSUNPROC glad_glDrawMeshArraysSUN;
+../Kits/NkCanvas/include/glad/gl.h:9991:GLAD_API_CALL PFNGLDRAWMESHARRAYSSUNPROC glad_debug_glDrawMeshArraysSUN;
+../Kits/NkCanvas/include/glad/gl.h:9992:#define glDrawMeshArraysSUN glad_debug_glDrawMeshArraysSUN
+../Kits/NkCanvas/include/glad/gl.h:9993:GLAD_API_CALL PFNGLDRAWMESHTASKSEXTPROC glad_glDrawMeshTasksEXT;
+../Kits/NkCanvas/include/glad/gl.h:9994:GLAD_API_CALL PFNGLDRAWMESHTASKSEXTPROC glad_debug_glDrawMeshTasksEXT;
+../Kits/NkCanvas/include/glad/gl.h:9995:#define glDrawMeshTasksEXT glad_debug_glDrawMeshTasksEXT
+../Kits/NkCanvas/include/glad/gl.h:9996:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTEXTPROC glad_glDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/gl.h:9997:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTEXTPROC glad_debug_glDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/gl.h:9998:#define glDrawMeshTasksIndirectEXT glad_debug_glDrawMeshTasksIndirectEXT
+../Kits/NkCanvas/include/glad/gl.h:9999:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTNVPROC glad_glDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gl.h:10000:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTNVPROC glad_debug_glDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gl.h:10001:#define glDrawMeshTasksIndirectNV glad_debug_glDrawMeshTasksIndirectNV
+../Kits/NkCanvas/include/glad/gl.h:10002:GLAD_API_CALL PFNGLDRAWMESHTASKSNVPROC glad_glDrawMeshTasksNV;
+../Kits/NkCanvas/include/glad/gl.h:10003:GLAD_API_CALL PFNGLDRAWMESHTASKSNVPROC glad_debug_glDrawMeshTasksNV;
+../Kits/NkCanvas/include/glad/gl.h:10004:#define glDrawMeshTasksNV glad_debug_glDrawMeshTasksNV
+../Kits/NkCanvas/include/glad/gl.h:10005:GLAD_API_CALL PFNGLDRAWRANGEELEMENTARRAYAPPLEPROC glad_glDrawRangeElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:10006:GLAD_API_CALL PFNGLDRAWRANGEELEMENTARRAYAPPLEPROC glad_debug_glDrawRangeElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:10007:#define glDrawRangeElementArrayAPPLE glad_debug_glDrawRangeElementArrayAPPLE
+../Kits/NkCanvas/include/glad/gl.h:10008:GLAD_API_CALL PFNGLDRAWRANGEELEMENTARRAYATIPROC glad_glDrawRangeElementArrayATI;
+../Kits/NkCanvas/include/glad/gl.h:10009:GLAD_API_CALL PFNGLDRAWRANGEELEMENTARRAYATIPROC glad_debug_glDrawRangeElementArrayATI;
+../Kits/NkCanvas/include/glad/gl.h:10010:#define glDrawRangeElementArrayATI glad_debug_glDrawRangeElementArrayATI
+../Kits/NkCanvas/include/glad/gl.h:10011:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSPROC glad_glDrawRangeElements;
+../Kits/NkCanvas/include/glad/gl.h:10012:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSPROC glad_debug_glDrawRangeElements;
+../Kits/NkCanvas/include/glad/gl.h:10013:#define glDrawRangeElements glad_debug_glDrawRangeElements
+../Kits/NkCanvas/include/glad/gl.h:10014:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glad_glDrawRangeElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:10015:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glad_debug_glDrawRangeElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:10016:#define glDrawRangeElementsBaseVertex glad_debug_glDrawRangeElementsBaseVertex
+../Kits/NkCanvas/include/glad/gl.h:10017:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSEXTPROC glad_glDrawRangeElementsEXT;
+../Kits/NkCanvas/include/glad/gl.h:10018:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSEXTPROC glad_debug_glDrawRangeElementsEXT;
+../Kits/NkCanvas/include/glad/gl.h:10019:#define glDrawRangeElementsEXT glad_debug_glDrawRangeElementsEXT
+../Kits/NkCanvas/include/glad/gl.h:10020:GLAD_API_CALL PFNGLDRAWTEXTURENVPROC glad_glDrawTextureNV;
+../Kits/NkCanvas/include/glad/gl.h:10021:GLAD_API_CALL PFNGLDRAWTEXTURENVPROC glad_debug_glDrawTextureNV;
+../Kits/NkCanvas/include/glad/gl.h:10022:#define glDrawTextureNV glad_debug_glDrawTextureNV
+../Kits/NkCanvas/include/glad/gl.h:10023:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKPROC glad_glDrawTransformFeedback;
+../Kits/NkCanvas/include/glad/gl.h:10024:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKPROC glad_debug_glDrawTransformFeedback;
+../Kits/NkCanvas/include/glad/gl.h:10025:#define glDrawTransformFeedback glad_debug_glDrawTransformFeedback
+../Kits/NkCanvas/include/glad/gl.h:10026:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glad_glDrawTransformFeedbackInstanced;
+../Kits/NkCanvas/include/glad/gl.h:10027:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC glad_debug_glDrawTransformFeedbackInstan
+ced;
+../Kits/NkCanvas/include/glad/gl.h:10028:#define glDrawTransformFeedbackInstanced glad_debug_glDrawTransformFeedbackInstanced
+../Kits/NkCanvas/include/glad/gl.h:10029:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKNVPROC glad_glDrawTransformFeedbackNV;
+../Kits/NkCanvas/include/glad/gl.h:10030:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKNVPROC glad_debug_glDrawTransformFeedbackNV;
+../Kits/NkCanvas/include/glad/gl.h:10031:#define glDrawTransformFeedbackNV glad_debug_glDrawTransformFeedbackNV
+../Kits/NkCanvas/include/glad/gl.h:10032:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC glad_glDrawTransformFeedbackStream;
+../Kits/NkCanvas/include/glad/gl.h:10033:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC glad_debug_glDrawTransformFeedbackStream;
+../Kits/NkCanvas/include/glad/gl.h:10034:#define glDrawTransformFeedbackStream glad_debug_glDrawTransformFeedbackStream
+../Kits/NkCanvas/include/glad/gl.h:10035:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glad_glDrawTransformFeedbackStream
+Instanced;
+../Kits/NkCanvas/include/glad/gl.h:10036:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC glad_debug_glDrawTransformFeedback
+StreamInstanced;
+../Kits/NkCanvas/include/glad/gl.h:10037:#define glDrawTransformFeedbackStreamInstanced glad_debug_glDrawTransformFeedbackStreamInstanc
+ed
+../Kits/NkCanvas/include/glad/gl.h:10038:GLAD_API_CALL PFNGLDRAWVKIMAGENVPROC glad_glDrawVkImageNV;
+../Kits/NkCanvas/include/glad/gl.h:10039:GLAD_API_CALL PFNGLDRAWVKIMAGENVPROC glad_debug_glDrawVkImageNV;
+../Kits/NkCanvas/include/glad/gl.h:10040:#define glDrawVkImageNV glad_debug_glDrawVkImageNV
+../Kits/NkCanvas/include/glad/gl.h:10308:GLAD_API_CALL PFNGLFRAMEBUFFERDRAWBUFFEREXTPROC glad_glFramebufferDrawBufferEXT;
+../Kits/NkCanvas/include/glad/gl.h:10309:GLAD_API_CALL PFNGLFRAMEBUFFERDRAWBUFFEREXTPROC glad_debug_glFramebufferDrawBufferEXT;
+../Kits/NkCanvas/include/glad/gl.h:10310:#define glFramebufferDrawBufferEXT glad_debug_glFramebufferDrawBufferEXT
+../Kits/NkCanvas/include/glad/gl.h:10311:GLAD_API_CALL PFNGLFRAMEBUFFERDRAWBUFFERSEXTPROC glad_glFramebufferDrawBuffersEXT;
+../Kits/NkCanvas/include/glad/gl.h:10312:GLAD_API_CALL PFNGLFRAMEBUFFERDRAWBUFFERSEXTPROC glad_debug_glFramebufferDrawBuffersEXT;
+../Kits/NkCanvas/include/glad/gl.h:10313:#define glFramebufferDrawBuffersEXT glad_debug_glFramebufferDrawBuffersEXT
+../Kits/NkCanvas/include/glad/gl.h:12006:GLAD_API_CALL PFNGLLISTDRAWCOMMANDSSTATESCLIENTNVPROC glad_glListDrawCommandsStatesClientNV;
+../Kits/NkCanvas/include/glad/gl.h:12007:GLAD_API_CALL PFNGLLISTDRAWCOMMANDSSTATESCLIENTNVPROC glad_debug_glListDrawCommandsStatesClien
+tNV;
+../Kits/NkCanvas/include/glad/gl.h:12008:#define glListDrawCommandsStatesClientNV glad_debug_glListDrawCommandsStatesClientNV
+../Kits/NkCanvas/include/glad/gl.h:12273:GLAD_API_CALL PFNGLMULTIDRAWARRAYSPROC glad_glMultiDrawArrays;
+../Kits/NkCanvas/include/glad/gl.h:12274:GLAD_API_CALL PFNGLMULTIDRAWARRAYSPROC glad_debug_glMultiDrawArrays;
+../Kits/NkCanvas/include/glad/gl.h:12275:#define glMultiDrawArrays glad_debug_glMultiDrawArrays
+../Kits/NkCanvas/include/glad/gl.h:12276:GLAD_API_CALL PFNGLMULTIDRAWARRAYSEXTPROC glad_glMultiDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gl.h:12277:GLAD_API_CALL PFNGLMULTIDRAWARRAYSEXTPROC glad_debug_glMultiDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gl.h:12278:#define glMultiDrawArraysEXT glad_debug_glMultiDrawArraysEXT
+../Kits/NkCanvas/include/glad/gl.h:12279:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTPROC glad_glMultiDrawArraysIndirect;
+../Kits/NkCanvas/include/glad/gl.h:12280:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTPROC glad_debug_glMultiDrawArraysIndirect;
+../Kits/NkCanvas/include/glad/gl.h:12281:#define glMultiDrawArraysIndirect glad_debug_glMultiDrawArraysIndirect
+../Kits/NkCanvas/include/glad/gl.h:12282:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC glad_glMultiDrawArraysIndirectAMD;
+../Kits/NkCanvas/include/glad/gl.h:12283:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTAMDPROC glad_debug_glMultiDrawArraysIndirectAMD;
+../Kits/NkCanvas/include/glad/gl.h:12284:#define glMultiDrawArraysIndirectAMD glad_debug_glMultiDrawArraysIndirectAMD
+../Kits/NkCanvas/include/glad/gl.h:12285:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNVPROC glad_glMultiDrawArraysIndirectBi
+ndlessCountNV;
+../Kits/NkCanvas/include/glad/gl.h:12286:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSCOUNTNVPROC glad_debug_glMultiDrawArraysIndi
+rectBindlessCountNV;
+../Kits/NkCanvas/include/glad/gl.h:12287:#define glMultiDrawArraysIndirectBindlessCountNV glad_debug_glMultiDrawArraysIndirectBindlessC
+ountNV
+../Kits/NkCanvas/include/glad/gl.h:12288:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSNVPROC glad_glMultiDrawArraysIndirectBindles
+sNV;
+../Kits/NkCanvas/include/glad/gl.h:12289:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTBINDLESSNVPROC glad_debug_glMultiDrawArraysIndirectB
+indlessNV;
+../Kits/NkCanvas/include/glad/gl.h:12290:#define glMultiDrawArraysIndirectBindlessNV glad_debug_glMultiDrawArraysIndirectBindlessNV
+../Kits/NkCanvas/include/glad/gl.h:12291:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC glad_glMultiDrawArraysIndirectCount;
+../Kits/NkCanvas/include/glad/gl.h:12292:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTCOUNTPROC glad_debug_glMultiDrawArraysIndirectCount;
+../Kits/NkCanvas/include/glad/gl.h:12293:#define glMultiDrawArraysIndirectCount glad_debug_glMultiDrawArraysIndirectCount
+../Kits/NkCanvas/include/glad/gl.h:12294:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC glad_glMultiDrawArraysIndirectCountARB;
+../Kits/NkCanvas/include/glad/gl.h:12295:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTCOUNTARBPROC glad_debug_glMultiDrawArraysIndirectCou
+ntARB;
+../Kits/NkCanvas/include/glad/gl.h:12296:#define glMultiDrawArraysIndirectCountARB glad_debug_glMultiDrawArraysIndirectCountARB
+../Kits/NkCanvas/include/glad/gl.h:12297:GLAD_API_CALL PFNGLMULTIDRAWELEMENTARRAYAPPLEPROC glad_glMultiDrawElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:12298:GLAD_API_CALL PFNGLMULTIDRAWELEMENTARRAYAPPLEPROC glad_debug_glMultiDrawElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:12299:#define glMultiDrawElementArrayAPPLE glad_debug_glMultiDrawElementArrayAPPLE
+../Kits/NkCanvas/include/glad/gl.h:12300:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSPROC glad_glMultiDrawElements;
+../Kits/NkCanvas/include/glad/gl.h:12301:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSPROC glad_debug_glMultiDrawElements;
+../Kits/NkCanvas/include/glad/gl.h:12302:#define glMultiDrawElements glad_debug_glMultiDrawElements
+../Kits/NkCanvas/include/glad/gl.h:12303:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC glad_glMultiDrawElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:12304:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC glad_debug_glMultiDrawElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gl.h:12305:#define glMultiDrawElementsBaseVertex glad_debug_glMultiDrawElementsBaseVertex
+../Kits/NkCanvas/include/glad/gl.h:12306:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSEXTPROC glad_glMultiDrawElementsEXT;
+../Kits/NkCanvas/include/glad/gl.h:12307:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSEXTPROC glad_debug_glMultiDrawElementsEXT;
+../Kits/NkCanvas/include/glad/gl.h:12308:#define glMultiDrawElementsEXT glad_debug_glMultiDrawElementsEXT
+../Kits/NkCanvas/include/glad/gl.h:12309:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTPROC glad_glMultiDrawElementsIndirect;
+../Kits/NkCanvas/include/glad/gl.h:12310:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTPROC glad_debug_glMultiDrawElementsIndirect;
+../Kits/NkCanvas/include/glad/gl.h:12311:#define glMultiDrawElementsIndirect glad_debug_glMultiDrawElementsIndirect
+../Kits/NkCanvas/include/glad/gl.h:12312:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC glad_glMultiDrawElementsIndirectAMD;
+../Kits/NkCanvas/include/glad/gl.h:12313:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTAMDPROC glad_debug_glMultiDrawElementsIndirectAMD;
+../Kits/NkCanvas/include/glad/gl.h:12314:#define glMultiDrawElementsIndirectAMD glad_debug_glMultiDrawElementsIndirectAMD
+../Kits/NkCanvas/include/glad/gl.h:12315:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNVPROC glad_glMultiDrawElementsIndire
+ctBindlessCountNV;
+../Kits/NkCanvas/include/glad/gl.h:12316:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSCOUNTNVPROC glad_debug_glMultiDrawElements
+IndirectBindlessCountNV;
+../Kits/NkCanvas/include/glad/gl.h:12317:#define glMultiDrawElementsIndirectBindlessCountNV glad_debug_glMultiDrawElementsIndirectBindl
+essCountNV
+../Kits/NkCanvas/include/glad/gl.h:12318:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSNVPROC glad_glMultiDrawElementsIndirectBin
+dlessNV;
+../Kits/NkCanvas/include/glad/gl.h:12319:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTBINDLESSNVPROC glad_debug_glMultiDrawElementsIndir
+ectBindlessNV;
+../Kits/NkCanvas/include/glad/gl.h:12320:#define glMultiDrawElementsIndirectBindlessNV glad_debug_glMultiDrawElementsIndirectBindlessNV
+../Kits/NkCanvas/include/glad/gl.h:12321:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC glad_glMultiDrawElementsIndirectCount;
+../Kits/NkCanvas/include/glad/gl.h:12322:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTPROC glad_debug_glMultiDrawElementsIndirectCo
+unt;
+../Kits/NkCanvas/include/glad/gl.h:12323:#define glMultiDrawElementsIndirectCount glad_debug_glMultiDrawElementsIndirectCount
+../Kits/NkCanvas/include/glad/gl.h:12324:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC glad_glMultiDrawElementsIndirectCount
+ARB;
+../Kits/NkCanvas/include/glad/gl.h:12325:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTCOUNTARBPROC glad_debug_glMultiDrawElementsIndirec
+tCountARB;
+../Kits/NkCanvas/include/glad/gl.h:12326:#define glMultiDrawElementsIndirectCountARB glad_debug_glMultiDrawElementsIndirectCountARB
+../Kits/NkCanvas/include/glad/gl.h:12327:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC glad_glMultiDrawMeshTasksIndirectCou
+ntEXT;
+../Kits/NkCanvas/include/glad/gl.h:12328:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC glad_debug_glMultiDrawMeshTasksIndir
+ectCountEXT;
+../Kits/NkCanvas/include/glad/gl.h:12329:#define glMultiDrawMeshTasksIndirectCountEXT glad_debug_glMultiDrawMeshTasksIndirectCountEXT
+../Kits/NkCanvas/include/glad/gl.h:12330:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC glad_glMultiDrawMeshTasksIndirectCoun
+tNV;
+../Kits/NkCanvas/include/glad/gl.h:12331:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC glad_debug_glMultiDrawMeshTasksIndire
+ctCountNV;
+../Kits/NkCanvas/include/glad/gl.h:12332:#define glMultiDrawMeshTasksIndirectCountNV glad_debug_glMultiDrawMeshTasksIndirectCountNV
+../Kits/NkCanvas/include/glad/gl.h:12333:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC glad_glMultiDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/gl.h:12334:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC glad_debug_glMultiDrawMeshTasksIndirectEX
+T;
+../Kits/NkCanvas/include/glad/gl.h:12335:#define glMultiDrawMeshTasksIndirectEXT glad_debug_glMultiDrawMeshTasksIndirectEXT
+../Kits/NkCanvas/include/glad/gl.h:12336:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC glad_glMultiDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gl.h:12337:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC glad_debug_glMultiDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gl.h:12338:#define glMultiDrawMeshTasksIndirectNV glad_debug_glMultiDrawMeshTasksIndirectNV
+../Kits/NkCanvas/include/glad/gl.h:12339:GLAD_API_CALL PFNGLMULTIDRAWRANGEELEMENTARRAYAPPLEPROC glad_glMultiDrawRangeElementArrayAPPLE;
+../Kits/NkCanvas/include/glad/gl.h:12340:GLAD_API_CALL PFNGLMULTIDRAWRANGEELEMENTARRAYAPPLEPROC glad_debug_glMultiDrawRangeElementArray
+APPLE;
+../Kits/NkCanvas/include/glad/gl.h:12341:#define glMultiDrawRangeElementArrayAPPLE glad_debug_glMultiDrawRangeElementArrayAPPLE
+../Kits/NkCanvas/include/glad/gl.h:12342:GLAD_API_CALL PFNGLMULTIMODEDRAWARRAYSIBMPROC glad_glMultiModeDrawArraysIBM;
+../Kits/NkCanvas/include/glad/gl.h:12343:GLAD_API_CALL PFNGLMULTIMODEDRAWARRAYSIBMPROC glad_debug_glMultiModeDrawArraysIBM;
+../Kits/NkCanvas/include/glad/gl.h:12344:#define glMultiModeDrawArraysIBM glad_debug_glMultiModeDrawArraysIBM
+../Kits/NkCanvas/include/glad/gl.h:12345:GLAD_API_CALL PFNGLMULTIMODEDRAWELEMENTSIBMPROC glad_glMultiModeDrawElementsIBM;
+../Kits/NkCanvas/include/glad/gl.h:12346:GLAD_API_CALL PFNGLMULTIMODEDRAWELEMENTSIBMPROC glad_debug_glMultiModeDrawElementsIBM;
+../Kits/NkCanvas/include/glad/gl.h:12347:#define glMultiModeDrawElementsIBM glad_debug_glMultiModeDrawElementsIBM
+../Kits/NkCanvas/include/glad/gl.h:12672:GLAD_API_CALL PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC glad_glNamedFramebufferDrawBuffer;
+../Kits/NkCanvas/include/glad/gl.h:12673:GLAD_API_CALL PFNGLNAMEDFRAMEBUFFERDRAWBUFFERPROC glad_debug_glNamedFramebufferDrawBuffer;
+../Kits/NkCanvas/include/glad/gl.h:12674:#define glNamedFramebufferDrawBuffer glad_debug_glNamedFramebufferDrawBuffer
+../Kits/NkCanvas/include/glad/gl.h:12675:GLAD_API_CALL PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC glad_glNamedFramebufferDrawBuffers;
+../Kits/NkCanvas/include/glad/gl.h:12676:GLAD_API_CALL PFNGLNAMEDFRAMEBUFFERDRAWBUFFERSPROC glad_debug_glNamedFramebufferDrawBuffers;
+../Kits/NkCanvas/include/glad/gl.h:12677:#define glNamedFramebufferDrawBuffers glad_debug_glNamedFramebufferDrawBuffers
+../Kits/NkCanvas/include/glad/gles1.h:1506:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_glDrawArrays;
+../Kits/NkCanvas/include/glad/gles1.h:1507:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_debug_glDrawArrays;
+../Kits/NkCanvas/include/glad/gles1.h:1508:#define glDrawArrays glad_debug_glDrawArrays
+../Kits/NkCanvas/include/glad/gles1.h:1509:GLAD_API_CALL PFNGLDRAWELEMENTSPROC glad_glDrawElements;
+../Kits/NkCanvas/include/glad/gles1.h:1510:GLAD_API_CALL PFNGLDRAWELEMENTSPROC glad_debug_glDrawElements;
+../Kits/NkCanvas/include/glad/gles1.h:1511:#define glDrawElements glad_debug_glDrawElements
+../Kits/NkCanvas/include/glad/gles1.h:1512:GLAD_API_CALL PFNGLDRAWTEXFOESPROC glad_glDrawTexfOES;
+../Kits/NkCanvas/include/glad/gles1.h:1513:GLAD_API_CALL PFNGLDRAWTEXFOESPROC glad_debug_glDrawTexfOES;
+../Kits/NkCanvas/include/glad/gles1.h:1514:#define glDrawTexfOES glad_debug_glDrawTexfOES
+../Kits/NkCanvas/include/glad/gles1.h:1515:GLAD_API_CALL PFNGLDRAWTEXFVOESPROC glad_glDrawTexfvOES;
+../Kits/NkCanvas/include/glad/gles1.h:1516:GLAD_API_CALL PFNGLDRAWTEXFVOESPROC glad_debug_glDrawTexfvOES;
+../Kits/NkCanvas/include/glad/gles1.h:1517:#define glDrawTexfvOES glad_debug_glDrawTexfvOES
+../Kits/NkCanvas/include/glad/gles1.h:1518:GLAD_API_CALL PFNGLDRAWTEXIOESPROC glad_glDrawTexiOES;
+../Kits/NkCanvas/include/glad/gles1.h:1519:GLAD_API_CALL PFNGLDRAWTEXIOESPROC glad_debug_glDrawTexiOES;
+../Kits/NkCanvas/include/glad/gles1.h:1520:#define glDrawTexiOES glad_debug_glDrawTexiOES
+../Kits/NkCanvas/include/glad/gles1.h:1521:GLAD_API_CALL PFNGLDRAWTEXIVOESPROC glad_glDrawTexivOES;
+../Kits/NkCanvas/include/glad/gles1.h:1522:GLAD_API_CALL PFNGLDRAWTEXIVOESPROC glad_debug_glDrawTexivOES;
+../Kits/NkCanvas/include/glad/gles1.h:1523:#define glDrawTexivOES glad_debug_glDrawTexivOES
+../Kits/NkCanvas/include/glad/gles1.h:1524:GLAD_API_CALL PFNGLDRAWTEXSOESPROC glad_glDrawTexsOES;
+../Kits/NkCanvas/include/glad/gles1.h:1525:GLAD_API_CALL PFNGLDRAWTEXSOESPROC glad_debug_glDrawTexsOES;
+../Kits/NkCanvas/include/glad/gles1.h:1526:#define glDrawTexsOES glad_debug_glDrawTexsOES
+../Kits/NkCanvas/include/glad/gles1.h:1527:GLAD_API_CALL PFNGLDRAWTEXSVOESPROC glad_glDrawTexsvOES;
+../Kits/NkCanvas/include/glad/gles1.h:1528:GLAD_API_CALL PFNGLDRAWTEXSVOESPROC glad_debug_glDrawTexsvOES;
+../Kits/NkCanvas/include/glad/gles1.h:1529:#define glDrawTexsvOES glad_debug_glDrawTexsvOES
+../Kits/NkCanvas/include/glad/gles1.h:1530:GLAD_API_CALL PFNGLDRAWTEXXOESPROC glad_glDrawTexxOES;
+../Kits/NkCanvas/include/glad/gles1.h:1531:GLAD_API_CALL PFNGLDRAWTEXXOESPROC glad_debug_glDrawTexxOES;
+../Kits/NkCanvas/include/glad/gles1.h:1532:#define glDrawTexxOES glad_debug_glDrawTexxOES
+../Kits/NkCanvas/include/glad/gles1.h:1533:GLAD_API_CALL PFNGLDRAWTEXXVOESPROC glad_glDrawTexxvOES;
+../Kits/NkCanvas/include/glad/gles1.h:1534:GLAD_API_CALL PFNGLDRAWTEXXVOESPROC glad_debug_glDrawTexxvOES;
+../Kits/NkCanvas/include/glad/gles1.h:1535:#define glDrawTexxvOES glad_debug_glDrawTexxvOES
+../Kits/NkCanvas/include/glad/gles1.h:1926:GLAD_API_CALL PFNGLMULTIDRAWARRAYSEXTPROC glad_glMultiDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gles1.h:1927:GLAD_API_CALL PFNGLMULTIDRAWARRAYSEXTPROC glad_debug_glMultiDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gles1.h:1928:#define glMultiDrawArraysEXT glad_debug_glMultiDrawArraysEXT
+../Kits/NkCanvas/include/glad/gles1.h:1929:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSEXTPROC glad_glMultiDrawElementsEXT;
+../Kits/NkCanvas/include/glad/gles1.h:1930:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSEXTPROC glad_debug_glMultiDrawElementsEXT;
+../Kits/NkCanvas/include/glad/gles1.h:1931:#define glMultiDrawElementsEXT glad_debug_glMultiDrawElementsEXT
+../Kits/NkCanvas/include/glad/gles2.h:4813:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_glDrawArrays;
+../Kits/NkCanvas/include/glad/gles2.h:4814:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_debug_glDrawArrays;
+../Kits/NkCanvas/include/glad/gles2.h:4815:#define glDrawArrays glad_debug_glDrawArrays
+../Kits/NkCanvas/include/glad/gles2.h:4816:GLAD_API_CALL PFNGLDRAWARRAYSINDIRECTPROC glad_glDrawArraysIndirect;
+../Kits/NkCanvas/include/glad/gles2.h:4817:GLAD_API_CALL PFNGLDRAWARRAYSINDIRECTPROC glad_debug_glDrawArraysIndirect;
+../Kits/NkCanvas/include/glad/gles2.h:4818:#define glDrawArraysIndirect glad_debug_glDrawArraysIndirect
+../Kits/NkCanvas/include/glad/gles2.h:4819:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDPROC glad_glDrawArraysInstanced;
+../Kits/NkCanvas/include/glad/gles2.h:4820:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDPROC glad_debug_glDrawArraysInstanced;
+../Kits/NkCanvas/include/glad/gles2.h:4821:#define glDrawArraysInstanced glad_debug_glDrawArraysInstanced
+../Kits/NkCanvas/include/glad/gles2.h:4822:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDANGLEPROC glad_glDrawArraysInstancedANGLE;
+../Kits/NkCanvas/include/glad/gles2.h:4823:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDANGLEPROC glad_debug_glDrawArraysInstancedANGLE;
+../Kits/NkCanvas/include/glad/gles2.h:4824:#define glDrawArraysInstancedANGLE glad_debug_glDrawArraysInstancedANGLE
+../Kits/NkCanvas/include/glad/gles2.h:4825:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEEXTPROC glad_glDrawArraysInstancedBaseInst
+anceEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4826:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEEXTPROC glad_debug_glDrawArraysInstancedBa
+seInstanceEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4827:#define glDrawArraysInstancedBaseInstanceEXT glad_debug_glDrawArraysInstancedBaseInstanceEXT
+../Kits/NkCanvas/include/glad/gles2.h:4828:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDEXTPROC glad_glDrawArraysInstancedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4829:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDEXTPROC glad_debug_glDrawArraysInstancedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4830:#define glDrawArraysInstancedEXT glad_debug_glDrawArraysInstancedEXT
+../Kits/NkCanvas/include/glad/gles2.h:4831:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDNVPROC glad_glDrawArraysInstancedNV;
+../Kits/NkCanvas/include/glad/gles2.h:4832:GLAD_API_CALL PFNGLDRAWARRAYSINSTANCEDNVPROC glad_debug_glDrawArraysInstancedNV;
+../Kits/NkCanvas/include/glad/gles2.h:4833:#define glDrawArraysInstancedNV glad_debug_glDrawArraysInstancedNV
+../Kits/NkCanvas/include/glad/gles2.h:4834:GLAD_API_CALL PFNGLDRAWBUFFERSPROC glad_glDrawBuffers;
+../Kits/NkCanvas/include/glad/gles2.h:4835:GLAD_API_CALL PFNGLDRAWBUFFERSPROC glad_debug_glDrawBuffers;
+../Kits/NkCanvas/include/glad/gles2.h:4836:#define glDrawBuffers glad_debug_glDrawBuffers
+../Kits/NkCanvas/include/glad/gles2.h:4837:GLAD_API_CALL PFNGLDRAWBUFFERSEXTPROC glad_glDrawBuffersEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4838:GLAD_API_CALL PFNGLDRAWBUFFERSEXTPROC glad_debug_glDrawBuffersEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4839:#define glDrawBuffersEXT glad_debug_glDrawBuffersEXT
+../Kits/NkCanvas/include/glad/gles2.h:4840:GLAD_API_CALL PFNGLDRAWBUFFERSINDEXEDEXTPROC glad_glDrawBuffersIndexedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4841:GLAD_API_CALL PFNGLDRAWBUFFERSINDEXEDEXTPROC glad_debug_glDrawBuffersIndexedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4842:#define glDrawBuffersIndexedEXT glad_debug_glDrawBuffersIndexedEXT
+../Kits/NkCanvas/include/glad/gles2.h:4843:GLAD_API_CALL PFNGLDRAWBUFFERSNVPROC glad_glDrawBuffersNV;
+../Kits/NkCanvas/include/glad/gles2.h:4844:GLAD_API_CALL PFNGLDRAWBUFFERSNVPROC glad_debug_glDrawBuffersNV;
+../Kits/NkCanvas/include/glad/gles2.h:4845:#define glDrawBuffersNV glad_debug_glDrawBuffersNV
+../Kits/NkCanvas/include/glad/gles2.h:4846:GLAD_API_CALL PFNGLDRAWELEMENTSPROC glad_glDrawElements;
+../Kits/NkCanvas/include/glad/gles2.h:4847:GLAD_API_CALL PFNGLDRAWELEMENTSPROC glad_debug_glDrawElements;
+../Kits/NkCanvas/include/glad/gles2.h:4848:#define glDrawElements glad_debug_glDrawElements
+../Kits/NkCanvas/include/glad/gles2.h:4849:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXPROC glad_glDrawElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gles2.h:4850:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXPROC glad_debug_glDrawElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gles2.h:4851:#define glDrawElementsBaseVertex glad_debug_glDrawElementsBaseVertex
+../Kits/NkCanvas/include/glad/gles2.h:4852:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXEXTPROC glad_glDrawElementsBaseVertexEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4853:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXEXTPROC glad_debug_glDrawElementsBaseVertexEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4854:#define glDrawElementsBaseVertexEXT glad_debug_glDrawElementsBaseVertexEXT
+../Kits/NkCanvas/include/glad/gles2.h:4855:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXOESPROC glad_glDrawElementsBaseVertexOES;
+../Kits/NkCanvas/include/glad/gles2.h:4856:GLAD_API_CALL PFNGLDRAWELEMENTSBASEVERTEXOESPROC glad_debug_glDrawElementsBaseVertexOES;
+../Kits/NkCanvas/include/glad/gles2.h:4857:#define glDrawElementsBaseVertexOES glad_debug_glDrawElementsBaseVertexOES
+../Kits/NkCanvas/include/glad/gles2.h:4858:GLAD_API_CALL PFNGLDRAWELEMENTSINDIRECTPROC glad_glDrawElementsIndirect;
+../Kits/NkCanvas/include/glad/gles2.h:4859:GLAD_API_CALL PFNGLDRAWELEMENTSINDIRECTPROC glad_debug_glDrawElementsIndirect;
+../Kits/NkCanvas/include/glad/gles2.h:4860:#define glDrawElementsIndirect glad_debug_glDrawElementsIndirect
+../Kits/NkCanvas/include/glad/gles2.h:4861:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDPROC glad_glDrawElementsInstanced;
+../Kits/NkCanvas/include/glad/gles2.h:4862:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDPROC glad_debug_glDrawElementsInstanced;
+../Kits/NkCanvas/include/glad/gles2.h:4863:#define glDrawElementsInstanced glad_debug_glDrawElementsInstanced
+../Kits/NkCanvas/include/glad/gles2.h:4864:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDANGLEPROC glad_glDrawElementsInstancedANGLE;
+../Kits/NkCanvas/include/glad/gles2.h:4865:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDANGLEPROC glad_debug_glDrawElementsInstancedANGLE;
+../Kits/NkCanvas/include/glad/gles2.h:4866:#define glDrawElementsInstancedANGLE glad_debug_glDrawElementsInstancedANGLE
+../Kits/NkCanvas/include/glad/gles2.h:4867:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEEXTPROC glad_glDrawElementsInstancedBase
+InstanceEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4868:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEEXTPROC glad_debug_glDrawElementsInstanc
+edBaseInstanceEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4869:#define glDrawElementsInstancedBaseInstanceEXT glad_debug_glDrawElementsInstancedBaseInstanc
+eEXT
+../Kits/NkCanvas/include/glad/gles2.h:4870:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glad_glDrawElementsInstancedBaseVerte
+x;
+../Kits/NkCanvas/include/glad/gles2.h:4871:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXPROC glad_debug_glDrawElementsInstancedBas
+eVertex;
+../Kits/NkCanvas/include/glad/gles2.h:4872:#define glDrawElementsInstancedBaseVertex glad_debug_glDrawElementsInstancedBaseVertex
+../Kits/NkCanvas/include/glad/gles2.h:4873:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEEXTPROC glad_glDrawElementsIns
+tancedBaseVertexBaseInstanceEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4874:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEEXTPROC glad_debug_glDrawEleme
+ntsInstancedBaseVertexBaseInstanceEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4875:#define glDrawElementsInstancedBaseVertexBaseInstanceEXT glad_debug_glDrawElementsInstancedB
+aseVertexBaseInstanceEXT
+../Kits/NkCanvas/include/glad/gles2.h:4876:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXEXTPROC glad_glDrawElementsInstancedBaseVe
+rtexEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4877:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXEXTPROC glad_debug_glDrawElementsInstanced
+BaseVertexEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4878:#define glDrawElementsInstancedBaseVertexEXT glad_debug_glDrawElementsInstancedBaseVertexEXT
+../Kits/NkCanvas/include/glad/gles2.h:4879:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXOESPROC glad_glDrawElementsInstancedBaseVe
+rtexOES;
+../Kits/NkCanvas/include/glad/gles2.h:4880:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXOESPROC glad_debug_glDrawElementsInstanced
+BaseVertexOES;
+../Kits/NkCanvas/include/glad/gles2.h:4881:#define glDrawElementsInstancedBaseVertexOES glad_debug_glDrawElementsInstancedBaseVertexOES
+../Kits/NkCanvas/include/glad/gles2.h:4882:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDEXTPROC glad_glDrawElementsInstancedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4883:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDEXTPROC glad_debug_glDrawElementsInstancedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4884:#define glDrawElementsInstancedEXT glad_debug_glDrawElementsInstancedEXT
+../Kits/NkCanvas/include/glad/gles2.h:4885:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDNVPROC glad_glDrawElementsInstancedNV;
+../Kits/NkCanvas/include/glad/gles2.h:4886:GLAD_API_CALL PFNGLDRAWELEMENTSINSTANCEDNVPROC glad_debug_glDrawElementsInstancedNV;
+../Kits/NkCanvas/include/glad/gles2.h:4887:#define glDrawElementsInstancedNV glad_debug_glDrawElementsInstancedNV
+../Kits/NkCanvas/include/glad/gles2.h:4888:GLAD_API_CALL PFNGLDRAWMESHTASKSEXTPROC glad_glDrawMeshTasksEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4889:GLAD_API_CALL PFNGLDRAWMESHTASKSEXTPROC glad_debug_glDrawMeshTasksEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4890:#define glDrawMeshTasksEXT glad_debug_glDrawMeshTasksEXT
+../Kits/NkCanvas/include/glad/gles2.h:4891:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTEXTPROC glad_glDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4892:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTEXTPROC glad_debug_glDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4893:#define glDrawMeshTasksIndirectEXT glad_debug_glDrawMeshTasksIndirectEXT
+../Kits/NkCanvas/include/glad/gles2.h:4894:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTNVPROC glad_glDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gles2.h:4895:GLAD_API_CALL PFNGLDRAWMESHTASKSINDIRECTNVPROC glad_debug_glDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gles2.h:4896:#define glDrawMeshTasksIndirectNV glad_debug_glDrawMeshTasksIndirectNV
+../Kits/NkCanvas/include/glad/gles2.h:4897:GLAD_API_CALL PFNGLDRAWMESHTASKSNVPROC glad_glDrawMeshTasksNV;
+../Kits/NkCanvas/include/glad/gles2.h:4898:GLAD_API_CALL PFNGLDRAWMESHTASKSNVPROC glad_debug_glDrawMeshTasksNV;
+../Kits/NkCanvas/include/glad/gles2.h:4899:#define glDrawMeshTasksNV glad_debug_glDrawMeshTasksNV
+../Kits/NkCanvas/include/glad/gles2.h:4900:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSPROC glad_glDrawRangeElements;
+../Kits/NkCanvas/include/glad/gles2.h:4901:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSPROC glad_debug_glDrawRangeElements;
+../Kits/NkCanvas/include/glad/gles2.h:4902:#define glDrawRangeElements glad_debug_glDrawRangeElements
+../Kits/NkCanvas/include/glad/gles2.h:4903:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glad_glDrawRangeElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gles2.h:4904:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC glad_debug_glDrawRangeElementsBaseVertex;
+../Kits/NkCanvas/include/glad/gles2.h:4905:#define glDrawRangeElementsBaseVertex glad_debug_glDrawRangeElementsBaseVertex
+../Kits/NkCanvas/include/glad/gles2.h:4906:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXEXTPROC glad_glDrawRangeElementsBaseVertexEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4907:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXEXTPROC glad_debug_glDrawRangeElementsBaseVert
+exEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4908:#define glDrawRangeElementsBaseVertexEXT glad_debug_glDrawRangeElementsBaseVertexEXT
+../Kits/NkCanvas/include/glad/gles2.h:4909:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXOESPROC glad_glDrawRangeElementsBaseVertexOES;
+../Kits/NkCanvas/include/glad/gles2.h:4910:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSBASEVERTEXOESPROC glad_debug_glDrawRangeElementsBaseVert
+exOES;
+../Kits/NkCanvas/include/glad/gles2.h:4911:#define glDrawRangeElementsBaseVertexOES glad_debug_glDrawRangeElementsBaseVertexOES
+../Kits/NkCanvas/include/glad/gles2.h:4912:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKEXTPROC glad_glDrawTransformFeedbackEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4913:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKEXTPROC glad_debug_glDrawTransformFeedbackEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4914:#define glDrawTransformFeedbackEXT glad_debug_glDrawTransformFeedbackEXT
+../Kits/NkCanvas/include/glad/gles2.h:4915:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDEXTPROC glad_glDrawTransformFeedbackInstanc
+edEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4916:GLAD_API_CALL PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDEXTPROC glad_debug_glDrawTransformFeedbackI
+nstancedEXT;
+../Kits/NkCanvas/include/glad/gles2.h:4917:#define glDrawTransformFeedbackInstancedEXT glad_debug_glDrawTransformFeedbackInstancedEXT
+../Kits/NkCanvas/include/glad/gles2.h:4918:GLAD_API_CALL PFNGLDRAWVKIMAGENVPROC glad_glDrawVkImageNV;
+../Kits/NkCanvas/include/glad/gles2.h:4919:GLAD_API_CALL PFNGLDRAWVKIMAGENVPROC glad_debug_glDrawVkImageNV;
+../Kits/NkCanvas/include/glad/gles2.h:4920:#define glDrawVkImageNV glad_debug_glDrawVkImageNV
+../Kits/NkCanvas/include/glad/gles2.h:5872:GLAD_API_CALL PFNGLMULTIDRAWARRAYSEXTPROC glad_glMultiDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5873:GLAD_API_CALL PFNGLMULTIDRAWARRAYSEXTPROC glad_debug_glMultiDrawArraysEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5874:#define glMultiDrawArraysEXT glad_debug_glMultiDrawArraysEXT
+../Kits/NkCanvas/include/glad/gles2.h:5875:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTEXTPROC glad_glMultiDrawArraysIndirectEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5876:GLAD_API_CALL PFNGLMULTIDRAWARRAYSINDIRECTEXTPROC glad_debug_glMultiDrawArraysIndirectEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5877:#define glMultiDrawArraysIndirectEXT glad_debug_glMultiDrawArraysIndirectEXT
+../Kits/NkCanvas/include/glad/gles2.h:5878:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSBASEVERTEXEXTPROC glad_glMultiDrawElementsBaseVertexEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5879:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSBASEVERTEXEXTPROC glad_debug_glMultiDrawElementsBaseVert
+exEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5880:#define glMultiDrawElementsBaseVertexEXT glad_debug_glMultiDrawElementsBaseVertexEXT
+../Kits/NkCanvas/include/glad/gles2.h:5881:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSEXTPROC glad_glMultiDrawElementsEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5882:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSEXTPROC glad_debug_glMultiDrawElementsEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5883:#define glMultiDrawElementsEXT glad_debug_glMultiDrawElementsEXT
+../Kits/NkCanvas/include/glad/gles2.h:5884:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTEXTPROC glad_glMultiDrawElementsIndirectEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5885:GLAD_API_CALL PFNGLMULTIDRAWELEMENTSINDIRECTEXTPROC glad_debug_glMultiDrawElementsIndirectEX
+T;
+../Kits/NkCanvas/include/glad/gles2.h:5886:#define glMultiDrawElementsIndirectEXT glad_debug_glMultiDrawElementsIndirectEXT
+../Kits/NkCanvas/include/glad/gles2.h:5887:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC glad_glMultiDrawMeshTasksIndirectC
+ountEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5888:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTEXTPROC glad_debug_glMultiDrawMeshTasksInd
+irectCountEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5889:#define glMultiDrawMeshTasksIndirectCountEXT glad_debug_glMultiDrawMeshTasksIndirectCountEXT
+../Kits/NkCanvas/include/glad/gles2.h:5890:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC glad_glMultiDrawMeshTasksIndirectCo
+untNV;
+../Kits/NkCanvas/include/glad/gles2.h:5891:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC glad_debug_glMultiDrawMeshTasksIndi
+rectCountNV;
+../Kits/NkCanvas/include/glad/gles2.h:5892:#define glMultiDrawMeshTasksIndirectCountNV glad_debug_glMultiDrawMeshTasksIndirectCountNV
+../Kits/NkCanvas/include/glad/gles2.h:5893:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC glad_glMultiDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/gles2.h:5894:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTEXTPROC glad_debug_glMultiDrawMeshTasksIndirect
+EXT;
+../Kits/NkCanvas/include/glad/gles2.h:5895:#define glMultiDrawMeshTasksIndirectEXT glad_debug_glMultiDrawMeshTasksIndirectEXT
+../Kits/NkCanvas/include/glad/gles2.h:5896:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC glad_glMultiDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/gles2.h:5897:GLAD_API_CALL PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC glad_debug_glMultiDrawMeshTasksIndirectN
+V;
+../Kits/NkCanvas/include/glad/gles2.h:5898:#define glMultiDrawMeshTasksIndirectNV glad_debug_glMultiDrawMeshTasksIndirectNV
+../Kits/NkCanvas/include/glad/glsc2.h:725:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_glDrawArrays;
+../Kits/NkCanvas/include/glad/glsc2.h:726:GLAD_API_CALL PFNGLDRAWARRAYSPROC glad_debug_glDrawArrays;
+../Kits/NkCanvas/include/glad/glsc2.h:727:#define glDrawArrays glad_debug_glDrawArrays
+../Kits/NkCanvas/include/glad/glsc2.h:728:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSPROC glad_glDrawRangeElements;
+../Kits/NkCanvas/include/glad/glsc2.h:729:GLAD_API_CALL PFNGLDRAWRANGEELEMENTSPROC glad_debug_glDrawRangeElements;
+../Kits/NkCanvas/include/glad/glsc2.h:730:#define glDrawRangeElements glad_debug_glDrawRangeElements
+../Kits/NkCanvas/include/glad/glx.h:540:typedef XID GLXDrawable;
+../Kits/NkCanvas/include/glad/glx.h:556:    GLXDrawable drawable;       /* XID of Drawable */
+../Kits/NkCanvas/include/glad/glx.h:568:    GLXDrawable drawable;       /* drawable on which event was requested in event mask */
+../Kits/NkCanvas/include/glad/glx.h:586:    GLXDrawable window;
+../Kits/NkCanvas/include/glad/glx.h:594:    GLXDrawable drawable;   /* i.d. of Drawable */
+../Kits/NkCanvas/include/glad/glx.h:770:typedef void (GLAD_API_PTR *PFNGLXBINDSWAPBARRIERSGIXPROC)(Display * dpy, GLXDrawable drawable,
+ int barrier);
+../Kits/NkCanvas/include/glad/glx.h:771:typedef void (GLAD_API_PTR *PFNGLXBINDTEXIMAGEEXTPROC)(Display * dpy, GLXDrawable drawable, int
+ buffer, const int * attrib_list);
+../Kits/NkCanvas/include/glad/glx.h:784:typedef void (GLAD_API_PTR *PFNGLXCOPYSUBBUFFERMESAPROC)(Display * dpy, GLXDrawable drawable, i
+nt x, int y, int width, int height);
+../Kits/NkCanvas/include/glad/glx.h:799:typedef Bool (GLAD_API_PTR *PFNGLXDELAYBEFORESWAPNVPROC)(Display * dpy, GLXDrawable drawable, G
+Lfloat seconds);
+../Kits/NkCanvas/include/glad/glx.h:820:typedef GLXDrawable (GLAD_API_PTR *PFNGLXGETCURRENTDRAWABLEPROC)(void);
+../Kits/NkCanvas/include/glad/glx.h:821:typedef GLXDrawable (GLAD_API_PTR *PFNGLXGETCURRENTREADDRAWABLEPROC)(void);
+../Kits/NkCanvas/include/glad/glx.h:822:typedef GLXDrawable (GLAD_API_PTR *PFNGLXGETCURRENTREADDRAWABLESGIPROC)(void);
+../Kits/NkCanvas/include/glad/glx.h:829:typedef Bool (GLAD_API_PTR *PFNGLXGETMSCRATEOMLPROC)(Display * dpy, GLXDrawable drawable, int32
+_t * numerator, int32_t * denominator);
+../Kits/NkCanvas/include/glad/glx.h:832:typedef void (GLAD_API_PTR *PFNGLXGETSELECTEDEVENTPROC)(Display * dpy, GLXDrawable draw, unsign
+ed long * event_mask);
+../Kits/NkCanvas/include/glad/glx.h:833:typedef void (GLAD_API_PTR *PFNGLXGETSELECTEDEVENTSGIXPROC)(Display * dpy, GLXDrawable drawable
+, unsigned long * mask);
+../Kits/NkCanvas/include/glad/glx.h:835:typedef Bool (GLAD_API_PTR *PFNGLXGETSYNCVALUESOMLPROC)(Display * dpy, GLXDrawable drawable, in
+t64_t * ust, int64_t * msc, int64_t * sbc);
+../Kits/NkCanvas/include/glad/glx.h:846:typedef Bool (GLAD_API_PTR *PFNGLXJOINSWAPGROUPNVPROC)(Display * dpy, GLXDrawable drawable, GLu
+int group);
+../Kits/NkCanvas/include/glad/glx.h:847:typedef void (GLAD_API_PTR *PFNGLXJOINSWAPGROUPSGIXPROC)(Display * dpy, GLXDrawable drawable, G
+LXDrawable member);
+../Kits/NkCanvas/include/glad/glx.h:850:typedef Bool (GLAD_API_PTR *PFNGLXMAKECONTEXTCURRENTPROC)(Display * dpy, GLXDrawable draw, GLXD
+rawable read, GLXContext ctx);
+../Kits/NkCanvas/include/glad/glx.h:851:typedef Bool (GLAD_API_PTR *PFNGLXMAKECURRENTPROC)(Display * dpy, GLXDrawable drawable, GLXCont
+ext ctx);
+../Kits/NkCanvas/include/glad/glx.h:852:typedef Bool (GLAD_API_PTR *PFNGLXMAKECURRENTREADSGIPROC)(Display * dpy, GLXDrawable draw, GLXD
+rawable read, GLXContext ctx);
+../Kits/NkCanvas/include/glad/glx.h:860:typedef void (GLAD_API_PTR *PFNGLXQUERYDRAWABLEPROC)(Display * dpy, GLXDrawable draw, int attri
+bute, unsigned int * value);
+../Kits/NkCanvas/include/glad/glx.h:874:typedef Bool (GLAD_API_PTR *PFNGLXQUERYSWAPGROUPNVPROC)(Display * dpy, GLXDrawable drawable, GL
+uint * group, GLuint * barrier);
+../Kits/NkCanvas/include/glad/glx.h:877:typedef Bool (GLAD_API_PTR *PFNGLXRELEASEBUFFERSMESAPROC)(Display * dpy, GLXDrawable drawable);
+../Kits/NkCanvas/include/glad/glx.h:878:typedef void (GLAD_API_PTR *PFNGLXRELEASETEXIMAGEEXTPROC)(Display * dpy, GLXDrawable drawable,
+int buffer);
+../Kits/NkCanvas/include/glad/glx.h:883:typedef void (GLAD_API_PTR *PFNGLXSELECTEVENTPROC)(Display * dpy, GLXDrawable draw, unsigned lo
+ng event_mask);
+../Kits/NkCanvas/include/glad/glx.h:884:typedef void (GLAD_API_PTR *PFNGLXSELECTEVENTSGIXPROC)(Display * dpy, GLXDrawable drawable, uns
+igned long mask);
+../Kits/NkCanvas/include/glad/glx.h:887:typedef void (GLAD_API_PTR *PFNGLXSWAPBUFFERSPROC)(Display * dpy, GLXDrawable drawable);
+../Kits/NkCanvas/include/glad/glx.h:888:typedef int64_t (GLAD_API_PTR *PFNGLXSWAPBUFFERSMSCOMLPROC)(Display * dpy, GLXDrawable drawable
+, int64_t target_msc, int64_t divisor, int64_t remainder);
+../Kits/NkCanvas/include/glad/glx.h:889:typedef void (GLAD_API_PTR *PFNGLXSWAPINTERVALEXTPROC)(Display * dpy, GLXDrawable drawable, int
+ interval);
+../Kits/NkCanvas/include/glad/glx.h:893:typedef Bool (GLAD_API_PTR *PFNGLXWAITFORMSCOMLPROC)(Display * dpy, GLXDrawable drawable, int64
+_t target_msc, int64_t divisor, int64_t remainder, int64_t * ust, int64_t * msc, int64_t * sbc);
+../Kits/NkCanvas/include/glad/glx.h:894:typedef Bool (GLAD_API_PTR *PFNGLXWAITFORSBCOMLPROC)(Display * dpy, GLXDrawable drawable, int64
+_t target_sbc, int64_t * ust, int64_t * msc, int64_t * sbc);
+../Kits/NkCanvas/include/glad/glx.h:1058:GLAD_API_CALL PFNGLXGETCURRENTDRAWABLEPROC glad_glXGetCurrentDrawable;
+../Kits/NkCanvas/include/glad/glx.h:1059:GLAD_API_CALL PFNGLXGETCURRENTDRAWABLEPROC glad_debug_glXGetCurrentDrawable;
+../Kits/NkCanvas/include/glad/glx.h:1060:#define glXGetCurrentDrawable glad_debug_glXGetCurrentDrawable
+../Kits/NkCanvas/include/glad/glx.h:1061:GLAD_API_CALL PFNGLXGETCURRENTREADDRAWABLEPROC glad_glXGetCurrentReadDrawable;
+../Kits/NkCanvas/include/glad/glx.h:1062:GLAD_API_CALL PFNGLXGETCURRENTREADDRAWABLEPROC glad_debug_glXGetCurrentReadDrawable;
+../Kits/NkCanvas/include/glad/glx.h:1063:#define glXGetCurrentReadDrawable glad_debug_glXGetCurrentReadDrawable
+../Kits/NkCanvas/include/glad/glx.h:1064:GLAD_API_CALL PFNGLXGETCURRENTREADDRAWABLESGIPROC glad_glXGetCurrentReadDrawableSGI;
+../Kits/NkCanvas/include/glad/glx.h:1065:GLAD_API_CALL PFNGLXGETCURRENTREADDRAWABLESGIPROC glad_debug_glXGetCurrentReadDrawableSGI;
+../Kits/NkCanvas/include/glad/glx.h:1066:#define glXGetCurrentReadDrawableSGI glad_debug_glXGetCurrentReadDrawableSGI
+../Kits/NkCanvas/include/glad/glx.h:1178:GLAD_API_CALL PFNGLXQUERYDRAWABLEPROC glad_glXQueryDrawable;
+../Kits/NkCanvas/include/glad/glx.h:1179:GLAD_API_CALL PFNGLXQUERYDRAWABLEPROC glad_debug_glXQueryDrawable;
+../Kits/NkCanvas/include/glad/glx.h:1180:#define glXQueryDrawable glad_debug_glXQueryDrawable
+../Kits/NkCanvas/include/glad/vulkan.h:7003:typedef struct VkDrawIndirectCommand {
+../Kits/NkCanvas/include/glad/vulkan.h:7008:} VkDrawIndirectCommand;
+../Kits/NkCanvas/include/glad/vulkan.h:7010:typedef struct VkDrawIndexedIndirectCommand {
+../Kits/NkCanvas/include/glad/vulkan.h:7016:} VkDrawIndexedIndirectCommand;
+../Kits/NkCanvas/include/glad/vulkan.h:7024:typedef struct VkMultiDrawInfoEXT {
+../Kits/NkCanvas/include/glad/vulkan.h:7027:} VkMultiDrawInfoEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:7029:typedef struct VkMultiDrawIndexedInfoEXT {
+../Kits/NkCanvas/include/glad/vulkan.h:7033:} VkMultiDrawIndexedInfoEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:7220:typedef struct VkPhysicalDeviceMultiDrawPropertiesEXT {
+../Kits/NkCanvas/include/glad/vulkan.h:7223:    uint32_t           maxMultiDrawCount;
+../Kits/NkCanvas/include/glad/vulkan.h:7224:} VkPhysicalDeviceMultiDrawPropertiesEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:8280:    uint32_t                              maxDrawMeshTasksCount;
+../Kits/NkCanvas/include/glad/vulkan.h:8295:typedef struct VkDrawMeshTasksIndirectCommandNV {
+../Kits/NkCanvas/include/glad/vulkan.h:8298:} VkDrawMeshTasksIndirectCommandNV;
+../Kits/NkCanvas/include/glad/vulkan.h:8300:typedef struct VkDrawMeshTasksIndirectCommandEXT {
+../Kits/NkCanvas/include/glad/vulkan.h:8304:} VkDrawMeshTasksIndirectCommandEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:8858:    uint32_t                                         maxDrawCount;
+../Kits/NkCanvas/include/glad/vulkan.h:9958:    uint64_t                           firstDrawTimestamp;
+../Kits/NkCanvas/include/glad/vulkan.h:11588:    VkBool32                 fullDrawIndexUint32;
+../Kits/NkCanvas/include/glad/vulkan.h:11596:    VkBool32                 multiDrawIndirect;
+../Kits/NkCanvas/include/glad/vulkan.h:11711:    uint32_t                 maxDrawIndexedIndexValue;
+../Kits/NkCanvas/include/glad/vulkan.h:11712:    uint32_t                 maxDrawIndirectCount;
+../Kits/NkCanvas/include/glad/vulkan.h:12941:typedef struct VkPhysicalDeviceMultiDrawFeaturesEXT {
+../Kits/NkCanvas/include/glad/vulkan.h:12944:    VkBool32                                          multiDraw;
+../Kits/NkCanvas/include/glad/vulkan.h:12945:} VkPhysicalDeviceMultiDrawFeaturesEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:13110:typedef struct VkPhysicalDeviceShaderDrawParametersFeatures {
+../Kits/NkCanvas/include/glad/vulkan.h:13113:    VkBool32                           shaderDrawParameters;
+../Kits/NkCanvas/include/glad/vulkan.h:13114:} VkPhysicalDeviceShaderDrawParametersFeatures;
+../Kits/NkCanvas/include/glad/vulkan.h:13116:typedef struct VkPhysicalDeviceShaderDrawParametersFeatures  VkPhysicalDeviceShaderDrawPar
+ameterFeatures;
+../Kits/NkCanvas/include/glad/vulkan.h:13583:    VkBool32                 transformFeedbackDraw;
+../Kits/NkCanvas/include/glad/vulkan.h:14424:    VkBool32                           shaderDrawParameters;
+../Kits/NkCanvas/include/glad/vulkan.h:15386:    VkBool32                              deviceGeneratedCommandsMultiDrawIndirectCount;
+../Kits/NkCanvas/include/glad/vulkan.h:15424:    uint32_t                                      maxDrawCount;
+../Kits/NkCanvas/include/glad/vulkan.h:15427:typedef struct VkDrawIndirectCountIndirectCommandEXT {
+../Kits/NkCanvas/include/glad/vulkan.h:15431:} VkDrawIndirectCountIndirectCommandEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:17943:    VkBool32                             tileShadingPerTileDraw;
+../Kits/NkCanvas/include/glad/vulkan.h:19526:typedef void (GLAD_API_PTR *PFN_vkCmdDraw)(VkCommandBuffer commandBuffer, uint32_t vertexC
+ount, uint32_t instanceCount, uint32_t firstVertex, uint32_t firstInstance);
+../Kits/NkCanvas/include/glad/vulkan.h:19527:typedef void (GLAD_API_PTR *PFN_vkCmdDrawClusterHUAWEI)(VkCommandBuffer commandBuffer, uin
+t32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ);
+../Kits/NkCanvas/include/glad/vulkan.h:19528:typedef void (GLAD_API_PTR *PFN_vkCmdDrawClusterIndirectHUAWEI)(VkCommandBuffer commandBuf
+fer, VkBuffer buffer, VkDeviceSize offset);
+../Kits/NkCanvas/include/glad/vulkan.h:19529:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndexed)(VkCommandBuffer commandBuffer, uint32_t
+indexCount, uint32_t instanceCount, uint32_t firstIndex, int32_t vertexOffset, uint32_t firstInstance);
+../Kits/NkCanvas/include/glad/vulkan.h:19530:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndexedIndirect)(VkCommandBuffer commandBuffer, V
+kBuffer buffer, VkDeviceSize offset, uint32_t drawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19531:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndexedIndirectCount)(VkCommandBuffer commandBuff
+er, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t stride)
+;
+../Kits/NkCanvas/include/glad/vulkan.h:19532:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndexedIndirectCountAMD)(VkCommandBuffer commandB
+uffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t stri
+de);
+../Kits/NkCanvas/include/glad/vulkan.h:19533:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndexedIndirectCountKHR)(VkCommandBuffer commandB
+uffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t stri
+de);
+../Kits/NkCanvas/include/glad/vulkan.h:19534:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndirect)(VkCommandBuffer commandBuffer, VkBuffer
+ buffer, VkDeviceSize offset, uint32_t drawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19535:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndirectByteCountEXT)(VkCommandBuffer commandBuff
+er, uint32_t instanceCount, uint32_t firstInstance, VkBuffer counterBuffer, VkDeviceSize counterBufferOffset, uint32_t counterOffset, u
+int32_t vertexStride);
+../Kits/NkCanvas/include/glad/vulkan.h:19536:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndirectCount)(VkCommandBuffer commandBuffer, VkB
+uffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19537:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndirectCountAMD)(VkCommandBuffer commandBuffer,
+VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19538:typedef void (GLAD_API_PTR *PFN_vkCmdDrawIndirectCountKHR)(VkCommandBuffer commandBuffer,
+VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19539:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMeshTasksEXT)(VkCommandBuffer commandBuffer, uint
+32_t groupCountX, uint32_t groupCountY, uint32_t groupCountZ);
+../Kits/NkCanvas/include/glad/vulkan.h:19540:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMeshTasksIndirectCountEXT)(VkCommandBuffer comman
+dBuffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t st
+ride);
+../Kits/NkCanvas/include/glad/vulkan.h:19541:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMeshTasksIndirectCountNV)(VkCommandBuffer command
+Buffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, uint32_t maxDrawCount, uint32_t str
+ide);
+../Kits/NkCanvas/include/glad/vulkan.h:19542:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMeshTasksIndirectEXT)(VkCommandBuffer commandBuff
+er, VkBuffer buffer, VkDeviceSize offset, uint32_t drawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19543:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMeshTasksIndirectNV)(VkCommandBuffer commandBuffe
+r, VkBuffer buffer, VkDeviceSize offset, uint32_t drawCount, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19544:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMeshTasksNV)(VkCommandBuffer commandBuffer, uint3
+2_t taskCount, uint32_t firstTask);
+../Kits/NkCanvas/include/glad/vulkan.h:19545:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMultiEXT)(VkCommandBuffer commandBuffer, uint32_t
+ drawCount, const VkMultiDrawInfoEXT * pVertexInfo, uint32_t instanceCount, uint32_t firstInstance, uint32_t stride);
+../Kits/NkCanvas/include/glad/vulkan.h:19546:typedef void (GLAD_API_PTR *PFN_vkCmdDrawMultiIndexedEXT)(VkCommandBuffer commandBuffer, u
+int32_t drawCount, const VkMultiDrawIndexedInfoEXT * pIndexInfo, uint32_t instanceCount, uint32_t firstInstance, uint32_t stride, const
+ int32_t * pVertexOffset);
+../Kits/NkCanvas/include/glad/vulkan.h:20703:GLAD_API_CALL PFN_vkCmdDraw glad_vkCmdDraw;
+../Kits/NkCanvas/include/glad/vulkan.h:20704:GLAD_API_CALL PFN_vkCmdDraw glad_debug_vkCmdDraw;
+../Kits/NkCanvas/include/glad/vulkan.h:20705:#define vkCmdDraw glad_debug_vkCmdDraw
+../Kits/NkCanvas/include/glad/vulkan.h:20706:GLAD_API_CALL PFN_vkCmdDrawClusterHUAWEI glad_vkCmdDrawClusterHUAWEI;
+../Kits/NkCanvas/include/glad/vulkan.h:20707:GLAD_API_CALL PFN_vkCmdDrawClusterHUAWEI glad_debug_vkCmdDrawClusterHUAWEI;
+../Kits/NkCanvas/include/glad/vulkan.h:20708:#define vkCmdDrawClusterHUAWEI glad_debug_vkCmdDrawClusterHUAWEI
+../Kits/NkCanvas/include/glad/vulkan.h:20709:GLAD_API_CALL PFN_vkCmdDrawClusterIndirectHUAWEI glad_vkCmdDrawClusterIndirectHUAWEI;
+../Kits/NkCanvas/include/glad/vulkan.h:20710:GLAD_API_CALL PFN_vkCmdDrawClusterIndirectHUAWEI glad_debug_vkCmdDrawClusterIndirectHUAWEI
+;
+../Kits/NkCanvas/include/glad/vulkan.h:20711:#define vkCmdDrawClusterIndirectHUAWEI glad_debug_vkCmdDrawClusterIndirectHUAWEI
+../Kits/NkCanvas/include/glad/vulkan.h:20712:GLAD_API_CALL PFN_vkCmdDrawIndexed glad_vkCmdDrawIndexed;
+../Kits/NkCanvas/include/glad/vulkan.h:20713:GLAD_API_CALL PFN_vkCmdDrawIndexed glad_debug_vkCmdDrawIndexed;
+../Kits/NkCanvas/include/glad/vulkan.h:20714:#define vkCmdDrawIndexed glad_debug_vkCmdDrawIndexed
+../Kits/NkCanvas/include/glad/vulkan.h:20715:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirect glad_vkCmdDrawIndexedIndirect;
+../Kits/NkCanvas/include/glad/vulkan.h:20716:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirect glad_debug_vkCmdDrawIndexedIndirect;
+../Kits/NkCanvas/include/glad/vulkan.h:20717:#define vkCmdDrawIndexedIndirect glad_debug_vkCmdDrawIndexedIndirect
+../Kits/NkCanvas/include/glad/vulkan.h:20718:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirectCount glad_vkCmdDrawIndexedIndirectCount;
+../Kits/NkCanvas/include/glad/vulkan.h:20719:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirectCount glad_debug_vkCmdDrawIndexedIndirectCount;
+../Kits/NkCanvas/include/glad/vulkan.h:20720:#define vkCmdDrawIndexedIndirectCount glad_debug_vkCmdDrawIndexedIndirectCount
+../Kits/NkCanvas/include/glad/vulkan.h:20721:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirectCountAMD glad_vkCmdDrawIndexedIndirectCountAMD;
+../Kits/NkCanvas/include/glad/vulkan.h:20722:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirectCountAMD glad_debug_vkCmdDrawIndexedIndirectCoun
+tAMD;
+../Kits/NkCanvas/include/glad/vulkan.h:20723:#define vkCmdDrawIndexedIndirectCountAMD glad_debug_vkCmdDrawIndexedIndirectCountAMD
+../Kits/NkCanvas/include/glad/vulkan.h:20724:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirectCountKHR glad_vkCmdDrawIndexedIndirectCountKHR;
+../Kits/NkCanvas/include/glad/vulkan.h:20725:GLAD_API_CALL PFN_vkCmdDrawIndexedIndirectCountKHR glad_debug_vkCmdDrawIndexedIndirectCoun
+tKHR;
+../Kits/NkCanvas/include/glad/vulkan.h:20726:#define vkCmdDrawIndexedIndirectCountKHR glad_debug_vkCmdDrawIndexedIndirectCountKHR
+../Kits/NkCanvas/include/glad/vulkan.h:20727:GLAD_API_CALL PFN_vkCmdDrawIndirect glad_vkCmdDrawIndirect;
+../Kits/NkCanvas/include/glad/vulkan.h:20728:GLAD_API_CALL PFN_vkCmdDrawIndirect glad_debug_vkCmdDrawIndirect;
+../Kits/NkCanvas/include/glad/vulkan.h:20729:#define vkCmdDrawIndirect glad_debug_vkCmdDrawIndirect
+../Kits/NkCanvas/include/glad/vulkan.h:20730:GLAD_API_CALL PFN_vkCmdDrawIndirectByteCountEXT glad_vkCmdDrawIndirectByteCountEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20731:GLAD_API_CALL PFN_vkCmdDrawIndirectByteCountEXT glad_debug_vkCmdDrawIndirectByteCountEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20732:#define vkCmdDrawIndirectByteCountEXT glad_debug_vkCmdDrawIndirectByteCountEXT
+../Kits/NkCanvas/include/glad/vulkan.h:20733:GLAD_API_CALL PFN_vkCmdDrawIndirectCount glad_vkCmdDrawIndirectCount;
+../Kits/NkCanvas/include/glad/vulkan.h:20734:GLAD_API_CALL PFN_vkCmdDrawIndirectCount glad_debug_vkCmdDrawIndirectCount;
+../Kits/NkCanvas/include/glad/vulkan.h:20735:#define vkCmdDrawIndirectCount glad_debug_vkCmdDrawIndirectCount
+../Kits/NkCanvas/include/glad/vulkan.h:20736:GLAD_API_CALL PFN_vkCmdDrawIndirectCountAMD glad_vkCmdDrawIndirectCountAMD;
+../Kits/NkCanvas/include/glad/vulkan.h:20737:GLAD_API_CALL PFN_vkCmdDrawIndirectCountAMD glad_debug_vkCmdDrawIndirectCountAMD;
+../Kits/NkCanvas/include/glad/vulkan.h:20738:#define vkCmdDrawIndirectCountAMD glad_debug_vkCmdDrawIndirectCountAMD
+../Kits/NkCanvas/include/glad/vulkan.h:20739:GLAD_API_CALL PFN_vkCmdDrawIndirectCountKHR glad_vkCmdDrawIndirectCountKHR;
+../Kits/NkCanvas/include/glad/vulkan.h:20740:GLAD_API_CALL PFN_vkCmdDrawIndirectCountKHR glad_debug_vkCmdDrawIndirectCountKHR;
+../Kits/NkCanvas/include/glad/vulkan.h:20741:#define vkCmdDrawIndirectCountKHR glad_debug_vkCmdDrawIndirectCountKHR
+../Kits/NkCanvas/include/glad/vulkan.h:20742:GLAD_API_CALL PFN_vkCmdDrawMeshTasksEXT glad_vkCmdDrawMeshTasksEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20743:GLAD_API_CALL PFN_vkCmdDrawMeshTasksEXT glad_debug_vkCmdDrawMeshTasksEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20744:#define vkCmdDrawMeshTasksEXT glad_debug_vkCmdDrawMeshTasksEXT
+../Kits/NkCanvas/include/glad/vulkan.h:20745:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectCountEXT glad_vkCmdDrawMeshTasksIndirectCountE
+XT;
+../Kits/NkCanvas/include/glad/vulkan.h:20746:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectCountEXT glad_debug_vkCmdDrawMeshTasksIndirect
+CountEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20747:#define vkCmdDrawMeshTasksIndirectCountEXT glad_debug_vkCmdDrawMeshTasksIndirectCountEXT
+../Kits/NkCanvas/include/glad/vulkan.h:20748:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectCountNV glad_vkCmdDrawMeshTasksIndirectCountNV
+;
+../Kits/NkCanvas/include/glad/vulkan.h:20749:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectCountNV glad_debug_vkCmdDrawMeshTasksIndirectC
+ountNV;
+../Kits/NkCanvas/include/glad/vulkan.h:20750:#define vkCmdDrawMeshTasksIndirectCountNV glad_debug_vkCmdDrawMeshTasksIndirectCountNV
+../Kits/NkCanvas/include/glad/vulkan.h:20751:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectEXT glad_vkCmdDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20752:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectEXT glad_debug_vkCmdDrawMeshTasksIndirectEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20753:#define vkCmdDrawMeshTasksIndirectEXT glad_debug_vkCmdDrawMeshTasksIndirectEXT
+../Kits/NkCanvas/include/glad/vulkan.h:20754:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectNV glad_vkCmdDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/vulkan.h:20755:GLAD_API_CALL PFN_vkCmdDrawMeshTasksIndirectNV glad_debug_vkCmdDrawMeshTasksIndirectNV;
+../Kits/NkCanvas/include/glad/vulkan.h:20756:#define vkCmdDrawMeshTasksIndirectNV glad_debug_vkCmdDrawMeshTasksIndirectNV
+../Kits/NkCanvas/include/glad/vulkan.h:20757:GLAD_API_CALL PFN_vkCmdDrawMeshTasksNV glad_vkCmdDrawMeshTasksNV;
+../Kits/NkCanvas/include/glad/vulkan.h:20758:GLAD_API_CALL PFN_vkCmdDrawMeshTasksNV glad_debug_vkCmdDrawMeshTasksNV;
+../Kits/NkCanvas/include/glad/vulkan.h:20759:#define vkCmdDrawMeshTasksNV glad_debug_vkCmdDrawMeshTasksNV
+../Kits/NkCanvas/include/glad/vulkan.h:20760:GLAD_API_CALL PFN_vkCmdDrawMultiEXT glad_vkCmdDrawMultiEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20761:GLAD_API_CALL PFN_vkCmdDrawMultiEXT glad_debug_vkCmdDrawMultiEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20762:#define vkCmdDrawMultiEXT glad_debug_vkCmdDrawMultiEXT
+../Kits/NkCanvas/include/glad/vulkan.h:20763:GLAD_API_CALL PFN_vkCmdDrawMultiIndexedEXT glad_vkCmdDrawMultiIndexedEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20764:GLAD_API_CALL PFN_vkCmdDrawMultiIndexedEXT glad_debug_vkCmdDrawMultiIndexedEXT;
+../Kits/NkCanvas/include/glad/vulkan.h:20765:#define vkCmdDrawMultiIndexedEXT glad_debug_vkCmdDrawMultiIndexedEXT
+../Kits/NkCanvas/include/glad/wgl.h:726:typedef BOOL (GLAD_API_PTR *PFNWGLMAKECONTEXTCURRENTARBPROC)(HDC hDrawDC, HDC hReadDC, HGLRC hg
+lrc);
+../Kits/NkCanvas/include/glad/wgl.h:727:typedef BOOL (GLAD_API_PTR *PFNWGLMAKECONTEXTCURRENTEXTPROC)(HDC hDrawDC, HDC hReadDC, HGLRC hg
+lrc);
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:27://   3. LES AIDES DE TEXTE — la vraie dette. `NkGuiDrawList::AddText` ne sait
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:32://        Labo/Mou/src/Mou/UI/MouDraw.h
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:41://   etage sous le nom NkGuiDrawText.h et cet en-tete les re-exporte. Tant qu
+e
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:47://   - une primitive qui manque a NkGuiDrawList      -> dans NKGui, pas ici
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:67:                              virtual void OnDraw(nkgui::NkGuiDrawList &dl) {
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:194:                             static void Text(nkgui::NkGuiDrawList &dl, nkgu
+i::NkGuiFont *f, float32 x, float32 topY, const char *s,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:198:                             static void TextCentered(nkgui::NkGuiDrawList &
+dl, nkgui::NkGuiFont *f, float32 cx, float32 topY,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:202:                             static void TextInBox(nkgui::NkGuiDrawList &dl,
+ nkgui::NkGuiFont *f, const nkgui::NkRect &box,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:206:                             static void TextRight(nkgui::NkGuiDrawList &dl,
+ nkgui::NkGuiFont *f, float32 right, float32 topY,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:244:                                     OnDraw(mGuiContext.dl);
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:66:#include "NKGui/Core/NkGuiDrawList.h"
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:78:              /// void OnDraw(NkGuiDrawList &dl) override {
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:158:                             void Dessiner(nkgui::NkGuiDrawList &dl, nkgui::
+NkGuiFont *titre, nkgui::NkGuiFont *corps,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:193:                             void DessinerRihen(nkgui::NkGuiDrawList &dl, nk
+gui::NkGuiFont *titre, nkgui::NkGuiFont *petite,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:272:                             void DessinerMoteur(nkgui::NkGuiDrawList &dl, n
+kgui::NkGuiFont *titre, nkgui::NkGuiFont *corps,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:328:                             void Invite(nkgui::NkGuiDrawList &dl, nkgui::Nk
+GuiFont *petite, const nkgui::NkRect &ecran,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:5://   `NkGuiDrawList::AddText` ne sait ecrire qu'a la LIGNE DE BASE : ni centrer
+,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:18://   Compte au 2026-09-01 : SIX copies dans le depot (MouDraw.h, Nkoung,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:29://   NkGuiDrawText.h et celui-ci le re-exporte. Tant que ce n'est pas fait, il
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:60:               inline void NkTexte(nkgui::NkGuiDrawList &dl, nkgui::NkGuiFont
+*f, float32 x, float32 topY, const char *s,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:68:               inline void NkTexteCentre(nkgui::NkGuiDrawList &dl, nkgui::NkGu
+iFont *f, float32 cx, float32 topY,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:74:               inline void NkTexteADroite(nkgui::NkGuiDrawList &dl, nkgui::NkG
+uiFont *f, float32 droite, float32 topY,
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasTexte.h:82:               inline void NkTexteDansBoite(nkgui::NkGuiDrawList &dl, nkgui::N
+kGuiFont *f, const nkgui::NkRect &box,
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:18:                    void *currentDrawable = nullptr; // id<CAMetalD
+rawable>
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:63:                    // donnait plus aucun (nextDrawable nil a chaqu
+e image).
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:227:   id<CAMetalDrawable> drawable = [layer nextDrawable];
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:228:   if (!drawable) { NK_MTL_ERR("nextDrawable failed\n"); return fa
+lse; }
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:229:   mData.currentDrawable = (void*)CFBridgingRetain(drawable);
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:265:   id<CAMetalDrawable>  drw  = (__bridge_transfer id<CAMetalDrawab
+le>)mData.currentDrawable;
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:266:   [cmdb presentDrawable:drw];
+../Kits/NkCanvas/include/NKCanvas/Backend/Metal/NkMetalContext.h:269:   mData.currentDrawable = nullptr;
+../Kits/NkCanvas/include/NKCanvas/Backend/OpenGL/NkOpenGLContextData.h:33:// besoin de `None` (Drawable nul de glXMakeCurrent, terminat
+eur des listes
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:126:                     void DrawPoint(int32 x, int32 y, uint8
+r, uint8 g, uint8 b, uint8 a = 255, float32 z = 0.0f,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:138:                     void DrawLine(int32 x0, int32 y0, int32
+ x1, int32 y1, uint8 r, uint8 g, uint8 b, uint8 a = 255,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:150:                                     DrawPoint(x0, y0, r, g,
+ b, a, z0 + (z1 - z0) * t, blend);
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:166:                     void DrawRect(int32 x, int32 y, int32 w
+, int32 h, uint8 r, uint8 g, uint8 b, uint8 a = 255,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:173:                             DrawLine(x, y, x1, y, r, g, b,
+a, z, z, blend);
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:174:                             DrawLine(x1, y, x1, y1, r, g, b
+, a, z, z, blend);
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:175:                             DrawLine(x1, y1, x, y1, r, g, b
+, a, z, z, blend);
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:176:                             DrawLine(x, y1, x, y, r, g, b,
+a, z, z, blend);
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:201:                     void DrawTriangle(const Vertex &v0, con
+st Vertex &v1, const Vertex &v2, uint8 r, uint8 g, uint8 b,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:203:                             DrawLine(RoundToInt(v0.x), Roun
+dToInt(v0.y), RoundToInt(v1.x), RoundToInt(v1.y), r, g, b, a, v0.z, v1.z,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:205:                             DrawLine(RoundToInt(v1.x), Roun
+dToInt(v1.y), RoundToInt(v2.x), RoundToInt(v2.y), r, g, b, a, v1.z, v2.z,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:207:                             DrawLine(RoundToInt(v2.x), Roun
+dToInt(v2.y), RoundToInt(v0.x), RoundToInt(v0.y), r, g, b, a, v2.z, v0.z,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:211:                     void DrawTriangle(int32 x0, int32 y0, i
+nt32 x1, int32 y1, int32 x2, int32 y2, uint8 r, uint8 g, uint8 b,
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:214:                             DrawTriangle(Vertex{static_cast
+<float32>(x0), static_cast<float32>(y0), z0},
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareContext.h:245:                                     DrawTriangle(v0, v1, v2
+, ColorToByte(c0.r), ColorToByte(c0.g), ColorToByte(c0.b), ColorToByte(c0.a),
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareRenderer2D.h:49:                           void Draw(const NkSprite &sprit
+e) override;
+../Kits/NkCanvas/include/NKCanvas/Core/NKRenderer2D.h:24://     r2d->Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Core/NKRenderer2D.h:25://     r2d->Draw(label);
+../Kits/NkCanvas/include/NKCanvas/Core/NKRenderer2D.h:26://     r2d->DrawFilledRect({100,100,200,50}, NkColor2D::Red);
+../Kits/NkCanvas/include/NKCanvas/Core/NKRenderer2D.h:27://     r2d->DrawFilledCircle({400,300}, 80, NkColor2D::Blue);
+../Kits/NkCanvas/include/NKCanvas/Core/NkWGLPixelFormat.h:21:           DrawToWindow = NK_PFD_DRAW_TO_WINDOW,
+../Kits/NkCanvas/include/NKCanvas/Core/NkWGLPixelFormat.h:22:           DrawToBitmap = NK_PFD_DRAW_TO_BITMAP,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:124:                               // Drawables
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:125:                               void Draw(const NkSprite &sprit
+e) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:126:                               void Draw(const NkText &text) o
+verride;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:129:                               void DrawPoint(NkVec2f pos, con
+st NkColor2D &col, float32 size) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:130:                               void DrawLine(NkVec2f a, NkVec2
+f b, const NkColor2D &col, float32 thick) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:131:                               void DrawRect(NkRect2f r, const
+ NkColor2D &col, float32 outline, const NkColor2D &oc) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:132:                               void DrawFilledRect(NkRect2f r,
+ const NkColor2D &col) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:133:                               void DrawCircle(NkVec2f c, floa
+t32 radius, const NkColor2D &col, uint32 segs, float32 outline,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:135:                               void DrawFilledCircle(NkVec2f c
+, float32 radius, const NkColor2D &col, uint32 segs) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:136:                               void DrawTriangle(NkVec2f a, Nk
+Vec2f b, NkVec2f c, const NkColor2D &col, float32 outline,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:138:                               void DrawFilledTriangle(NkVec2f
+ a, NkVec2f b, NkVec2f c, const NkColor2D &col) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:139:                               void DrawVertices(const NkVerte
+x2D *verts, uint32 vCount, const uint32 *idx, uint32 iCount,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:4:// NkDrawable.h — Interface abstraite des objets dessinables (style SFML
+)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:6:// Equivalent de sf::Drawable. Toute classe qui peut etre rendue par un
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:8:// la methode Draw(target, states).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:11://   void Draw(NkRenderTarget& target, const NkRenderStates& states) co
+nst
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:14://              concretes (target.Draw(vertices, count, primitive, stat
+es))
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:22://   void NkSprite::Draw(NkRenderTarget& target, const NkRenderStates&
+states) const {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:26://       target.Draw(mVertices, 4, NkPrimitiveType::NK_TRIANGLE_STRIP,
+local);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:29:// COEXISTENCE AVEC NkIDrawable2D (heritage)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:30://   L'ancienne interface `NkIDrawable2D` (signature Draw(NkIRenderer2D
+&)) est
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:32://   les 5 backends). La migration vers NkDrawable se fait en etape A.8
+.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:43:                class NkDrawable {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:45:                                virtual ~NkDrawable() noexcept = defaul
+t;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:51:                                virtual void Draw(NkRenderTarget &targe
+t, const NkRenderStates &states) const = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:8://       renderer->Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:9://       renderer->Draw(text);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:10://       renderer->DrawRect(...);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:35:             // NkIDrawable2D — anything that can be drawn by the re
+nderer
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:37:             class NkIDrawable2D {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:39:                             virtual ~NkIDrawable2D() = default;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:40:                             virtual void Draw(class NkIRenderer2D &
+renderer) const = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:57:                             // Call Begin() before any Draw calls,
+End() to flush and submit.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:171:                            // ── Draw primitives ─────────────────
+──────────────────────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:173:                            // Drawables (sprites, text, shapes)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:174:                            virtual void Draw(const NkIDrawable2D &
+drawable) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:175:                                    drawable.Draw(*this);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:179:                            virtual void Draw(const NkSprite &sprit
+e) = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:182:                            virtual void Draw(const NkText &text) =
+ 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:185:                            virtual void DrawPoint(NkVec2f pos, con
+st NkColor2D &color = NkColor2D::White, float32 size = 1.f) = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:187:                            virtual void DrawLine(NkVec2f a, NkVec2
+f b, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:190:                            virtual void DrawRect(NkRect2f rect, co
+nst NkColor2D &color = NkColor2D::White, float32 outline = 0.f,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:193:                            virtual void DrawFilledRect(NkRect2f re
+ct, const NkColor2D &color = NkColor2D::White) = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:195:                            virtual void DrawCircle(NkVec2f center,
+ float32 radius, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:199:                            virtual void DrawFilledCircle(NkVec2f c
+enter, float32 radius, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:202:                            virtual void DrawTriangle(NkVec2f a, Nk
+Vec2f b, NkVec2f c, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:205:                            virtual void DrawFilledTriangle(NkVec2f
+ a, NkVec2f b, NkVec2f c,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:210:                            // a modifier). Geometrie alignee sur l
+'outline de DrawRect.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:211:                            virtual void DrawRectOutline(NkRect2f r
+ect, const NkColor2D &color, float32 thickness = 1.f) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:215:                                    DrawFilledRect({rect.left - t,
+rect.top - t, rect.width + 2 * t, t}, color);              // haut
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:216:                                    DrawFilledRect({rect.left - t,
+rect.top + rect.height, rect.width + 2 * t, t}, color); // bas
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:217:                                    DrawFilledRect({rect.left - t,
+rect.top, t, rect.height}, color);                                         // gauche
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:218:                                    DrawFilledRect({rect.left + rec
+t.width, rect.top, t, rect.height}, color);                        // droite
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:222:                            virtual void DrawCircleOutline(NkVec2f
+center, float32 radius, const NkColor2D &color,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:230:                                            DrawLine(prev, cur, col
+or, thickness);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:236:                            virtual void DrawVertices(const NkVerte
+x2D *vertices, uint32 vertexCount, const uint32 *indices,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:241:                            // entiere). Impl par defaut composee s
+ur DrawVertices (aucun
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:243:                            virtual void DrawTexturedRect(NkRect2f
+rect, const NkTexture *texture,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:276:                                    DrawVertices(v, 4, idx, 6, text
+ure);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:26://   r.DrawLine({10, 10}, {200, 50}, NkColor2D::Red, 2.f);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:27://   r.DrawFilledRect({50, 50, 100, 100}, NkColor2D::Blue);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:28://   r.Draw(sprite);                              // NkDrawable nouve
+au style
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:29://   r.Draw(spriteOld);                           // NkIDrawable2D co
+mpat
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:39://     - Draw(NkDrawable&, NkRenderStates) — nouveau pattern target.D
+raw
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:49:#include "NKCanvas/Renderer/Core/NkDrawable.h"
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:50:#include "NKCanvas/Renderer/Resources/NkTexture.h" // surcharge DrawT
+exturedRect en pixels (GetTexCoords)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:187:                             // ── Draw — nouveau pattern NkDrawable
+ ──────────────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:189:                             /// Dessine un NkDrawable avec un etat
+compose, en utilisant le
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:191:                             void Draw(const NkDrawable &drawable, c
+onst NkRenderStates &states = NkRenderStates::Default()) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:193:                                             drawable.Draw(*mTarget,
+ states);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:196:                             // ── Draw — compat ancien NkIDrawable2
+D ─────────────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:198:                             void Draw(const NkIDrawable2D &drawable
+) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:200:                                             mBackend->Draw(drawable
+);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:203:                             // ── Draw — convenience primitives (fo
+rwardes au backend) ───────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:205:                             void DrawPoint(NkVec2f pos, const NkCol
+or2D &color = NkColor2D::White, float32 size = 1.f) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:207:                                             mBackend->DrawPoint(pos
+, color, size);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:210:                             void DrawLine(NkVec2f a, NkVec2f b, con
+st NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:213:                                             mBackend->DrawLine(a, b
+, color, thickness);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:216:                             void DrawRect(NkRect2f rect, const NkCo
+lor2D &color = NkColor2D::White, float32 outline = 0.f,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:219:                                             mBackend->DrawRect(rect
+, color, outline, outlineColor);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:222:                             void DrawFilledRect(NkRect2f rect, cons
+t NkColor2D &color = NkColor2D::White) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:224:                                             mBackend->DrawFilledRec
+t(rect, color);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:227:                             void DrawCircle(NkVec2f center, float32
+ radius, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:231:                                             mBackend->DrawCircle(ce
+nter, radius, color, segments, outline, outlineColor);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:234:                             void DrawFilledCircle(NkVec2f center, f
+loat32 radius, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:237:                                             mBackend->DrawFilledCir
+cle(center, radius, color, segments);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:240:                             void DrawTriangle(NkVec2f a, NkVec2f b,
+ NkVec2f c, const NkColor2D &color = NkColor2D::White,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:243:                                             mBackend->DrawTriangle(
+a, b, c, color, outline, outlineColor);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:246:                             void DrawFilledTriangle(NkVec2f a, NkVe
+c2f b, NkVec2f c, const NkColor2D &color = NkColor2D::White) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:248:                                             mBackend->DrawFilledTri
+angle(a, b, c, color);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:252:                             void DrawRectOutline(NkRect2f rect, con
+st NkColor2D &color, float32 thickness = 1.f) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:254:                                             mBackend->DrawRectOutli
+ne(rect, color, thickness);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:257:                             void DrawCircleOutline(NkVec2f center,
+float32 radius, const NkColor2D &color, float32 thickness = 1.f,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:260:                                             mBackend->DrawCircleOut
+line(center, radius, color, thickness, segments);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:264:                             void DrawVertices(const NkVertex *verti
+ces, uint32 vertexCount, const uint32 *indices,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:267:                                             mBackend->DrawVertices(
+vertices, vertexCount, indices, indexCount, texture);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:272:                             void DrawTexturedRect(NkRect2f rect, co
+nst NkTexture *texture,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:276:                                             mBackend->DrawTexturedR
+ect(rect, texture, color, uv);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:283:                             void DrawTexturedRect(NkRect2f rect, co
+nst NkTexture *texture, NkRect2i sourcePixels,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:286:                                             mBackend->DrawTexturedR
+ect(rect, texture, color, texture->GetTexCoords(sourcePixels));
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:291:                             void Draw(const NkSprite &sprite) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:293:                                             mBackend->Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:296:                             void Draw(const NkText &text) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:298:                                             mBackend->Draw(text);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2DFactory.h:13://     r2d->DrawFilledRect({100,100,200,50}, NkColor2D::Red);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2DFactory.h:14://     r2d->DrawSprite(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2DFactory.h:15://     r2d->DrawText(label);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2DTypes.h:156:                // sous-systemes existants (NkIRenderer2D::Draw
+Vertices, batchers, etc.).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderStates.h:18://   target.Draw(va, states);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkTransformable.h:27://   class NkSprite : public NkTransformable, public NkDrawable {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkTransformable.h:28://       void Draw(NkRenderTarget& target, NkRenderStates states)
+const override {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkTransformable.h:30://           target.Draw(mVertices, states);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkTransformable.h:191:                          /// DrawFilledRect ne passe PAS par NkT
+ransformable.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:15://   target.Draw(va, states);    // (drawable une fois A.3 livre)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:22://   Pas encore NkDrawable : le rename de NkIDrawable2D et la nouvel
+le
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:23://   signature Draw(NkRenderTarget&, NkRenderStates) sont en etape A
+.3.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:24://   A ce moment-la, NkVertexArray heritera de NkDrawable et fournir
+a un
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:25://   Draw() qui delegue au backend via target.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkFont.h:11://   renderer.Draw(label);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:20://   defauts), puis l'attache aux draws via target.Draw(drawable,
+material.States()).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:28://     est utilise via target.Draw(drawable, mat.States()).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:46://   target.Draw(flameSprite, fireMat.States());
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:196:                          /// Retourne un NkRenderStates pret a p
+asser a target.Draw(drawable, mat.States()).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkShader.h:58://     target.Draw(sprite, st);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkShader.h:141:                            // ── Uniformes (set apres Compile, ava
+nt Draw) ──────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:6:// de NkDrawable, exactement comme NkShape. Trois defauts disparaisse
+nt d'un coup.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:8://   1. Ils heritaient AUSSI de NkIDrawable2D, et NkRenderTarget expo
+sant une
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:9://      surcharge pour chacune des deux interfaces, `target.Draw(spri
+te)` etait
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:16://   3. Leur Draw(target, states) JETAIT l'etat recu : le parametre
+etait
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:20:// L'ancienne voie reste ouverte : NkIRenderer2D::Draw(const NkSprit
+e&) prend le
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:26:#include "NKCanvas/Renderer/Core/NkDrawable.h"
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:40:             class NkSprite : public NkTransformable, public NkDrawa
+ble {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:92:                             // appelle par NkIRenderer2D::Draw(spri
+te).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:93:                             void Draw(NkIRenderer2D &renderer) cons
+t;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:95:                             // ── NkDrawable ──────────────────────
+──────────────────────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:98:                             void Draw(NkRenderTarget &target, const
+ NkRenderStates &states) const override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:112:            class NkText : public NkTransformable, public NkDrawabl
+e {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:177:                            void Draw(NkIRenderer2D &renderer) cons
+t;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:179:                            // ── NkDrawable ──────────────────────
+──────────────────────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:183:                            void Draw(NkRenderTarget &target, const
+ NkRenderStates &states) const override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkCircleShape.h:12://   target.Draw(c);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkConvexShape.h:17://   target.Draw(pentagon);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkConvexShape.h:20://   - NkShape::Draw triangule en TRIANGLE_FAN, valable UNIQUEMENT
+ pour convexes.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkLineShape.h:11://   target.Draw(ln);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkLineShape.h:20://   Pour un trait fin sans epaisseur (1 pixel), utiliser NkRenderer
+2D::DrawLine
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkRectangleShape.h:14://   target.Draw(r);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:9://   - de l'heritage NkDrawable (signature Draw(NkRenderTarget&, NkRender
+States))
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:29:#include "NKCanvas/Renderer/Core/NkDrawable.h"
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:40:         class NkShape : public NkTransformable, public NkDrawable {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:144:                                // ── Draw (impl dans .cpp pour le disp
+atch target) ──────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:145:                                void Draw(NkRenderTarget &target, const
+ NkRenderStates &states) const override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:6:// rendre des NkDrawable. Deux implementations concretes :
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:20://     target.Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:26://     target.Draw(va);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:32://     - Draw(const NkDrawable&, NkRenderStates) — nouveau patte
+rn
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:33://     - Draw(const NkIDrawable2D&)              — ancien patter
+n (delegue au renderer interne)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:38:#include "NKCanvas/Renderer/Core/NkDrawable.h"
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:44:         class NkIDrawable2D;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:107:                                // ── API Draw — nouvelle inter
+face NkDrawable ───────────────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:109:                                /// Dessine un NkDrawable avec
+un etat compose donne. Le drawable
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:110:                                /// est responsable de l'appel
+a target.Draw(vertices, …).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:111:                                void Draw(const NkDrawable &dra
+wable, const NkRenderStates &states = NkRenderStates::Default()) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:112:                                        drawable.Draw(*this, st
+ates);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:116:                                void Draw(const NkVertexArray &
+va, const NkRenderStates &states = NkRenderStates::Default());
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:120:                                /// d'entree bas niveau qu'util
+isent NkDrawable::Draw().
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:121:                                virtual void Draw(const NkVerte
+x *vertices, uint32 count, NkPrimitiveType primitive,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:124:                                // ── API Draw — compat ancienn
+e interface NkIDrawable2D ─────────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:126:                                /// Compat : un drawable ancien
+ style (NkIDrawable2D::Draw(NkIRenderer2D&)).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:128:                                /// auront migre vers NkDrawabl
+e (etape A.8).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:129:                                void Draw(const NkIDrawable2D &
+drawable);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:142:                                /// inclut Draw(NkDrawable&) av
+ec dispatch correct vers *this).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:14://       rt.Draw(scene);                          // dessin off
+screen
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:26:// API NkRenderTarget complete supportee : Clear/Display/SetVie
+w/Draw(...)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:87:                                // Re-expose les surcharges Dra
+w du parent (cf NkRenderWindow.h).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:88:                                using NkRenderTarget::Draw;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:90:                                void Draw(const NkVertex *verti
+ces, uint32 count, NkPrimitiveType primitive,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:29://       target.Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:95:                         // ── Re-expose les surcharges Draw du
+parent NkRenderTarget ─────
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:96:                         // (name-hiding C++ : declarer un overr
+ide de Draw(raw vertices)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:98:                         using NkRenderTarget::Draw;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:100:                                void Draw(const NkVertex *verti
+ces, uint32 count, NkPrimitiveType primitive,
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:6:// NkGuiCanvasBackend.h — rend un nkgui::NkGuiDrawList via NKCanvas (NkIRen
+derer2D).
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:128:                          //  appels a `SubmitDrawList`, et que la presen
+tation ne pese que
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:130:                          //  Mais « SubmitDrawList » nomme l'appel, pas
+son contenu. Voici la
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:140:                          //    3. PILOTE       `SetClip`, `SetBlendMode`
+ et `DrawVertices` --
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:213:                          void Submit(const nkentseu::nkgui::NkGuiDrawLis
+t &dl, nkentseu::uint32 fbW, nkentseu::uint32 fbH) {
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:268:                                          const nkgui::NkGuiDrawCmd &dc =
+ dl.cmds[ci];
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:331:                                          if (dc.type == nkgui::NkGuiDraw
+CmdType::TexturedTriangles) {
+../Kits/NkCanvas/include/NKCanvas/UI/NkGuiCanvasBackend.h:455:                                          mRenderer->DrawVertices(mScratc
+h.Data() + lo, hi - lo + 1u, mIdxTmp.Data(), dc.idxCount, tex);
+../Kits/NkCanvas/include/NKFont/Core/NkFontSizeCache.h:202:      * NkFontScaleRenderer::DrawText2D(renderer, fontRef, "Hello", px, py,
+scale, ...);
+../Kits/NkCanvas/include/NKGui/Core/NkGuiContext.h:14:#include "NKGui/Core/NkGuiDrawList.h"
+../Kits/NkCanvas/include/NKGui/Core/NkGuiContext.h:274:                         // les modales (NkModalDraw, NkModalFrameDraw) la lisen
+t, les panneaux non.
+../Kits/NkCanvas/include/NKGui/Core/NkGuiContext.h:280:                         NkGuiDrawList dl;                ///< couche principale
+ (rendue en 1er)
+../Kits/NkCanvas/include/NKGui/Core/NkGuiContext.h:281:                         NkGuiDrawList dlOverlay; ///< couche popups/overlay (re
+ndue PAR-DESSUS)
+../Kits/NkCanvas/include/NKGui/Core/NkGuiContext.h:482:                         NkGuiDrawList winDL[WinMax];                     ///< p
+ool de draw-lists (1 par fenêtre/frame)
+../Kits/NkCanvas/include/NKGui/Core/NkGuiContext.h:584:                         NkGuiDrawList &DL() noexcept {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:4:// @File    NkGuiDrawList.h
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:10:// Réécriture PROPRE (s'inspire du modèle prouvé NkUIDrawList, noms neufs).
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:30:         enum class NkGuiDrawCmdType : uint8 {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:49:         struct NkGuiDrawCmd {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:50:                         NkGuiDrawCmdType type = NkGuiDrawCmdType::Triangles;
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:64:         struct NKENTSEU_NKGUI_CLASS_EXPORT NkGuiDrawList {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:67:                         NkVector<NkGuiDrawCmd> cmds;
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:79:                         void Append(const NkGuiDrawList &other) noexcept;
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawList.h:236:                                NkGuiDrawCmd &CurCmd(uint32 texId) noexcept;
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:3:// @File    NkGuiDrawListRaster.h
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:4:// @Brief   Rasterisation LOGICIELLE d'une NkGuiDrawList vers des pixels RG
+BA8 --
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:13://  la toile dessine : une NkGuiDrawList (sommets, indices, commandes). La
+ liste
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:49:#include "NKGui/Core/NkGuiDrawList.h"
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:62:           class NkGuiDrawListRaster {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:116:                          uint32 Rasteriser(const NkGuiDrawList &dl) noex
+cept {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:119:                                          const NkGuiDrawCmd &c = dl.cmds
+[ci];
+../Kits/NkCanvas/include/NKGui/Core/NkGuiDrawListRaster.h:135:                                          if (c.type == NkGuiDrawCmdType:
+:TexturedTriangles && c.texId != 0u) {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiIcons.h:15:// le meme motif que MouDraw.h / NkoungDraw.h, une couche plus haut.
+../Kits/NkCanvas/include/NKGui/Core/NkGuiIcons.h:52:            struct NkGuiDrawList;
+../Kits/NkCanvas/include/NKGui/Core/NkGuiIcons.h:82:            enum class NkGuiIconDraw : uint8 {
+../Kits/NkCanvas/include/NKGui/Core/NkGuiIcons.h:216:           NKENTSEU_NKGUI_API NkGuiIconDraw AddIcon(NkGuiDrawList &dl, const NkGui
+IconSet &set, NkGuiIconHandle h,
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiInteraction.h:2017:                                     // appel a `StyleDraw` (mesure : 4 site
+s, aucun n'est le sien).
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:1475:         inline void NkGuiHachurer(NkGuiDrawList &dl, const NkRect &zone, const
+NkColor &trait,
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:4112:                                                                 NkGuiDrawList &
+dl = ctx.DL();
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:4681:                                                 NkGuiDrawList &dlC = ctx.DL();
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:4953:                                                 NkGuiDrawList &dlC = ctx.DL();
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:5025:                                                         NkGuiDrawList &dl = ctx
+.DL();
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:5168:                                                         const NkGuiIconDraw fai
+t =
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:5171:                                                         if (fait != NkGuiIconDr
+aw::Glyph)
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:5257:                                 NkGuiDrawList &dl = ctx.DL();
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:5509:                                         NkGuiDrawList &dl = ctx.DL();
+../Kits/NkCanvas/include/NKGui/Doc/NkGuiMonteur.h:5582:                                 NkGuiDrawList &dl = ctx.DL();
+../Kits/NkCanvas/include/NKGui/NKGui.h:14:// État : Phase 1 (squelette). Le cœur (DrawList/Context/Input/Interaction),
+../Kits/NkCanvas/include/NKGui/NKGui.h:32:#include "NKGui/Core/NkGuiDrawList.h"
+../Kits/NkCanvas/include/NKGui/Widgets/NkGuiWidgets.h:246:              // `NkUILayout::DrawSplitter`, que l'extinction de NKUI va supp
+rimer : sans
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:674:                    NKIMG_INLINE void DrawHLine(int32 x0, int32 x1, int32 y, const
+math::NkColor &c) noexcept {
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:685:                    NKIMG_INLINE void DrawVLine(int32 x, int32 y0, int32 y1, const
+math::NkColor &c) noexcept {
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:696:                    NKIMG_INLINE void DrawLine(int32 x0, int32 y0, int32 x1, int32
+y1, const math::NkColor &c) noexcept {
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:719:                    NKIMG_INLINE void DrawRect(int32 x, int32 y, int32 w, int32 h,
+const math::NkColor &c) noexcept {
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:722:                            DrawHLine(x, x + w - 1, y, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:723:                            DrawHLine(x, x + w - 1, y + h - 1, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:724:                            DrawVLine(x, y, y + h - 1, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:725:                            DrawVLine(x + w - 1, y, y + h - 1, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:731:                                    DrawHLine(x, x + w - 1, y + j, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:735:                    NKIMG_INLINE void DrawCircle(int32 cx, int32 cy, int32 r, const
+ math::NkColor &c) noexcept {
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:764:                                    DrawHLine(cx - dx, cx + dx, cy + dy, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:769:                    NKIMG_INLINE void DrawEllipse(int32 cx, int32 cy, int32 rx, int
+32 ry, const math::NkColor &c) noexcept {
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:778:                                    DrawLine(px, py, nx, ny, c);
+../Kits/NkCanvas/include/NKImage/Core/NkImage.h:793:                                    DrawHLine(cx - dx, cx + dx, cy + dy, c);
+../Kits/NkCanvas/include/NKMath/NkColor.h:1251:                          * @note Format utilisé par certains systèmes de rendu (ex: ImG
+ui DrawList)
+../Kits/NkCanvas/include/NKMath/NkColor.h:2074: *     DrawPixel(x, y, displayColor.ToU32());  // Format ABGR pour DrawList
+../Kits/NkCanvas/include/NKMath/NkSegment.h:297:                void DrawSegment(const NkSegment& segment, uint32 color)
+../Kits/NkCanvas/include/NKMath/NkSegment.h:306:                        DrawLineLowLevel(x1, y1, x2, y2, color);
+../Kits/NkCanvas/include/NKMath/NkSegment.h:309:                void DrawSegmentVectorized(const NkSegment& segment, uint32 color)
+../Kits/NkCanvas/include/NKMath/NkSegment.h:312:                        DrawLineVectorized(
+../Kits/NkCanvas/include/NKMemory/NkProfiler.h:462:             HUD_DrawText("Memory: %.1f MB (peak: %.1f MB, Δ: %+d KB)",
+../Kits/NkCanvas/include/NKPlatform/NkCGXDetect.h:1285:                 GetMetalDrawableQueue()->setVSyncEnabled(enabled);
+../Kits/NkCanvas/include/NKWindow/Core/NkContext.h:152:                 uintptr nativeDrawable = 0;        // GLXDrawable, EGLSurface,
+HWND
+exo5-qui_appelle_vraiment/appelants.cpp:5:class Dessin : public nkentseu::renderer::NkDrawable {
+exo5-qui_appelle_vraiment/appelants.cpp:8:    void Draw(nkentseu::renderer::NkRenderTarget &target, const nkentseu::renderer::NkRenderS
+tates &states) const override {
+exo5-qui_appelle_vraiment/appelants.cpp:27:        target.Draw(vk, 6, nkentseu::renderer::NkPrimitiveType::NK_LINES, states);
+exo5-qui_appelle_vraiment/appelants.cpp:43:        target.Draw(mObj);
+C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07> grep -rn "Draw(" ../Kits/NkCanvas/include/ exo5-qui_appelle_vraim
+ent/
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:67:                              virtual void OnDraw(nkgui::NkGuiDrawList &dl) {
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasGuiApp.h:244:                                     OnDraw(mGuiContext.dl);
+../Kits/NkCanvas/include/NKCanvas/App/NkCanvasSplash.h:78:              /// void OnDraw(NkGuiDrawList &dl) override {
+../Kits/NkCanvas/include/NKCanvas/Backend/Software/NkSoftwareRenderer2D.h:49:                           void Draw(const NkSprite &sprit
+e) override;
+../Kits/NkCanvas/include/NKCanvas/Core/NKRenderer2D.h:24://     r2d->Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Core/NKRenderer2D.h:25://     r2d->Draw(label);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:125:                               void Draw(const NkSprite &sprit
+e) override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Batch/NkBatchRenderer2D.h:126:                               void Draw(const NkText &text) o
+verride;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:8:// la methode Draw(target, states).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:11://   void Draw(NkRenderTarget& target, const NkRenderStates& states) co
+nst
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:14://              concretes (target.Draw(vertices, count, primitive, stat
+es))
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:22://   void NkSprite::Draw(NkRenderTarget& target, const NkRenderStates&
+states) const {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:26://       target.Draw(mVertices, 4, NkPrimitiveType::NK_TRIANGLE_STRIP,
+local);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:30://   L'ancienne interface `NkIDrawable2D` (signature Draw(NkIRenderer2D
+&)) est
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkDrawable.h:51:                                virtual void Draw(NkRenderTarget &targe
+t, const NkRenderStates &states) const = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:8://       renderer->Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:9://       renderer->Draw(text);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:40:                             virtual void Draw(class NkIRenderer2D &
+renderer) const = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:174:                            virtual void Draw(const NkIDrawable2D &
+drawable) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:175:                                    drawable.Draw(*this);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:179:                            virtual void Draw(const NkSprite &sprit
+e) = 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkIRenderer2D.h:182:                            virtual void Draw(const NkText &text) =
+ 0;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:28://   r.Draw(sprite);                              // NkDrawable nouve
+au style
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:29://   r.Draw(spriteOld);                           // NkIDrawable2D co
+mpat
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:39://     - Draw(NkDrawable&, NkRenderStates) — nouveau pattern target.D
+raw
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:191:                             void Draw(const NkDrawable &drawable, c
+onst NkRenderStates &states = NkRenderStates::Default()) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:193:                                             drawable.Draw(*mTarget,
+ states);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:198:                             void Draw(const NkIDrawable2D &drawable
+) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:200:                                             mBackend->Draw(drawable
+);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:291:                             void Draw(const NkSprite &sprite) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:293:                                             mBackend->Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:296:                             void Draw(const NkText &text) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderer2D.h:298:                                             mBackend->Draw(text);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkRenderStates.h:18://   target.Draw(va, states);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkTransformable.h:28://       void Draw(NkRenderTarget& target, NkRenderStates states)
+const override {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkTransformable.h:30://           target.Draw(mVertices, states);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:15://   target.Draw(va, states);    // (drawable une fois A.3 livre)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:23://   signature Draw(NkRenderTarget&, NkRenderStates) sont en etape A
+.3.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Core/NkVertexArray.h:25://   Draw() qui delegue au backend via target.
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkFont.h:11://   renderer.Draw(label);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:20://   defauts), puis l'attache aux draws via target.Draw(drawable,
+material.States()).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:28://     est utilise via target.Draw(drawable, mat.States()).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:46://   target.Draw(flameSprite, fireMat.States());
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkMaterial.h:196:                          /// Retourne un NkRenderStates pret a p
+asser a target.Draw(drawable, mat.States()).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkShader.h:58://     target.Draw(sprite, st);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:9://      surcharge pour chacune des deux interfaces, `target.Draw(spri
+te)` etait
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:16://   3. Leur Draw(target, states) JETAIT l'etat recu : le parametre
+etait
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:20:// L'ancienne voie reste ouverte : NkIRenderer2D::Draw(const NkSprit
+e&) prend le
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:92:                             // appelle par NkIRenderer2D::Draw(spri
+te).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:93:                             void Draw(NkIRenderer2D &renderer) cons
+t;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:98:                             void Draw(NkRenderTarget &target, const
+ NkRenderStates &states) const override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:177:                            void Draw(NkIRenderer2D &renderer) cons
+t;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Resources/NkSprite.h:183:                            void Draw(NkRenderTarget &target, const
+ NkRenderStates &states) const override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkCircleShape.h:12://   target.Draw(c);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkConvexShape.h:17://   target.Draw(pentagon);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkLineShape.h:11://   target.Draw(ln);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkRectangleShape.h:14://   target.Draw(r);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:9://   - de l'heritage NkDrawable (signature Draw(NkRenderTarget&, NkRender
+States))
+../Kits/NkCanvas/include/NKCanvas/Renderer/Shapes/NkShape.h:145:                                void Draw(NkRenderTarget &target, const
+ NkRenderStates &states) const override;
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:20://     target.Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:26://     target.Draw(va);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:32://     - Draw(const NkDrawable&, NkRenderStates) — nouveau patte
+rn
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:33://     - Draw(const NkIDrawable2D&)              — ancien patter
+n (delegue au renderer interne)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:110:                                /// est responsable de l'appel
+a target.Draw(vertices, …).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:111:                                void Draw(const NkDrawable &dra
+wable, const NkRenderStates &states = NkRenderStates::Default()) {
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:112:                                        drawable.Draw(*this, st
+ates);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:116:                                void Draw(const NkVertexArray &
+va, const NkRenderStates &states = NkRenderStates::Default());
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:120:                                /// d'entree bas niveau qu'util
+isent NkDrawable::Draw().
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:121:                                virtual void Draw(const NkVerte
+x *vertices, uint32 count, NkPrimitiveType primitive,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:126:                                /// Compat : un drawable ancien
+ style (NkIDrawable2D::Draw(NkIRenderer2D&)).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:129:                                void Draw(const NkIDrawable2D &
+drawable);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTarget.h:142:                                /// inclut Draw(NkDrawable&) av
+ec dispatch correct vers *this).
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:14://       rt.Draw(scene);                          // dessin off
+screen
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:26:// API NkRenderTarget complete supportee : Clear/Display/SetVie
+w/Draw(...)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderTexture.h:90:                                void Draw(const NkVertex *verti
+ces, uint32 count, NkPrimitiveType primitive,
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:29://       target.Draw(sprite);
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:96:                         // (name-hiding C++ : declarer un overr
+ide de Draw(raw vertices)
+../Kits/NkCanvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:100:                                void Draw(const NkVertex *verti
+ces, uint32 count, NkPrimitiveType primitive,
+exo5-qui_appelle_vraiment/appelants.cpp:8:    void Draw(nkentseu::renderer::NkRenderTarget &target, const nkentseu::renderer::NkRenderS
+tates &states) const override {
+exo5-qui_appelle_vraiment/appelants.cpp:27:        target.Draw(vk, 6, nkentseu::renderer::NkPrimitiveType::NK_LINES, states);
+exo5-qui_appelle_vraiment/appelants.cpp:43:        target.Draw(mObj);
+
+Par la pile : pour la pile, j'ai utilisé GDB avec un Breakpoint sur la méthode Draw. La commande est : gdb Build/Bin/Debug-Windows/ex5/ex5.exe suivie de (gdb) break Draw et de (gdb) run
+
+Reading symbols from Build/Bin/Debug-Windows/ex5/ex5.exe...
+   (gdb) breack Draw
+   Undefined command: "breack".  Try "help".
+   (gdb) break Draw
+   Breakpoint 1 at 0x140004ad5: Draw. (14 locations)
+   (gdb) run
+   Starting program: C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\Build\Bin\Debug-Windows\ex5\ex5.exe
+   [New Thread 23048.0x59fc]
+   [New Thread 23048.0x3b0]
+   [New Thread 23048.0x1f6c]
+   [New Thread 23048.0x44e8]
+   [New Thread 23048.0x5890]
+   [NKLogger] niveau=info | console=debug | journal=C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\logs\app.log
+   [NKLogger] trace/debug sont SOUS le niveau : NK_LOG_LEVEL=debug pour les voir ; NK_LOG_CONSOLE=1 pour tout mettre a l'ecran ; NK_LOG_QU
+   IET=1 pour taire ces deux lignes.
+   [2026-10-25 12:43:20.409] [INF] [default] [NkCanvasApp.cpp:358 in ResoudreBackend] -> [nkcanvasapp] backend par defaut de la plateforme
+    = DirectX 11
+   warning: clientcore\windows\dwm\dwmapi\attribute.cpp(288)\dwmapi.dll!00007FFF58A94F8F: (caller: 00007FF602F8CE46) ReturnHr(1) tid(1140)
+    80070057 The parameter is incorrect.
+   [2026-10-25 12:43:20.577] [WRN] [default] [NkContextFactory.cpp:46 in Create] -> [NkContextFactory][DBG] Create begin api=DirectX 11
+   [2026-10-25 12:43:20.577] [INF] [default] [NkGpuPolicy.cpp:114 in ApplyPreContext] -> [NkGpuPolicy] api=DirectX 11 pref=Default vendor=
+   Any adapterIndex=-1
+   [2026-10-25 12:43:20.578] [WRN] [default] [NkContextFactory.cpp:95 in Create] -> [NkContextFactory][DBG] Context allocated ptr=0x1c6a88
+   [2026-10-25 12:43:20.578] [WRN] [default] [NkContextFactory.cpp:97 in Create] -> [NkContextFactory][DBG] Initialize begin
+   [New Thread 23048.0x2304]
+   [New Thread 23048.0x2224]
+   [Thread 23048.0x2224 exited with code 0]
+   [New Thread 23048.0x3928]
+   [New Thread 23048.0x54d4]
+   [New Thread 23048.0x2310]
+   [New Thread 23048.0x3790]
+   [New Thread 23048.0x5844]
+   [New Thread 23048.0x17c]
+   [New Thread 23048.0x485c]
+   [New Thread 23048.0x540c]
+   [New Thread 23048.0x2554]
+   [New Thread 23048.0x5ae4]
+   [New Thread 23048.0x378c]
+   [2026-10-25 12:43:21.528] [INF] [default] [NkDX11Context.cpp:208 in CreateDeviceAndSwapchain] -> [NkDX11] D3D11CreateDevice OK with 11_
+   1+ (chosen FL=0xB100)
+
+   [2026-10-25 12:43:21.529] [INF] [default] [NkDX11Context.cpp:242 in CreateDeviceAndSwapchain] -> [NkDX11] Using adapter #0 vendor=0x10D
+   E device=0x1F95
+
+   [2026-10-25 12:43:21.821] [INF] [default] [NkDX11Context.cpp:269 in CreateDeviceAndSwapchain] -> [NkDX11] Device+Swapchain OK (feature
+   level B100, VRAM 3935 MB)
+
+   [2026-10-25 12:43:21.822] [INF] [default] [NkDX11Context.cpp:144 in Initialize] -> [NkDX11] Ready a?" DirectX 11 | VRAM 3935 MB
+
+   [2026-10-25 12:43:21.823] [WRN] [default] [NkContextFactory.cpp:103 in Create] -> [NkContextFactory][DBG] Initialize success
+   [2026-10-25 12:43:21.823] [INF] [default] [NkContextFactory.cpp:105 in Create] -> [NkContextFactory] Context created: DirectX 11
+
+   [2026-10-25 12:43:21.823] [INF] [default] [NkRenderer2DFactory.cpp:39 in Create] -> [NkRenderer2DFactory] Creating 2D renderer for API:
+    DirectX 11
+   [New Thread 23048.0x58f4]
+   [New Thread 23048.0x2f94]
+   [New Thread 23048.0x45b8]
+   [New Thread 23048.0x5670]
+   [New Thread 23048.0x4770]
+   [New Thread 23048.0x628]
+   [2026-10-25 12:43:21.858] [INF] [default] [NkDX11Renderer2D.cpp:317 in Initialize] -> [NkDX11-2D] Initialized
+   [2026-10-25 12:43:21.859] [INF] [default] [NkRenderer2DFactory.cpp:102 in Create] -> [NkRenderer2DFactory] 2D renderer created: DirectX
+    11
+   [2026-10-25 12:43:21.859] [INF] [default] [NkCanvasApp.cpp:497 in CreateWindowAndTarget] -> [nkcanvasapp] Exercice 5 chap 7 - backend g
+   raphique retenu = DirectX 11
+
+   Thread 1 hit Breakpoint 1.13, nkentseu::renderer::NkRenderTarget::Draw (this=0x1a6968, drawable=..., states=...)
+       at C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/Renderer/Targets/NkRenderTarget.h:112
+   112                                             drawable.Draw(*this, states);
+   (gdb) bt
+   #0  nkentseu::renderer::NkRenderTarget::Draw (this=0x1a6968, drawable=..., states=...)
+       at C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/Renderer/Targets/NkRenderTarget.h:112
+   #1  0x00007ff60311747f in App::OnRender (this=0x5ff640, target=...)
+       at C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraiment/appelants.cpp:43
+   #2  0x00007ff602f42064 in nkentseu::renderer::NkCanvasApp::Execute (this=0x5ff640, state=...)
+       at D:\a\Nkentseu-Kits\Nkentseu-Kits\nkentseu\Kernel\Runtime\NKCanvas\src\NKCanvas\App/NkCanvasApp.cpp:223
+   #3  0x00007ff603165420 in nkentseu::renderer::NkCanvasApp::Run<App> (state=...)
+       at C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/NkCanvasApp.h:204
+   #4  0x00007ff602f41863 in nkmain (state=...)   
+
+Les différences : La différence entre la m"thode par texte et par la pile est que la méthode par texte montre absolument toutes les occurences d'une fonction du nom Draw. Qu'elle soit celle que l'on cherche ou celle que l'on ne cherche pas. Tandis que la pile d'appel identifie les fonctions qui ont menés à l'appel de la méthode Draw désignes.
+Cette différence existe car la recherche par texte se base sur des occurences de a chaine de caractère qui constitue le nom de la fonciton et non l'analyse de ses symboles comme le fait GDB

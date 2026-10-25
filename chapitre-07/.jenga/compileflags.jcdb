@@ -5,3 +5,7 @@ project	ex3
 dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo3-suivre_un_appel
 std	c++17
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include
+project	ex5
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraiment
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include

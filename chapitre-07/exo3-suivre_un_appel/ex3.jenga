@@ -5,4 +5,5 @@ with project("ex3") :
     windowedapp()
     cppdialect("C++17")
     language("C++")
+    files(["./**.cpp"])
     usenkcanvas()
