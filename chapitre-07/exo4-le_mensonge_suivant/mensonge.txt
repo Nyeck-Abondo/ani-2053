@@ -1,5 +1,8 @@
-Le commentaire : //   - Conteneur MOV/MP4 (ISOBMFF) : piste vidéo -> MJPEG (mjpa/jpeg). H264 = à venir.
+Le commentaire : Il provient de l'entête NkVideoReader.h
+
+//   - Conteneur MOV/MP4 (ISOBMFF) : piste vidéo -> MJPEG (mjpa/jpeg). H264 = à venir.
 Le code : NkVector<nk_uint8> h264Sps, h264Pps; // H264 : SPS/PPS extraits de l'avc Dans NkVideoReader.cpp ligne 474
+
 La preuve : grep -rn "h264" Kernel/ donne comme resultat
 Kernel/Runtime/NKMedia/src/NKMedia/Video/NkVideoReader.cpp:1828:                                        info.codec = NkString("h264");
 Kernel/Runtime/NKMedia/src/NKMedia/Video/NkVideoReader.cpp:1996:                                        if (frames.Size() == 0 || h264Sps.Size() == 0 || h264Pps.Size() == 0)
