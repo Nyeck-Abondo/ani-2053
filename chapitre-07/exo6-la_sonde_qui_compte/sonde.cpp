@@ -18,7 +18,7 @@ class Sonde : public nkentseu::renderer::NkCanvasApp {
 
     void OnRender(nkentseu::renderer::NkRenderWindow &target) override {
         count++;
-
+        //logger.Info("[SONDE] : Compteur : {0} --- Time : {1}", count, Time());
         if (Time() >= 10) {
             //creation du fichier
             nkentseu::uint64 mode = nkentseu::NkFileStream::OpenMode::NK_WRITE_MODE;
