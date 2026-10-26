@@ -1,0 +1,17 @@
+Question : Comment est ce que le point d'entrée nkmain fait il pour rendre du code C++ parfaitement
+compilable avec les compilateurs androids, sans avoir besoin de spécifier le point d'entrée android android_main
+dans le code de l'application ?
+
+Les endroits : 
+    - Canvas/include/NKWindow/NKEntry.h - fonction : nkmain ligne 368 
+    -Canvas/include/NKWindow/EntryPoints/NkAndroid.h - fonction : android_main ligne 31
+Les surprises : la gestion du point d'entré sous android utilise deux pointeurs de type android_app plutôt qu'un seul, celui de la fonction android_main.
+une en variable globale du namespace nkentseu et l'autre en argument de la fonction android_main
+    par ailleurs, le point d'entré android utilise les fonctions inlines du fichier NkEntry.h pour des initialisations de l'état, plutôt que simplement appeler nkmain dans ce qui s'apparente au corps minimal de la
+    fonction android_main pour un programme android.
+
+Les questions ouvertes : Pourquoi utiliser une variable globale de type android_app* en plus de celle en argument du point d'entré android_main ?
+A quoi correspond la variable d'état que les fonction inline du NkEntry.h modifie dans le android_main ?
+Pourquoi utiliser des arguments en lignes de commande sur un programme android ?
+
+Les mensonges : aucun
