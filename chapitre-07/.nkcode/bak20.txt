@@ -1,0 +1,2 @@
+nktableau 1
+trait encre 4.0 -322.5,-12.1

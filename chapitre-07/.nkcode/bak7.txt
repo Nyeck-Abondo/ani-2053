@@ -1,0 +1,40 @@
+#include "NKWindow/NkWindow.h"
+#include "NKWindow/NkMain.h"
+#include "NKCanvas/App/NkCanvasApp.h"
+
+class Dessin : public nkentseu::renderer::NkDrawable {
+    public:
+    Dessin(nkentseu::math::NkColor color) : mColor(color) { }
+    void Draw(nkentseu::renderer::NkRenderTarget &target, const nkentseu::renderer::NkRenderStates &states) const override {
+        nkentseu::rendererNkVertex vertices[4];
+
+                vertices[0] = {-50.0f, -50.0f, 0.0f, 0.0f, 255, 0, 0, 255};
+                vertices[1] = {50.0f, 50.0f, 0.0f, 0.0f, 0, 255, 0, 255};
+                vertices[2] = {-50.0f, 50.0f, 0.0f, 0.0f, 255, 255, 0, 255};
+                vertices[3] = {50.0f, -50.0f, 0.0f, 0.0f, 255, 0, 255, 255};
+
+                target.Display(vertices, 4, NkPrimitiveType::NK_LINES, states);
+    }
+    
+    private:
+    nkentseu::math::NkColor mColor;
+};
+
+class App : public nkentseu::renderer::NkCanvasApp {
+    public:
+    App() : mObj({3, 74, 97}) {
+        Config().title        =    "Exercice 5 chap 7";
+        Config().width        =    1280;
+        Config().height       =    720;
+        Config().clearColor   =    {43, 97, 81};
+    }
+    void OnRender(nkentseu::renderer::NkRenderWindow &target) override {
+        target.Draw(mObj);
+    }
+    private:
+    Dessin mObj;
+};
+
+int nkmain(const nkentseu::NkEntryState& state) {
+    return nkentseu::renderer::NkCanvasApp::Run<App>(state);
+}

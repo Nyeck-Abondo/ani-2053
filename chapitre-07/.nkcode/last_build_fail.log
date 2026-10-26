@@ -1,4 +1,4 @@
-$ jenga build --target ex5 --config Debug --platform Windows-x86_64 --jenga-file "C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/chapitre7.jenga"
+$ jenga build --target ex6 --config Debug --platform Windows-x86_64 --jenga-file "C:/Users/Administrator/Documents/Github/Sprints/ani-2053/chapitre-07/chapitre7.jenga"
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
@@ -20,114 +20,42 @@ Target:        Windows x86_64
 Toolchain:     clang-mingw
 
 Build Order (1 projects):
-  1. ex5 [WINDOWED_APP]
+  1. ex6 [WINDOWED_APP]
 
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║  Project: ex5                                                            Kind: WINDOWED_APP  ║
+║  Project: ex6                                                            Kind: WINDOWED_APP  ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ℹ Found 1 source file(s)
 
 ╔══════════════════════════════════════════════════════════════════════════════════════════════╗
-║                               Compilation Error: appelants.cpp                               ║
+║                                 Compilation Error: sonde.cpp                                 ║
 ╠══════════════════════════════════════════════════════════════════════════════════════════════╣
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:1:10: warning: non-portable path to file '"NKWindow/NKWindow.h"'; specified ║
-║ path differs in case from file name on disk [-Wnonportable-include-path]                     ║
-║     1 | #include "NKWindow/NkWindow.h"                                                       ║
-║       |          ^~~~~~~~~~~~~~~~~~~~~                                                       ║
-║       |          "NKWindow/NKWindow.h"                                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:2:10: warning: non-portable path to file '"NKWindow/NKMain.h"'; specified   ║
-║ path differs in case from file name on disk [-Wnonportable-include-path]                     ║
-║     2 | #include "NKWindow/NkMain.h"                                                         ║
+║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo6-la_sonde_qui_compt ║
+║ e\sonde.cpp:1:10: warning: non-portable path to file '"NKWindow/NKMain.h"'; specified path   ║
+║ differs in case from file name on disk [-Wnonportable-include-path]                          ║
+║     1 | #include "NKWindow/NkMain.h"                                                         ║
 ║       |          ^~~~~~~~~~~~~~~~~~~                                                         ║
 ║       |          "NKWindow/NKMain.h"                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:46:12: error: field type 'Dessin' is an abstract class                      ║
-║    46 |     Dessin mObj;                                                                     ║
-║       |            ^                                                                         ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/Rend ║
-║ erer/Core/NkDrawable.h:51:18: note: unimplemented pure virtual method 'Draw' in 'Dessin'     ║
-║ 51 |                                 virtual void Draw(NkRenderTarget &target, const         ║
-║ NkRenderStates &states) const = 0;                                                           ║
-║       |                                              ^                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:37:9: error: no matching member function for call to 'Config'               ║
-║    37 |         Config().title        =    "Exercice 5 chap 7";                              ║
-║       |         ^~~~~~                                                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:208:24: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'nkentseu::renderer::NkCanvasApp' for object argument                                        ║
-║   208 |                                 NkCanvasAppConfig &Config() noexcept {               ║
-║       |                                                    ^                                 ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:211:30: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'const nkentseu::renderer::NkCanvasApp' for object argument                                  ║
-║   211 |                                 const NkCanvasAppConfig &Config() const noexcept {   ║
-║       |                                                          ^                           ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:38:9: error: no matching member function for call to 'Config'               ║
-║    38 |         Config().width        =    1280;                                             ║
-║       |         ^~~~~~                                                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:208:24: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'nkentseu::renderer::NkCanvasApp' for object argument                                        ║
-║   208 |                                 NkCanvasAppConfig &Config() noexcept {               ║
-║       |                                                    ^                                 ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:211:30: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'const nkentseu::renderer::NkCanvasApp' for object argument                                  ║
-║   211 |                                 const NkCanvasAppConfig &Config() const noexcept {   ║
-║       |                                                          ^                           ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:39:9: error: no matching member function for call to 'Config'               ║
-║    39 |         Config().height       =    720;                                              ║
-║       |         ^~~~~~                                                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:208:24: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'nkentseu::renderer::NkCanvasApp' for object argument                                        ║
-║   208 |                                 NkCanvasAppConfig &Config() noexcept {               ║
-║       |                                                    ^                                 ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:211:30: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'const nkentseu::renderer::NkCanvasApp' for object argument                                  ║
-║   211 |                                 const NkCanvasAppConfig &Config() const noexcept {   ║
-║       |                                                          ^                           ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:40:9: error: no matching member function for call to 'Config'               ║
-║    40 |         Config().clearColor   =    {43, 97, 81};                                     ║
-║       |         ^~~~~~                                                                       ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:208:24: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'nkentseu::renderer::NkCanvasApp' for object argument                                        ║
-║   208 |                                 NkCanvasAppConfig &Config() noexcept {               ║
-║       |                                                    ^                                 ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:211:30: note: candidate function not viable: no known conversion from 'App' to ║
-║ 'const nkentseu::renderer::NkCanvasApp' for object argument                                  ║
-║   211 |                                 const NkCanvasAppConfig &Config() const noexcept {   ║
-║       |                                                          ^                           ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include/NKCanvas/App/ ║
-║ NkCanvasApp.h:204:13: error: non-const lvalue reference to type 'NkCanvasApp' cannot bind to ║
-║ a value of unrelated type 'App'                                                              ║
-║ 204 |                                         return static_cast<NkCanvasApp                 ║
-║ &>(app).Execute(state);                                                                      ║
-║       |                                                ^                          ~~~        ║
-║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraime ║
-║ nt\appelants.cpp:50:45: note: in instantiation of function template specialization           ║
-║ 'nkentseu::renderer::NkCanvasApp::Run<App>' requested here                                   ║
-║    50 |     return nkentseu::renderer::NkCanvasApp::Run<App>(state);                         ║
-║       |                                             ^                                        ║
-║ 2 warnings and 6 errors generated.                                                           ║
+║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo6-la_sonde_qui_compt ║
+║ e\sonde.cpp:3:10: warning: non-portable path to file '"NKCanvas/App/NkCanvasApp.h"';         ║
+║ specified path differs in case from file name on disk [-Wnonportable-include-path]           ║
+║     3 | #include "NKCanvas/App/NKCanvasApp.h"                                                ║
+║       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                ║
+║       |          "NKCanvas/App/NkCanvasApp.h"                                                ║
+║ C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo6-la_sonde_qui_compt ║
+║ e\sonde.cpp:5:10: fatal error: 'NKContainers/NkString.h' file not found                      ║
+║     5 | #include "NKContainers/NkString.h"                                                   ║
+║       |          ^~~~~~~~~~~~~~~~~~~~~~~~~                                                   ║
+║ 2 warnings and 1 error generated.                                                            ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
 
-✗ ✗ Compilation failed: C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraiment\appelants.cpp
+✗ ✗ Compilation failed: C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo6-la_sonde_qui_compte\sonde.cpp
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│  ✗ Build Failed                                                                 Time: 2.71s  │
-│ Errors: 6  | Failed files: 1                                                                 │
+│  ✗ Build Failed                                                                 Time: 3.14s  │
+│ Errors: 2  | Failed files: 1                                                                 │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ════════════════════════════════════════════════════════════════════════════════
@@ -135,11 +63,11 @@ Build Order (1 projects):
 ════════════════════════════════════════════════════════════════════════════════
 Projects Built:  0/1
 Failed:         1
-Errors:         6
-Time:           2.71s
+Errors:         2
+Time:           3.14s
 Status:         ✗ FAILURE
 ════════════════════════════════════════════════════════════════════════════════
 
 Echecs (1) — a corriger :
-  ✗ ex5
+  ✗ ex6
 

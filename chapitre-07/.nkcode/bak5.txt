@@ -12,3 +12,5 @@ with workspace("Chapitre-07"):
         pass
     with include("exo5-qui_appelle_vraiment/ex5.jenga"):
         pass
+    with include("exo6-la_sonde_qui_compte/ex6.jenga"):
+    

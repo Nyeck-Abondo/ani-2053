@@ -1,0 +1,10 @@
+Plafond 60 : 600 passages et 10.0162 secondes
+Sans plafond : 599 passages et 10.008 secondes
+Sans la ligne : avec plafond on a : 598 avec 10.0086 secondes et sans plafond : 600 et 10.0133 secondes
+Les écarts : avec le message, l'application NkCanvas a 1 passage de plus que celle sans plafond, et sans le message de log,
+l'application NkCanvas a 3 passages de moins qe celle sans plafond. La boucle promet ici 60 passages par secondes de la méthode OnRender
+dans le cas de l'application NkCanvas plafonée, et une utilisation oportuniste des ressources dans le cas d'une application NkCanvas non plafonée.
+la ligne de journal comme on peut l'observer dans les deux cas a un effet minime. Entre les deux types de testes, l'écart avec l'application plafonée est de 2 passages de moins qu'avec le message de log
+et dans le cas de l'applicaiton sans plafond on observe un nombre de passage supérieur dans le cas de l'abscence de message de log. Cela s'explique notamment
+par le fait que l'écriture du message de log bien qu'il ralonge le temps d'un passage, ne constitue pas un facteur significatif permettant d'afficher
+un écart sensible de performances entre les deux situations de test.

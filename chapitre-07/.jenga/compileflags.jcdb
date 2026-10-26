@@ -9,3 +9,7 @@ project	ex5
 dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo5-qui_appelle_vraiment
 std	c++17
 inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include
+project	ex6
+dir	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\chapitre-07\exo6-la_sonde_qui_compte
+std	c++17
+inc	C:\Users\Administrator\Documents\Github\Sprints\ani-2053\Kits\NKCanvas\include
