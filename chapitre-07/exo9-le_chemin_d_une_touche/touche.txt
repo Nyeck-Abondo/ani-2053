@@ -1,0 +1,8 @@
+Les couches :
+ - 01 : NkCanvasApp.h classe : NkCanvasApp Methode: OnKeyPress
+ - 02 : NkEventSystem.h classe : NkEventSystem Methode : PoolEvent
+ - 03 : NkKeyboardEvent.h classe : NkKeyPressEvent
+ - 04 : NkWin32EventSystem.h (sous windows) fonction: NkWin32WndProc
+Où je me suis arrêté : je me suis arrêté à la procédure de fenêtre sous windows où je n'ai pas pu voir comment est ce que les classes d'évènement
+étaient poussées dans la file.
+Combien : j'ai trouvé 4 couches et j'en ai vu travailler 3 la 4 ième ne présentant pas exokicitement son fonctionnement dans le fichier entête
