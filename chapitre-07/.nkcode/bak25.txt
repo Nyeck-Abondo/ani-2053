@@ -1,0 +1,8 @@
+Le long : Canvas/include/NKEvent/NkKeyboardEvent.h 1676 lignes
+Le difficile : Canvas/include/NKAudio/NkAudioBus.h 188 lignes
+Ce qu'ils gardent : NkKeyBordEvent.h ne garde que la touche logique du bouton, son code physique, les modificateurs et le code natif  + l'étendue
+tandis que NkAudioBus.h garde le nom de l'audio, le bus parent, le ou les buss enfants, le nombre  de bus enfants, le niveau de volume, l'état sans son ou lecture ralentie, le Side chain pour la réduction du volument pendant les dialogue;
+et l'ensemble des voix actives
+L'écart : pour établir la différence de difficulté de lecture entre les deux, je me base sur ce qui est conservé par chaque modules. Le fichier NkKeboardEvent.h ne conserve que des énumération facilement lisible et donc compréhensible par un lecteur qui n'a jamais ouvert
+le fichierou qui ne sais pas se qu'est un évènement clavier. il ne conserve que l'état minimal de ce que représente une touche ce qui rends le fichier plus facile à lire. Or le fichier NkAudioBus.h stocke aussi de façon récursive la classe que le fichier défini , en plus
+de garder des états tels que le volume du son le nombre de voix, qui sont des paramètres dont le lieu de modification n'est pas facilement visible pour quelqu'un de non averti
