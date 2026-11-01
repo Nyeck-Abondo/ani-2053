@@ -1,15 +1,24 @@
 #include "NKWindow/NKMain.h"
 #include "NKWindow/NKWindow.h"
+#include "NKCanvas/Renderer/Resources/NkSprite.h"
 
 #include "NKCanvas/App/NkCanvasApp.h"
 
 class fenetre : public nkentseu::renderer::NkCanvasApp {
+    private:
+    nkentseu::renderer::NkTexture tex;
     public:
     fenetre() {
+        
         Config().title  =   "fenetre exerceice 1";
         Config().width  =   1280;
         Config().height =   720;
         Config().clearColor =   {65, 171, 204};
+    }
+    void OnRender(nkentseu::renderer::NkRenderWindow &target) override {
+        target.Clear({46, 46, 46, 255});
+        nkentseu::renderer::NkSprite sp(tex);
+        sp
     }
 };
 

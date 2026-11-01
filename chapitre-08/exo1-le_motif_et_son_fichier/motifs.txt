@@ -1,0 +1,9 @@
+Stratégie : un commentaire permet de revéler la présence du motif strategie ici. NkLogger.h:93  Pattern Strategy : chaque sink définit son comportement d'écriture
+Fabrique : un commentaire sur le mode de fonctionnement du code permet de revéler le motif utilisé iciNkIrenderer2D.h:6 //   auto* renderer = NkRenderer2DFactory::Create(graphicsCtx);
+Façade : NkDX11Renderer2D.h:65 static uint32 CreateDX11RenderTexture(uint32 w, uint32 h);
+Patron de méthode : un commentaire dans la coquille permet de revéler le pattern patron de méthode ici NkCanvasApp.h:242                // --- A remplir par l'application ------------------------------
+Observateur : c'est un commentaire qui permet de revéler le pattern utilisé ici NkEvent.h:629 //   - Observer  : handler recevant un événement modifiable (peut appeler MarkHandled)
+Singleton : NkLog.h:5        // DESCRIPTION : Singleton de logger avec API fluide chaînable
+Adaptateur : NkGuiCanvasBackend.h:7 // traduit ses draw-lists en appels NkIRenderer2D. Gère l'atlas de police
+Composite : NkLogger.h:92 *  - Pattern Composite : agrège plusieurs NkISink pour diffusion
+Commande : Le motif de commande est absent des entêtes du kit, et devrait se trouver dans le Module du gestionnaire d'évènement car il permetttrait de0 les conserver pour les rejouer plus tard.
