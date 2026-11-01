@@ -1,0 +1,21 @@
+Virtuelles pures : la première méthode a consisté en utiliser la commande grep -rn "= 0;" include/NKCanvas/Renderer/Core/NkIRenderer2D.h
+dans le repertoire du kit Canvas du 22 octobre 2026, puis à compter les méthodes virtuelles pures en évitant les simples instructions renvoyées
+par la commande qui se terminaient par un = 0; . la seconde elle consistait en un ressencement direct dans le fichier NkIRenderer2D.h et à la main.
+Cette méthode a renvoyé un nombre très exacte de 31 méthodes virtuelles pures.
+
+Dorsaux : les dorsaux du kit ont aussi été listés de deux manières:
+- la première toujours avec la commande grep. elle se présente comme ceci : grep -rn "public NkBatchRenderer2D" include/NKCanvas/Backend elle revèle
+l'existence de 6 dorsaux qui sont NkVulkanRenderer2D; NkSoftwareRenderer2D; NkOpenGLRenderer2D; NkMetalRenderer2D; NkDX11Renderer2D et enfin NkDX12Renderer2D
+- la seconde méthode consitait en un parcours manuel des différents dossier de backends sur lesquels s'appuient le Moteur de rendu. Il en ressort comme plus haut la présence
+de 6 dorsaux, ceux listez plus haut.
+
+Ce que chacun écrit : Durant le parcours de chaque dorsal, on remarque que la classe mère est NkBatchRenderer2D. Et en ce qui concerne le décompte des méthodes virtuelles pures
+que chacun implémente on a:
+NkVulkanRenderer2D: grep -rn "override" include/NKCanvas/Backend/Vulkan/NkVulkanRenderer2D.h nous donne un total de 14 méthodes redéfinies
+NkOpenGLRenderer2D : grep -rn "override" include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h nous donne un total de 9 méthodes redéfinies
+NkMetalRenderer2D : grep -rn "override" include/NKCanvas/Backend/Metal/NkMetalRenderer2D.h nous donne un total de 9 méthodes redéfinies
+NkDX11Renderer2D : grep -rn "override" include/NKCanvas/Backend/DirectX/NkDX11Renderer2D.h nous donne un total de 8 méthodes redéfinies
+NkSoftwareRenderer2D : grep -rn "override" include/NKCanvas/Backend/Software/NkSoftwareRenderer2D.h bous donne un total de 9 méthodes redéfinies
+NkDX12Renderer2D : grep -rn "override" include/NKCanvas/Backend/DirectX/NkDX12Renderer2D.h nous donne un total de 8 méthodes redéfinies
+
+Le coût : D'après nos comptes, l'ajout d'un nouveau dorsal implique la redéfinition d'un minimum de 9 méthodes vituelles pures par le nouveau dorsal.
