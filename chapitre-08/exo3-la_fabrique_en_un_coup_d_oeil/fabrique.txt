@@ -1,0 +1,31 @@
+Recherche : la commande tapée pour la recherche des occurences de NkOpenGLRenderer2D est : grep -rn "NkOpenGLRenderer2D" include et voici sa sortie
+C:\Users\Administrator\Downloads\Canvas> grep -rn "NkOpenGLRenderer2D" include
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:3:// NkOpenGLRenderer2D.h — OpenGL 2D renderer backend
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:13:                class NkOpenGLRenderer2D final : public NkBatchRenderer2D {
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:15:                                NkOpenGLRenderer2D() = default;
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:17:                                ~NkOpenGLRenderer2D() override {
+include/NKCanvas/Renderer/Core/NkIRenderer2D.h:15://   Backends/OpenGL/NkOpenGLRenderer2D
+include/NKCanvas/Renderer/Core/NkRenderer2D.h:19://   NkSoftwareRenderer2D / NkOpenGLRenderer2D / NkVulkanRenderer2D / NkDX11Renderer2D / NkDX12Renderer2D
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:22:// EXEMPLE D'ENREGISTREMENT (OpenGL, en fin de NkOpenGLRenderer2D::Initialize)
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:24://       &NkOpenGLRenderer2D::CreateGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:25://       &NkOpenGLRenderer2D::UpdateGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:26://       &NkOpenGLRenderer2D::DeleteGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:27://       &NkOpenGLRenderer2D::SetGLTextureFilter,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:28://       &NkOpenGLRenderer2D::SetGLTextureWrap,
+include/NKGui/Core/NkGuiDrawListRaster.h:35://      OpenGL (`NkOpenGLRenderer2D::SetBlendMode`) : Screen ONE /
+
+Hors de son dossier : la commande nous permet d'identifier exactement trois fichiers: NkTextureBackend.h, NkIRenderer2D.h et NkGuiDrawListRaster.h
+NkIRenderer2D.h:15://   Backends/OpenGL/NkOpenGLRenderer2D  : Ceci est un commentaire
+NkRenderer2D.h:19://   NkSoftwareRenderer2D / NkOpenGLRenderer2D / NkVulkanRenderer2D / NkDX11Renderer2D / NkDX12Renderer2D : Ceci est un commentaire
+NkTextureBackend.h:22:// EXEMPLE D'ENREGISTREMENT (OpenGL, en fin de NkOpenGLRenderer2D::Initialize)  : Ceci est un commentaire
+NkTextureBackend.h:24://       &NkOpenGLRenderer2D::CreateGLTexture,  : Ceci est un commentaire
+NkTextureBackend.h:25://       &NkOpenGLRenderer2D::UpdateGLTexture,  : Ceci est un commentaire
+NkTextureBackend.h:26://       &NkOpenGLRenderer2D::DeleteGLTexture,  : Ceci est un commentaire
+NkTextureBackend.h:27://       &NkOpenGLRenderer2D::SetGLTextureFilter,  : Ceci est un commentaire
+NkTextureBackend.h:28://       &NkOpenGLRenderer2D::SetGLTextureWrap,  : Ceci est un commentaire
+NkGuiDrawListRaster.h:35://      OpenGL (`NkOpenGLRenderer2D::SetBlendMode`) : Screen ONE /  : Ceci est un commentaire
+
+Chaque fichiers ne fait référence à la classe NkOpenGLRenderer2D que par des commentaires. Aucune instanciation d'objet du type de la classe n'est trouvé.
+
+Conclusion : d'après les observations faites plus haut, on peut conclure que la fabrique n'expose pas directement les classes contraites dont elle a la charge de création.
+Elles ne sont crées qu'au travers d'une méthode propre à la classe abstraite de la fabrique.
