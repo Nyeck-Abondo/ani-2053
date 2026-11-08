@@ -17,7 +17,7 @@ int main() {
         std::cin >> cmd;
 
         if (cmd == "AJOUTE") {
-            perdues.push_back(++ids);
+            planche.push_back(++ids);
         }
         else if (cmd == "SUPPRIME") {
             int index = 0;
