@@ -10,10 +10,10 @@ enum Operation {
 };
 
 struct Texture {
-    int index;
+    int value;
     static int ids;
 
-    Texture () { index = ++ids;}
+    Texture () { value = ++ids;}
 };
 
 int Texture::ids = 0;
@@ -42,12 +42,12 @@ int main() {
     std::cin >> S >> V >> F;
     std::cin >> N;
     operations.resize(N);
-    
+
     for (int i = 0; i < N; i++) {
         std::cin >> operations[i].cmd;
         operations[i].StringToCmd();
         if (operations[i].op == Operation::SUPPRIME)
-            std::cin >> operations[i].id;
+        std::cin >> operations[i].id;
     }
 
     // process des operations
@@ -60,41 +60,40 @@ int main() {
             c++;
         }
         if (operations[i].op == Operation::SUPPRIME) {
-            auto it = std::find_if(planche.begin(), planche.end(), [&] (Texture& t) {
-                return t.index == operations[i].id; 
-            });
-            if (it != planche.end()) {
-                if (S == 0) {
-                    f++;
-                    suppressed.emplace_back(it->index);
-                }
-                else if (S > 1) {
-                    std::cout << "PLANTAGE " << i << " TEXTURE " << planche[i].index << std::endl;
-                    return 0;
-                }
-                planche.erase(it);
+            int index = operations[i].id;
+            Texture it = planche[index];
+
+            if (S == 0) {
+                f++;
+                suppressed.emplace_back(it.value);
             }
+            else if (S > 1) {
+                std::cout << "PLANTAGE " << i << " TEXTURE " << planche[i].value << std::endl;
+                return 0;
+            }
+            planche.erase(planche.begin() + index);
         }
+
         if (operations[i].op == Operation::VIDE) {
             if (V == 0) {
                 f += planche.size();
                 for (auto t : planche)
-                    suppressed.emplace_back(t.index);
+                    suppressed.emplace_back(t.value);
             }
             else if (V > 1) {
-                std::cout << "PLANTAGE " << i << " TEXTURE " << planche[i].index << std::endl;
+                std::cout << "PLANTAGE " << i << " TEXTURE " << planche[i].value << std::endl;
                 return 0;
             }
             planche.clear();
-            
+
         }
     }
-    
+
     std::cout << "CREEES " << c << std::endl;
     std::cout << "FUITES " << f << std::endl;
     std::cout << "PERDUES";
     for (auto t : suppressed)
-        std::cout << " " << t;
+    std::cout << " " << t;
     std::cout << std::endl;
 
     return 0;
