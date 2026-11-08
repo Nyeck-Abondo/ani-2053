@@ -1,8 +1,0 @@
-NkTexture
-NkTexture() = default;
-~NkTexture();                             // libere
-NkTexture(const NkTexture &) = delete;    // pas de copie
-NkTexture &operator=(const NkTexture &) = delete;
-NkTexture(NkTexture &&) noexcept;         // mais un transfert
-NkTexture &operator=(NkTexture &&) noexcept;
-bool IsValid() const;
