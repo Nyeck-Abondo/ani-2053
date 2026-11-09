@@ -12,7 +12,6 @@ struct Cmds {
 
 std::vector<Cmds> commands;
 
-// indice de la commande DECL de l'objet nom (commands.size() si absent)
 int trouverDecl(const std::string& nom) {
     auto it = std::find_if(commands.begin(), commands.end(), [&] (const Cmds& x) {
         return x.name == "DECL" && x.a == nom;
@@ -20,13 +19,12 @@ int trouverDecl(const std::string& nom) {
     return static_cast<int>(it - commands.begin());
 }
 
-// libere nom ; seules les lignes DEPEND situees avant l'indice limite sont connues
-// renvoie true s'il y a plantage
+
 bool liberer(const std::string& nom, const std::string& prefixe, int limite) {
     int taille = static_cast<int>(commands.size());
     int id = trouverDecl(nom);
     if (id == taille) return false;
-    if (commands[id].isClosed) return false;          // deja libere : rien a afficher
+    if (commands[id].isClosed) return false;
 
     for (int j = 0; j < limite; j++) {
         if (commands[j].name == "DEPEND" && commands[j].a == nom) {
