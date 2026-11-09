@@ -10,59 +10,83 @@ struct Cmds {
     bool isClosed = false;
 };
 
+std::vector<Cmds> commands;
+
+// indice de la commande DECL de l'objet nom (commands.size() si absent)
+int trouverDecl(const std::string& nom) {
+    auto it = std::find_if(commands.begin(), commands.end(), [&] (const Cmds& x) {
+        return x.name == "DECL" && x.a == nom;
+    });
+    return static_cast<int>(it - commands.begin());
+}
+
+// libere nom ; seules les lignes DEPEND situees avant l'indice limite sont connues
+// renvoie true s'il y a plantage
+bool liberer(const std::string& nom, const std::string& prefixe, int limite) {
+    int taille = static_cast<int>(commands.size());
+    int id = trouverDecl(nom);
+    if (id == taille) return false;
+    if (commands[id].isClosed) return false;          // deja libere : rien a afficher
+
+    for (int j = 0; j < limite; j++) {
+        if (commands[j].name == "DEPEND" && commands[j].a == nom) {
+            int idb = trouverDecl(commands[j].b);
+            if (idb < taille && commands[idb].isClosed) {
+                std::cout << "PLANTAGE " << nom << " " << commands[j].b << std::endl;
+                return true;
+            }
+        }
+    }
+    commands[id].isClosed = true;
+    std::cout << prefixe << " " << nom << std::endl;
+    return false;
+}
+
 int main() {
-    std::vector<Cmds> commands;
-    Cmds c;
     std::string line;
 
     while (std::getline(std::cin, line)) {
         std::istringstream iss(line);
+        Cmds c;
         iss >> c.name >> c.a;
         if (c.name == "DEPEND")
         iss >> c.b;
         commands.push_back(c);
     }
-    
-    // objets - detruire normalement
-    std::vector<std::string> obj;
 
-    //Fermeture
-    for (int i = 0; i < commands.size(); i++) {
+    int taille = static_cast<int>(commands.size());
+
+    // rejeu des commandes dans l'ordre de lecture
+    for (int i = 0; i < taille; i++) {
         if (commands[i].name == "FERME") {
-            for (int j = 0; j < commands.size(); j++) {
-                if (commands[j].name == "DEPEND") {
-                    auto it = std::find_if(commands.begin(), commands.end(), [&] (Cmds& c) {
-                        return commands[j].a == commands[i].a; 
-                    });
-                    auto it1 = std::find_if(commands.begin(), commands.end(), [&] (Cmds& c) {
-                        return commands[j].b == commands[i].a; 
-                    });
-                    // indices des appels des commandes de Fermeture
-                    int ida = it - commands.begin();
-                    int idb = it1 - commands.begin();
+            if (liberer(commands[i].a, "FERME", i)) return 0;
+        }
 
-                    if (idb < ida) {
-                        std::cout << "FERME " << commands[i].b << std::endl;
-                        std::cout << "PLANTAGE " << commands[j].a << " " << commands[j].b << std::endl;
-                        return 0;
-                    }
-                    else
-                        std::cout << "FERME " << commands[i].a << std::endl;
-                    commands[i].isClosed = true;
-                }
-
-                //objet a fermer par defaut
-                if (commands[j].name == "DECL") {
-                    if (commands[j].a != commands[i].a)
-                        obj.push_back(commands[j].a);
-                }
+        if (commands[i].name == "}") {
+        // recherche de l'accolade ouvrante correspondante
+        int profondeur = 0, debut = -1;
+        for (int k = i - 1; k >= 0; k--) {
+            if (commands[k].name == "}") profondeur++;
+        if (commands[k].name == "{") {
+                if (profondeur == 0) { debut = k; break; }
+                profondeur--;
+            }
+        }
+        // destruction du bloc, du dernier declare au premier
+        for (int k = i - 1; k > debut; k--) {
+            if (commands[k].name == "DECL") {
+                if (liberer(commands[k].a, "DETRUIT", i)) return 0;
             }
         }
     }
-    if (!obj.empty()) {
-        for (auto & o : obj)
-            std::cout << "DETRUIT " << o << std::endl;
-        std::cout << "PROPRE" << std::endl;
+}
+
+for (int k = taille - 1; k >= 0; k--) {
+    if (commands[k].name == "DECL") {
+        if (liberer(commands[k].a, "DETRUIT", taille)) return 0;
     }
-    return 0;
+}
+
+std::cout << "PROPRE" << std::endl;
+return 0;
 }
