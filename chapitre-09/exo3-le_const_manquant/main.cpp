@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 #include <algorithm>
 #include <string>
 #include <sstream>
@@ -37,14 +36,14 @@ int CalculNiveau(int i) {
         });
         int level = 0, index = 0;
         if (it != functions.end()) {
-            index = functions.begin() - it;
+            index = it - functions.begin();
         }
         level = CalculNiveau(index);
         if (level < 0) return m.niveau = -1;
         mx = std::max(mx, level);
     }
     m.canConst = true;
-    return m.niveau;
+    return m.niveau = mx + 1;
 }
 
 void afficher(const std::string& titre, const std::vector<std::string>& noms) {
