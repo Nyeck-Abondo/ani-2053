@@ -1,0 +1,4 @@
+DECL window
+DECL target
+DEPEND target window
+FERME window
