@@ -1,0 +1,4 @@
+fichier : main.cpp, lignes : 2138, inclut : windows.h, NKImage.h, NkTecture.h, NkSprite.h, NkFont.h, NkDirectory.h; NkFile.h, NkGraphicsApi.h, NkContextDesc.h, NkRenderWindow.h, NkTime.h, NkLog.h, NkDropEvent.h, NkKeyboardEvent.h, NkMouseEvent.h, NkWindowEvent.h, NkEvent.h, NkMain.h, Nkwindow.h
+fichier : NkRefBoard.h, lignes : 371, inclut : NkMath.h, NkVector.h, NkString.h
+fichier : NkRefFile.h, lignes : 224, inclut : NkVector.h, NkRefBoard.h, NkRefView.h
+fichier : NkRefView.h, lignes : 86, inclut : NkMath.h

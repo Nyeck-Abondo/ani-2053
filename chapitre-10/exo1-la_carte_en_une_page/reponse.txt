@@ -1,0 +1,6 @@
+Ce que possède chaque fichier : NkRefView.h possède les informations relatives à la caméra orthographique du canevas: la position de son centre et son zoom. 
+    NkRefFile.h : possède les informations relatives aux images sous deux formes : la forme de tableaux de pixels d'entier non signés (la forme sérialisée) et leur forme désérialisée.
+    NkRefBoard.h : possèle l'ensemble des images désérialisées, ainsi que l'ensemble des traits de crayons posées ur le canevas avec les identifiants des images.
+    main.cpp : continent les informations relatives au évènement clavier, souris et fenêtre de chaque frames, ainsi que les différents thèmes que peut prendre l'aplication, et les objets nécessaire à l'initialisation de la fenêtre et du contexte de l'interface immédiate.
+La part des fichiers purs : NkRefView.h prend 3.05% des lignes totales. et NkRefBoard.h prends 13.16% des lignes totales de l'application
+Les deux fichiers que je garderais : je garderais les fichier NkRefBoard.h et NkRefView car ils ne dépendent d'aucune entête de l'application, et possèdent les types sur lesquels se fondent le fontionnement de l'application.
