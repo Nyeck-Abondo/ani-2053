@@ -76,7 +76,7 @@ int main() {
         return 0;
     }
     uint32_t nbImg = u32();
-    std::cout << "IMGAGES " << nbImg << std::endl;
+    std::cout << "IMAGES " << nbImg << std::endl;
     for (int i = 1; i <= nbImg; i++) {
         if (!need(36)) {
             std::cout << "TRONQUE" << std::endl;
