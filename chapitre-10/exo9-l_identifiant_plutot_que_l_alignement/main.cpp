@@ -28,22 +28,22 @@ int main() {
             newId++;
         }
 
-        if (name == "SUPPRIME") {
-            int i;
-            is >> i;
+        else if (name == "SUPPRIME") {
+            int c;
+            is >> c;
             std::vector<int> index;
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < c; j++) {
                 int val;
-                std::cin >> val;
+                is >> val;
                 index.push_back(val);
             }
             std::sort(index.begin(), index.end(), std::greater<int>());
 
-            for (int k = 0; k < i; k++) {
+            for (int k = 0; k < c; k++) {
                 planche.erase(planche.begin() + index[k]);
             }
             occasions ++;
-            repercutes += 2 * i;
+            repercutes += 2 * c;
         }
 
         else if (name == "MONTE" || name == "DESCEND") {
