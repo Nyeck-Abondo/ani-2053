@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include <functional>
 
 struct OperationT {
     std::string name;
@@ -40,12 +41,17 @@ int main() {
         std::getline(std::cin, line);
         std::istringstream is(line);
         is >> op.name;
-        if (op.name == "MONTE") {
+        if (op.name == "AJOUTE") {
+            is >> op.picture;
+        }
+        if (op.name == "MONTE" || op.name == "DESCEND") {
             is >> op.n;
         }
         else if (op.name == "SUPPRIME") {
+            is >> op.n;
             int id;
-            while (is >> id) {
+            for (int k = 0; k < op.n; k++) {
+                is >> id;
                 op.index.push_back(id);
             }
         }
@@ -94,25 +100,24 @@ int main() {
                     }
                 }
             }
-            
-            if (imgOp[i].name == "MONTE" || imgOp[i].name == "DESCEND") {
-                int a = imgOp[i].n;
-                int b = (imgOp[i].name == "MONTE") ? a + 1 : a - 1;
-                if (b < 0 || b >= modele.size())
-                    continue;
-                std::swap(modele[a], modele[b]);
-                for (int j = 0; j < tabOp[2].tableau.size(); j++) {
-                    if (tabOp[2].tableau[j] == "textures" && a < texture.size() && b < texture.size()) {
-                        std::swap(texture[a], texture[b]);
-                    }
-                    if (tabOp[2].tableau[j] == "sources" && a < sources.size() && b < sources.size()) {
-                        std::swap(sources[a], sources[b]);
-                    }
+        }
+        if (imgOp[i].name == "MONTE" || imgOp[i].name == "DESCEND") {
+            int a = imgOp[i].n;
+            int b = (imgOp[i].name == "MONTE") ? a + 1 : a - 1;
+            if (b < 0 || b >= modele.size())
+                continue;
+            std::swap(modele[a], modele[b]);
+            for (int j = 0; j < tabOp[2].tableau.size(); j++) {
+                if (tabOp[2].tableau[j] == "textures" && a < texture.size() && b < texture.size()) {
+                    std::swap(texture[a], texture[b]);
+                }
+                if (tabOp[2].tableau[j] == "sources" && a < sources.size() && b < sources.size()) {
+                    std::swap(sources[a], sources[b]);
                 }
             }
         }
     }
-    
+
     int L = std::max({modele.size(), texture.size(), sources.size()});
     int decales = 0;
     for (int i = 0; i < L; i++) {
@@ -121,9 +126,9 @@ int main() {
         std::string s = (i < sources.size()) ? sources[i] : "-";
         std::cout << i << " " << m << " " << t << " " << s << "\n";
         if (m != t || m != s)
-            decales++;
+        decales++;
     }
     std::cout << "DECALES " << decales << "\n";
-    
+
     return 0;
 }
