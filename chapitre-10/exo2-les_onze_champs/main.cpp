@@ -34,6 +34,24 @@ int main() {
     for (int i = 0; i < N; i++) {
         std::cin >> imgs[i];
     }
+    
+    int invalid = 0;
+    for (int i = 0; i < N; i++) {
+        if (imgs[i].octects == 0)
+            invalid++;
+    }
+    std::cout << invalid << std::endl;
+    for (int i = 0; i < invalid; i++) {
+        for (int j = 0; j < N; j++) {
+            if (imgs[j].octects == 0 && j + 1 <= N - 1) {
+                Image i = imgs[j];
+                int index = j + 1;
+                imgs[j] = imgs[index];
+                imgs[index] = i;
+            }
+        }
+    }
+    
     for (int i = 0; i < N; i++) {
         std::cout << "ITEM " << imgs[i].id;
         if (imgs[i].octects == 0) {
