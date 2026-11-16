@@ -15,7 +15,7 @@ int main() {
         octects.push_back(v);
     }
     //utilistaires de lectures
-    int index;
+    int index = 0;
     auto need = [&] (int val) {
         return octects.size() >= val + index;
     };
