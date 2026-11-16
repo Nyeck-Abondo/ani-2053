@@ -1,0 +1,16 @@
+from Jenga import *
+
+with workspace("ex4", location="."):
+    configurations(["Debug", "Release"])
+    startproject("exercice 4")
+    
+    useconfig("../../kits/NKCanvas/NKCanvas.jenga")
+    
+    with project("exercice"):
+        consoleapp()
+        language("C++")
+        cppdialect("C++17")
+        files(["./**.cpp"])
+        includedirs(["copie/NKRef"])
+        
+        usenkcanvas()

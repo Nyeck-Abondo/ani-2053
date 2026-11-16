@@ -1,0 +1,3 @@
+Le signe que j'ai changé : dans le retur de PixelToWorl à la ligne 34 center.x + (pixel.x - viewport.x * 0.5f est devenu center.x + (pixel.x + viewport.x * 0.5f
+Le test qui est tombé : aller_retour et point_fixe
+Un test qui n'a rien vu : bornes; grille et origine

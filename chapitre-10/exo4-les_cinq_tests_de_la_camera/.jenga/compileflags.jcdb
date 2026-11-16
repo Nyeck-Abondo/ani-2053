@@ -1,0 +1,8 @@
+# jcdb/1  Jenga Compilation DataBase
+compiler	C:/msys64/ucrt64/bin/clang++.exe
+msvc	0
+project	exercice-4
+dir	E:\All Github\Github\Sprints\ani-2053\chapitre-10\exo4-les_cinq_tests_de_la_camera
+std	c++17
+inc	E:\All Github\Github\Sprints\ani-2053\chapitre-10\exo4-les_cinq_tests_de_la_camera\copie\NkRef
+inc	E:\All Github\Github\Sprints\ani-2053\Kits\NKCanvas\include

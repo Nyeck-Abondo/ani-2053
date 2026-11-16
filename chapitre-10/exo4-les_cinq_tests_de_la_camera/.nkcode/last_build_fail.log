@@ -1,0 +1,61 @@
+$ jenga build --target exercice-4 --config Debug --platform Windows-x86_64 --jenga-file "E:/All Github/Github/Sprints/ani-2053/chapitre-10/exo4-les_cinq_tests_de_la_camera/ex4.jenga"
+
+Configuration: Debug
+Target:        Windows x86_64
+Toolchain:     clang-mingw
+
+Build Order (1 projects):
+  1. exercice-4 [CONSOLE_APP]
+
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: exercice-4                                                      Kind: CONSOLE_APP  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 2 source file(s)
+✓   [1/2] Compiled with warnings: test_camera.cpp
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                   Warning: test_camera.cpp                                   ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════╣
+║ E:\All                                                                                       ║
+║ Github\Github\Sprints\ani-2053\chapitre-10\exo4-les_cinq_tests_de_la_camera\test_camera.cpp: ║
+║ 4:10: warning: non-portable path to file '"NKMath/NKMath.h"'; specified path differs in case ║
+║ from file name on disk [-Wnonportable-include-path]                                          ║
+║     4 | #include "NKMath/NkMAth.h"                                                           ║
+║       |          ^~~~~~~~~~~~~~~~~                                                           ║
+║       |          "NKMath/NKMath.h"                                                           ║
+║ 1 warning generated.                                                                         ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                 Compilation Error: main.cpp                                  ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════╣
+║ E:\All                                                                                       ║
+║ Github\Github\Sprints\ani-2053\chapitre-10\exo4-les_cinq_tests_de_la_camera\copie\NkRef\main ║
+║ .cpp:64:10: fatal error: 'NkRef/NkRefView.h' file not found                                  ║
+║    64 | #include "NkRef/NkRefView.h"                                                         ║
+║       |          ^~~~~~~~~~~~~~~~~~~                                                         ║
+║ 1 error generated.                                                                           ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+✗ ✗ Compilation failed: E:\All Github\Github\Sprints\ani-2053\chapitre-10\exo4-les_cinq_tests_de_la_camera\copie\NkRef\main.cpp
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✗ Build Failed                                                                 Time: 2.63s  │
+│ Errors: 2  | Warnings: 2  | Failed files: 1                                                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+════════════════════════════════════════════════════════════════════════════════
+                                  BUILD FAILED                                  
+════════════════════════════════════════════════════════════════════════════════
+Projects Built:  0/1
+Failed:         1
+Errors:         2
+Warnings:       2
+Time:           2.63s
+Status:         ✗ FAILURE
+════════════════════════════════════════════════════════════════════════════════
+
+Echecs (1) — a corriger :
+  ✗ exercice-4
+
