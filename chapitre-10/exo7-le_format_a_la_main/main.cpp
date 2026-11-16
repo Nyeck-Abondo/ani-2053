@@ -16,6 +16,8 @@ int main() {
     }
     //utilistaires de lectures
     int index = 0;
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(2);
     auto need = [&] (int val) {
         return octects.size() >= val + index;
     };
@@ -38,7 +40,7 @@ int main() {
         return 0;
     }
     //verification de la version
-    if (octects[0] != 0x4E && octects[1] != 0x4B && octects[2] != 0x52 && octects[3] != 0x46) {
+    if (octects[0] != 0x4E || octects[1] != 0x4B || octects[2] != 0x52 || octects[3] != 0x46) {
         std::cout << "PAS_UNE_PLANCHE" << std::endl;
         return 0;
     }
@@ -47,6 +49,7 @@ int main() {
     uint32_t version = u32();
     if (version != 1) {
         std::cout << "VERSION_INCONNUE " << version;
+        return 0;
     }
 
     //les trois F32
@@ -65,10 +68,20 @@ int main() {
     uint8_t theme = u8();
     uint8_t grille = u8();
     index += 2;
-
-    std::cout << "VUE " << std::fixed << std::setprecision(2) << cx << " " << cy << " " << zoom << std::endl;
-    std::cout << "THEME " << ((theme == 1) ? "SOMBRE" : "CLAIR") << std::endl;
-    std::cout << "GRILLE " << (grille == 0 ? "AFFICHEE" : "IGNOREE") << std::endl;
+    
+    if (cx <= 0.005f && cx >= -0.005f) {
+        cx = 0.0f;
+    }
+    if (cy <= 0.005f && cy >= -0.005f) {
+        cy = 0.0f;
+    }
+    if (zoom <= 0.005f && zoom >= -0.005f) {
+        zoom = 0.0f;
+    }
+    
+    out << "VUE " << std::fixed << std::setprecision(2) << cx << " " << cy << " " << zoom << std::endl;
+    out << "THEME " << ((theme != 0) ? "SOMBRE" : "CLAIR") << std::endl;
+    out << "GRILLE " << (grille == 0 ? "AFFICHEE" : "CACHEE") << std::endl;
 
     // les images
     if (!need(4)) {
@@ -94,8 +107,24 @@ int main() {
         }
         // saut de size octects source
         index += size;
-
-        std ::cout << "IMAGE " << i << std::fixed << std::setprecision(2) << " " << x << " " << y << " " << scale << " " << rotation << " "
+        
+        if (x <= 0.005f && x >= -0.005f) {
+            x = 0.0f;
+        }
+        if (y <= 0.005f && y >= -0.005f) {
+            y = 0.0f;
+        }
+        if (scale <= 0.005f && scale >= -0.005f) {
+            scale = 0.0f;
+        }
+        if (rotation <= 0.005f && rotation >= -0.005f) {
+            rotation = 0.0f;
+        }
+        if (opacite <= 0.005f && opacite >= -0.005f) {
+            opacite = 0.0f;
+        }
+        
+        out << "IMAGE " << i << std::fixed << std::setprecision(2) << " " << x << " " << y << " " << scale << " " << rotation << " "
         << opacite << " " << (mx != 0 ? 1 : 0) << " " << (my != 0 ? 1 : 0) << " " << w << " " << h << " " << size << std::endl;
 
     }
@@ -106,7 +135,7 @@ int main() {
         return 0;
     }
     uint32_t nbTraits = u32();
-    std::cout << "TRAITS " << std::fixed << std::setprecision(2) << nbTraits << std::endl;
+    out << "TRAITS " << std::fixed << std::setprecision(2) << nbTraits << std::endl;
     for (int i = 1; i <= nbTraits; i++) {
         if (!need(12)) {
             std::cout << "TRONQUE" << std::endl;
@@ -116,8 +145,11 @@ int main() {
         float e = f32();
         uint32_t nbPoints = u32();
 
+        if (e <= 0.005f && e >= -0.005f) {
+            e = 0.0f;
+        }
 
-        std::cout << "TRAIT " << std::fixed << std::setprecision(2) << i << " " << r << " " << g << " " << b << " "
+        out << "TRAIT " << std::fixed << std::setprecision(2) << i << " " << r << " " << g << " " << b << " "
         << a << " " << e << " " << nbPoints << std::endl;
         for (int j = 1 ; j <= nbPoints; j++) {
             if (!need(8)) {
@@ -125,9 +157,16 @@ int main() {
                 return 0;
             }
             float x = f32(), y = f32();
-            std::cout << "POINT " << std::fixed << std::setprecision(2) << x << " " << y << std::endl; 
+            if (x <= 0.005f && x >= -0.005f) {
+                x = 0.0f;
+            }
+            if (y <= 0.005f && y >= -0.005f) {
+                y = 0.0f;
+            }
+            out << "POINT " << std::fixed << std::setprecision(2) << x << " " << y << std::endl; 
         }
     }
+    std::cout << out.str(); 
 
     return 0;
 }
