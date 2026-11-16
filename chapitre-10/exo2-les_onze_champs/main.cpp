@@ -40,7 +40,7 @@ int main() {
         if (imgs[i].octects == 0)
             invalid++;
     }
-    std::cout << invalid << std::endl;
+
     for (int i = 0; i < invalid; i++) {
         for (int j = 0; j < N; j++) {
             if (imgs[j].octects == 0 && j + 1 <= N - 1) {
