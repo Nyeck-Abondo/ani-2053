@@ -43,9 +43,27 @@ int main() {
         std::cin.ignore();
     };
 
+    auto afficherFin = [&] () {
+        std::cout << "VRAIES " << vrai << std::endl;
+        std::cout << "FAUSSES " << fausse << std::endl;
+        std::cout << "OUBLIEES " << oublies << std::endl;
+        std::cout << "NOUVELLES " << nouvelles << std::endl;
+        std::cout << "PART_OUBLIEE " << part << std::endl;
+    };
+
     insert(avant, n);
     insert(corrige, c);
     insert(apres, a);
+
+    if (avant != "AVANT") {
+        if (corrige != "AVANT") {
+            afficherFin();
+            if (apres != "AVANT") {
+                afficherFin();
+                return 0;
+            }
+        }   
+    }
 
     for (int i = 0; i < n; i++) {
         for (int j = n; j < n + c; j++) {
@@ -88,11 +106,7 @@ int main() {
         }
     }
 
-    std::cout << "VRAIES " << vrai << std::endl;
-    std::cout << "FAUSSES " << fausse << std::endl;
-    std::cout << "OUBLIEES " << oublies << std::endl;
-    std::cout << "NOUVELLES " << nouvelles << std::endl;
-    std::cout << "PART_OUBLIEE " << part << std::endl;
+    afficherFin();
 
     return 0;
 }
