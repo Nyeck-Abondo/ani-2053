@@ -56,8 +56,10 @@ int main() {
         }
         for (int j = n + c; j < n + c + a; j++) {
             if (errors[i] == errors[j]) {
-                errors[i].state = "ENCORE_VRAIE";
-                vrai++;
+                if (errors[i].state != "DEVENUE_FAUSSE") {
+                    errors[i].state = "ENCORE_VRAIE";
+                    vrai++;
+                }
             }
         }
         if (errors[i].state != "DEVENUE_FAUSSE" && errors[i].state != "ENCORE_VRAIE") {
