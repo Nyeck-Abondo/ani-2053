@@ -55,14 +55,9 @@ int main() {
     insert(corrige, c);
     insert(apres, a);
 
-    if (avant != "AVANT") {
-        if (corrige != "AVANT") {
-            afficherFin();
-            if (apres != "AVANT") {
-                afficherFin();
-                return 0;
-            }
-        }   
+    if (avant != "AVANT" && corrige != "AVANT" && apres != "AVANT") {
+        afficherFin();
+        return 0;
     }
 
     for (int i = 0; i < n; i++) {
