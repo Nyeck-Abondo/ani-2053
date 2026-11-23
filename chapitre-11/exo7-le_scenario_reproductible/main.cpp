@@ -133,13 +133,6 @@ int main() {
     // deroulement
     for (size_t j = 0; j < tours.size(); j++) {
         long long t = tours[j];
-
-        // ERREUR : les captures sont ecrites avant les actions du tour
-        for (size_t i = 0; i < shots.size(); i++)
-            if (shots[i] == t + 1) {
-                std::cout << "TOUR " << t << " CAPTURE\n"; joues++;
-            }
-
         if (t > 0) {
             if (hasPan && panN == t) {
                 std::cout << "TOUR " << t << " PAN " << panDx << " " << panDy << "\n"; joues++;
@@ -166,6 +159,11 @@ int main() {
                 std::cout << "TOUR " << t << " GRILLE " << gridV << "\n"; joues++;
             }
         }
+        
+        for (size_t i = 0; i < shots.size(); i++)
+            if (shots[i] == t + 1) {
+                std::cout << "TOUR " << t << " CAPTURE\n"; joues++;
+            }
     }
 
     if (limite) std::cout << "ARRET " << dernier << "\n";
