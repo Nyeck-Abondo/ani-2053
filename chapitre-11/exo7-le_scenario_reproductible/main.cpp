@@ -100,7 +100,9 @@ int main() {
             for (size_t i = 0; i < elems.size(); i++) {
                 decoupe(elems[i], ':', champs);
                 if (champs.size() >= 4 && entier(champs[0], n) && dropN.size() < 8) {
-                    std::string chemin = champs[3]; // ERREUR : les champs suivants sont perdus
+                    std::string chemin = champs[3];
+                    for (size_t k = 4; k < champs.size(); k++)
+                        chemin += ":" + champs[k];
                     dropN.push_back(n); dropPx.push_back(champs[1]); dropPy.push_back(champs[2]);
                     dropPath.push_back(chemin);
                     gardes++;
@@ -131,6 +133,13 @@ int main() {
     // deroulement
     for (size_t j = 0; j < tours.size(); j++) {
         long long t = tours[j];
+
+        // ERREUR : les captures sont ecrites avant les actions du tour
+        for (size_t i = 0; i < shots.size(); i++)
+            if (shots[i] == t + 1) {
+                std::cout << "TOUR " << t << " CAPTURE\n"; joues++;
+            }
+
         if (t > 0) {
             if (hasPan && panN == t) {
                 std::cout << "TOUR " << t << " PAN " << panDx << " " << panDy << "\n"; joues++;
@@ -157,11 +166,6 @@ int main() {
                 std::cout << "TOUR " << t << " GRILLE " << gridV << "\n"; joues++;
             }
         }
-        // le compteur passe a t + 1 : les captures de numero t + 1
-        for (size_t i = 0; i < shots.size(); i++)
-            if (shots[i] == t + 1) {
-                std::cout << "TOUR " << t << " CAPTURE\n"; joues++;
-            }
     }
 
     if (limite) std::cout << "ARRET " << dernier << "\n";
