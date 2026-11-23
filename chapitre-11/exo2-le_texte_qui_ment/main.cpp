@@ -93,7 +93,7 @@ int main() {
             });
             //retrouve le hash
             if (it != infs.end()) {
-                std::cout << "ANONCE " << i + 1 << " VRAI" << std::endl;
+                std::cout << "ANNONCE " << i + 1 << " VRAI" << std::endl;
             }
             else {
                 for (int j = commits.size() - 1; j >= 0; j--) {
@@ -102,7 +102,7 @@ int main() {
                     });
                     if (op != commits[j].functions.end()) {
                         mensonges++;
-                        std::cout << "ANONCE " << i + 1 << " MENT " << commits[j].hash << std::endl;
+                        std::cout << "ANNONCE " << i + 1 << " MENT " << commits[j].hash << std::endl;
                         break;
                     } else {
                         mensonges++;
@@ -117,7 +117,7 @@ int main() {
                 return inf.function == ans[i].function;
             });
             if (it == infs.end()) {
-                std::cout << "ANONCE " << i + 1 << " VRAI" << std::endl;
+                std::cout << "ANNONCE " << i + 1 << " VRAI" << std::endl;
             }
             else {
                 for (int j = 0; j < commits.size(); j++) {
@@ -126,7 +126,7 @@ int main() {
                     });
                     if (op != commits[j].functions.end()) {
                         mensonges++;
-                        std::cout << "ANONCE " << i + 1 << " MENT " << commits[j].hash << std::endl;
+                        std::cout << "ANNONCE " << i + 1 << " MENT " << commits[j].hash << std::endl;
                     }
                 }
             }
