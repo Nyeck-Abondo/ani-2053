@@ -8,7 +8,6 @@ struct Input {
     std::string hash;
     std::string action;
     std::vector<std::string> functions;
-    bool retracted = false;
     int size;
 };
 
@@ -21,6 +20,7 @@ struct Anounce {
 struct Info {
     std::string hash;
     std::string function;
+    bool retracted = false;
 };
 
 int main() {
@@ -70,15 +70,24 @@ int main() {
 
     // trie en fonction de l'qjout et du retrait
     for (int i = 0; i < commits.size(); i++) {
-        if (commits[i].action == "AJOUTE")
-        continue;
+        if (commits[i].action == "AJOUTE") {
+            for (int j = 0; j < commits[i].functions.size(); j++) {
+                auto it = std::find_if(infs.begin(), infs.end(), [&] (Info inf) {
+                    return inf.function == commits[i].functions[j];
+                });
+                if (it != infs.end()) {
+                    it->retracted = false;
+                }
+            }
+        }
+        
         else if (commits[i].action == "RETIRE") {
             for (int j = 0; j < commits[i].functions.size(); j++) {
                 auto it = std::find_if(infs.begin(), infs.end(), [&] (Info inf) {
                     return inf.function == commits[i].functions[j];
                 });
                 if (it != infs.end()) {
-                    infs.erase(it);
+                    it->retracted = true;
                 }
             }
         }
@@ -92,7 +101,7 @@ int main() {
                 return inf.function == ans[i].function;
             });
             //retrouve le hash
-            if (it != infs.end()) {
+            if (it != infs.end() && !it->retracted) {
                 std::cout << "ANNONCE " << i + 1 << " VRAI" << std::endl;
             }
             else {
@@ -120,13 +129,14 @@ int main() {
                 std::cout << "ANNONCE " << i + 1 << " VRAI" << std::endl;
             }
             else {
-                for (int j = 0; j < commits.size(); j++) {
+                for (int j = commits.size() - 1; j >= 0 ; j--) {
                     auto op = std::find_if(commits[j].functions.begin(), commits[j].functions.end(), [&] (std::string& s) {
                         return s == ans[i].function;
                     });
                     if (op != commits[j].functions.end()) {
                         mensonges++;
                         std::cout << "ANNONCE " << i + 1 << " MENT " << commits[j].hash << std::endl;
+                        break;
                     }
                 }
             }
