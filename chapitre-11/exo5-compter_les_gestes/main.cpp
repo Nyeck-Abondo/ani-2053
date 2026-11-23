@@ -4,51 +4,58 @@
 #include <sstream>
 
 int main() {
-    int t = 0, tDebut = 0, min = 0, parjour = 0, waitTime;
+    int t = 0, tDebut = 0, min = 0, parjour = 0, waitTime = 0;
     std::string action, nom, line;
-    int g = 0, e = 0, d = 0, m = 0, ss = 0, a = 0;
-    int totalJour = 0;
-    bool finished = false;
-    int taskCount = 0;
+    int g = 0, e = 0, d = 0;
+    long long a = 0, m = 0, ss = 0;
+    long long totalJour = 0;
+    bool finished = true;   // true = aucune tâche en cours
     std::vector<std::string> response;
 
     while(std::getline(std::cin, line)) {
         std::istringstream is(line);
+        action.clear();
         is >> t >> action;
         if (action == "DEBUT") {
             tDebut = t;
-            g = e = d = a = 0;
-            if (taskCount > 0 && !finished)
-                response.push_back(nom + " INACHEVEE");
+            g = e = d = 0;
+            a = 0;
             is >> nom >> min >> parjour;
-            taskCount++;
+            finished = false;
         }
         else if (action == "CLIC"|| action == "TOUCHE" || action == "MOLETTE" || action == "GLISSE") {
-            g++;
+            if (!finished)
+                g++;
         }
         else if (action == "ATTENTE") {
             is >> waitTime;
-            a += waitTime;
-            totalJour += waitTime;
+            if (!finished)
+                a += waitTime;
         }
         else if (action == "FIN") {
             finished = true;
-            d  = t - tDebut;
+            d = t - tDebut;
             e = (g > min) ? g - min : 0;
             //JOUR
-            int totalTime = a * parjour;
-            m = totalTime / 60000;
-            ss = (totalTime / 1000) % 60;
-            std::string msg = nom + " GESTES " + std::to_string(g).c_str() + " EN_TROP " + std::to_string(e).c_str() + " DUREE " + std::to_string(d).c_str() + " ATTENTE " + std::to_string(a);
-            msg += " JOUR " + std::to_string(m) + ":" + std::to_string(ss).c_str();
+            long long secondes = (a * parjour) / 1000;
+            totalJour += secondes;
+            m = secondes / 60;
+            ss = secondes % 60;
+            std::string msg = nom + " GESTES " + std::to_string(g) + " EN_TROP " + std::to_string(e)
+                            + " DUREE " + std::to_string(d) + " ATTENTE " + std::to_string(a);
+            msg += " JOUR " + std::to_string(m) + ":" + (ss < 10 ? "0" : "") + std::to_string(ss);
             std::cout << msg << std::endl;
-            g = e = d = a = 0;
+            g = e = d = 0;
+            a = 0;
         }
     }
-    for (auto m : response) {
-        std::cout << m << std::endl;
+    if (!finished)
+        response.push_back(nom + " INACHEVEE");
+    for (auto r : response) {
+        std::cout << r << std::endl;
     }
-    int totalTime = totalJour * parjour;
-    std::cout << "TOTAL_JOUR " << totalTime / 60000 << ":" << (totalTime / 1000) % 60 << std::endl;
+    m = totalJour / 60;
+    ss = totalJour % 60;
+    std::cout << "TOTAL_JOUR " << m << ":" << (ss < 10 ? "0" : "") << ss << std::endl;
     return 0;
 }
